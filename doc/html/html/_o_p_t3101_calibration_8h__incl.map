@@ -1,0 +1,13 @@
+<map id="C:/folders/d/scripts/cpp/OPT3101SDK/OPT3101SDK/OPT3101SDK/OPT3101Calibration.h" name="C:/folders/d/scripts/cpp/OPT3101SDK/OPT3101SDK/OPT3101SDK/OPT3101Calibration.h">
+<area shape="rect" id="node3" href="$_o_p_t3101_design_coefficients_8h.html" title="OPT3101DesignCoefficients.h" alt="" coords="718,109,912,136"/>
+<area shape="rect" id="node21" href="$_o_p_t3101_phase_offset_8h.html" title="OPT3101PhaseOffset.h" alt="" coords="854,333,1013,360"/>
+<area shape="rect" id="node22" href="$_o_p_t3101frame_data_8h.html" title="OPT3101frameData.h" alt="" coords="766,408,912,435"/>
+<area shape="rect" id="node27" href="$environment_control_8h.html" title="environmentControl.h" alt="" coords="1444,184,1586,211"/>
+<area shape="rect" id="node5" href="$_o_p_t3101device_8h.html" title="OPT3101device.h" alt="" coords="743,259,866,285"/>
+<area shape="rect" id="node26" href="$_o_p_t3101_crosstalk_8h.html" title="OPT3101Crosstalk.h" alt="" coords="406,184,549,211"/>
+<area shape="rect" id="node6" href="$_o_p_t3101_register_definition_8h.html" title="OPT3101RegisterDefinition.h" alt="" coords="566,333,754,360"/>
+<area shape="rect" id="node7" href="$register_8h.html" title="register.h" alt="" coords="358,408,434,435"/>
+<area shape="rect" id="node8" href="$host_controller_8h.html" title="hostController.h" alt="" coords="441,483,554,509"/>
+<area shape="rect" id="node9" href="$serial_8h.html" title="serialLib/serial.h" alt="" coords="440,557,556,584"/>
+<area shape="rect" id="node17" href="$v8stdint_8h.html" title="v8stdint.h" alt="" coords="851,632,928,659"/>
+</map>

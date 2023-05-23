@@ -1,0 +1,172 @@
+\hypertarget{class_o_p_t3101crosstalk_temp_coff}{}\section{O\+P\+T3101crosstalk\+Temp\+Coff Class Reference}
+\label{class_o_p_t3101crosstalk_temp_coff}\index{O\+P\+T3101crosstalk\+Temp\+Coff@{O\+P\+T3101crosstalk\+Temp\+Coff}}
+
+
+Class that holds crosstalk temperature coeffecient related registers and values.  
+
+
+
+
+{\ttfamily \#include $<$O\+P\+T3101\+Design\+Coefficients.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_o_p_t3101crosstalk_temp_coff_a4a9926dea76c9744cd5bb4fd9b96fd52}{calculate\+Coff}} (\mbox{\hyperlink{class_o_p_t3101_crosstalk}{O\+P\+T3101\+Crosstalk}} $\ast$illum\+Xtalk0, \mbox{\hyperlink{class_o_p_t3101_crosstalk}{O\+P\+T3101\+Crosstalk}} $\ast$illum\+Xtalk1)
+\begin{DoxyCompactList}\small\item\em calculates the crosstalk temp coff \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_p_t3101crosstalk_temp_coff_a8283a641699c42fe5232c2758ddfcd40}{store\+To\+File}} (char $\ast$file\+Name)
+\begin{DoxyCompactList}\small\item\em saves crosstalk temp coff values to file This methods saves the crosstalk temp coff values to a non-\/volatile memory. Storage/\+Restoration to/from non-\/volatile memory is important for factory calibration \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_p_t3101crosstalk_temp_coff_a1335cf4cf57650284c93232d93c49ef0}{load\+From\+File}} (char $\ast$file\+Name)
+\begin{DoxyCompactList}\small\item\em load crosstalk temp coff values from file This methods loads the crosstalk temp coff values to a non-\/volatile memory. Storage/\+Restoration to/from non-\/volatile memory is important for factory calibration \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_o_p_t3101crosstalk_temp_coff_ac111d5555887277804f4b0ee8f555349}{coffI}}
+\begin{DoxyCompactList}\small\item\em Coeffecient for I Component with floating point precision.\+Units for this measurement is crosstalk \mbox{\hyperlink{class_o_p_t3101_crosstalk_a382c8271e35b33821b22d612466c96c7}{O\+P\+T3101\+Crosstalk\+::I}} (24 bit level) codes change per unit of temperature sensor codes (\mbox{\hyperlink{class_o_p_t3101_1_1registers_a3dfd8d81d4cb04d274007deb7c6122fc}{O\+P\+T3101\+::registers\+::tmain}}) per \mbox{\hyperlink{class_o_p_t3101_crosstalk_acb6217116c652bc7c0c84e7b86504f18}{O\+P\+T3101\+Crosstalk\+::magnitude()}} of crosstalk. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_o_p_t3101crosstalk_temp_coff_a6d2ce80b4e1936571777185f302305b5}{coffQ}}
+\begin{DoxyCompactList}\small\item\em Coeffecient for Q Component with floating point precision.\+Units for this measurement is crosstalk \mbox{\hyperlink{class_o_p_t3101_crosstalk_a0454e10774015dd2e941f9284ea516da}{O\+P\+T3101\+Crosstalk\+::Q}} (24 bit level) codes change per unit of temperature sensor codes (\mbox{\hyperlink{class_o_p_t3101_1_1registers_a3dfd8d81d4cb04d274007deb7c6122fc}{O\+P\+T3101\+::registers\+::tmain}}) per \mbox{\hyperlink{class_o_p_t3101_crosstalk_acb6217116c652bc7c0c84e7b86504f18}{O\+P\+T3101\+Crosstalk\+::magnitude()}} of crosstalk. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_o_p_t3101crosstalk_temp_coff_a5dd870ca86bfb7314dfaa636654d797e}{coff\+I\+Reg}}
+\begin{DoxyCompactList}\small\item\em Value of \mbox{\hyperlink{class_o_p_t3101crosstalk_temp_coff_ac111d5555887277804f4b0ee8f555349}{O\+P\+T3101crosstalk\+Temp\+Coff\+::coffI}} represented as a 8 bit number to be written to illum crosstalk temp compensation registers. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_o_p_t3101crosstalk_temp_coff_abe7525dd02d13dbbb4ea329b5dfa9250}{coff\+Q\+Reg}}
+\begin{DoxyCompactList}\small\item\em Value of \mbox{\hyperlink{class_o_p_t3101crosstalk_temp_coff_a6d2ce80b4e1936571777185f302305b5}{O\+P\+T3101crosstalk\+Temp\+Coff\+::coffQ}} represented as a 8 bit number to be written to illum crosstalk temp compensation registers. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_o_p_t3101crosstalk_temp_coff_a23ec6b8c3190fefad73d747864a0b10f}{common\+Scale}}
+\begin{DoxyCompactList}\small\item\em Value of common scale for register coeffecients achieved using different instances of \mbox{\hyperlink{class_o_p_t3101crosstalk_temp_coff}{O\+P\+T3101crosstalk\+Temp\+Coff}}. Calculated by \mbox{\hyperlink{class_o_p_t3101_calibration_ab4a9d45a3175bec9d2d5c2967cc0348f}{O\+P\+T3101\+Calibration\+::find\+Crosstalk\+Temp\+Register\+Values}} during production calibration. Used while loading a set of TX and current configurations to the \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} device during production calibration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class that holds crosstalk temperature coeffecient related registers and values. 
+
+This is a class container that can hold crosstalk temperature coeffecients and related register values. \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} device has different crosstalk phenomenon which needs to be calibrated and compensated~\newline
+ Refer to documentation for \mbox{\hyperlink{class_o_p_t3101_crosstalk}{O\+P\+T3101\+Crosstalk}} class documentation~\newline
+ Crosstalk varis with temperautre which needs to be calibration and compensated to imrpove the system performance. Illum crosstalk temperature variation needs to be evaluated and a compensation coeffecients have to be calcualted. \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} device has internal registers to correct and compensate for illum crosstak temperature variation. This class acts as a temproary storage of crosstalk temp coeffeicnets and related registers. Calculations have to be made on the crosstalk values, coeffecients to transform them to register settings. Instances of \mbox{\hyperlink{class_o_p_t3101_crosstalk}{O\+P\+T3101\+Crosstalk}} taken at different temperatre will be used to calculate these coeffecients and registers. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_o_p_t3101crosstalk_temp_coff_a4a9926dea76c9744cd5bb4fd9b96fd52}\label{class_o_p_t3101crosstalk_temp_coff_a4a9926dea76c9744cd5bb4fd9b96fd52}} 
+\index{O\+P\+T3101crosstalk\+Temp\+Coff@{O\+P\+T3101crosstalk\+Temp\+Coff}!calculate\+Coff@{calculate\+Coff}}
+\index{calculate\+Coff@{calculate\+Coff}!O\+P\+T3101crosstalk\+Temp\+Coff@{O\+P\+T3101crosstalk\+Temp\+Coff}}
+\subsubsection{\texorpdfstring{calculate\+Coff()}{calculateCoff()}}
+{\footnotesize\ttfamily void O\+P\+T3101crosstalk\+Temp\+Coff\+::calculate\+Coff (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_p_t3101_crosstalk}{O\+P\+T3101\+Crosstalk}} $\ast$}]{illum\+Xtalk0,  }\item[{\mbox{\hyperlink{class_o_p_t3101_crosstalk}{O\+P\+T3101\+Crosstalk}} $\ast$}]{illum\+Xtalk1 }\end{DoxyParamCaption})}
+
+
+
+calculates the crosstalk temp coff 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em illum\+Xtalk0;} & Pointer to illum crosstalk \mbox{\hyperlink{class_o_p_t3101_crosstalk}{O\+P\+T3101\+Crosstalk}} instance measured at a lower temperature \\
+\hline
+\mbox{\tt in}  & {\em illum\+Xtalk1;} & Pointer to illum crosstalk \mbox{\hyperlink{class_o_p_t3101_crosstalk}{O\+P\+T3101\+Crosstalk}} instance measured at a higher temperature \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing; 
+\end{DoxyReturn}
+{\bfseries Algorithm of the method is as follows}
+
+
+\begin{DoxyItemize}
+\item Scales the 16bit crosstalk registers \mbox{\hyperlink{class_o_p_t3101_crosstalk_a382c8271e35b33821b22d612466c96c7}{O\+P\+T3101\+Crosstalk\+::I}} and \mbox{\hyperlink{class_o_p_t3101_crosstalk_a0454e10774015dd2e941f9284ea516da}{O\+P\+T3101\+Crosstalk\+::Q}} to 24 bit level using \mbox{\hyperlink{class_o_p_t3101_crosstalk_a5a84d979d127f7624e6f19830b739d5e}{O\+P\+T3101\+Crosstalk\+::xtalk\+Scale}}
+\item Makes the data base circular to avoid errorneous high slope measurements
+\item Calculates the double precision \mbox{\hyperlink{class_o_p_t3101crosstalk_temp_coff_ac111d5555887277804f4b0ee8f555349}{O\+P\+T3101crosstalk\+Temp\+Coff\+::coffI}} and \mbox{\hyperlink{class_o_p_t3101crosstalk_temp_coff_a6d2ce80b4e1936571777185f302305b5}{O\+P\+T3101crosstalk\+Temp\+Coff\+::coffQ}} by finding difference between 24 bit registers divided by delta \mbox{\hyperlink{class_o_p_t3101_crosstalk_af5ac7c2a662a32e1ad954412a3c8d6ea}{O\+P\+T3101\+Crosstalk\+::tmain}} divided by \mbox{\hyperlink{class_o_p_t3101_crosstalk_acb6217116c652bc7c0c84e7b86504f18}{O\+P\+T3101\+Crosstalk\+::magnitude()}}
+\item {\bfseries Warning\+:} Makes the O\+P\+T3101crosstalk\+Temp\+Coff\+::I and O\+P\+T3101crosstalk\+Temp\+Coff\+::Q 0 if the \mbox{\hyperlink{class_o_p_t3101_crosstalk_af5ac7c2a662a32e1ad954412a3c8d6ea}{O\+P\+T3101\+Crosstalk\+::tmain}} are same for both the input arguments 
+\end{DoxyItemize}\mbox{\Hypertarget{class_o_p_t3101crosstalk_temp_coff_a1335cf4cf57650284c93232d93c49ef0}\label{class_o_p_t3101crosstalk_temp_coff_a1335cf4cf57650284c93232d93c49ef0}} 
+\index{O\+P\+T3101crosstalk\+Temp\+Coff@{O\+P\+T3101crosstalk\+Temp\+Coff}!load\+From\+File@{load\+From\+File}}
+\index{load\+From\+File@{load\+From\+File}!O\+P\+T3101crosstalk\+Temp\+Coff@{O\+P\+T3101crosstalk\+Temp\+Coff}}
+\subsubsection{\texorpdfstring{load\+From\+File()}{loadFromFile()}}
+{\footnotesize\ttfamily void O\+P\+T3101crosstalk\+Temp\+Coff\+::load\+From\+File (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+load crosstalk temp coff values from file This methods loads the crosstalk temp coff values to a non-\/volatile memory. Storage/\+Restoration to/from non-\/volatile memory is important for factory calibration 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em file\+Name;} & Path and name of the file from where to load \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing; 
+\end{DoxyReturn}
+{\bfseries Algorithm of the method is as follows}
+\begin{DoxyItemize}
+\item User needs to implement file load/restore based on host. 
+\end{DoxyItemize}\mbox{\Hypertarget{class_o_p_t3101crosstalk_temp_coff_a8283a641699c42fe5232c2758ddfcd40}\label{class_o_p_t3101crosstalk_temp_coff_a8283a641699c42fe5232c2758ddfcd40}} 
+\index{O\+P\+T3101crosstalk\+Temp\+Coff@{O\+P\+T3101crosstalk\+Temp\+Coff}!store\+To\+File@{store\+To\+File}}
+\index{store\+To\+File@{store\+To\+File}!O\+P\+T3101crosstalk\+Temp\+Coff@{O\+P\+T3101crosstalk\+Temp\+Coff}}
+\subsubsection{\texorpdfstring{store\+To\+File()}{storeToFile()}}
+{\footnotesize\ttfamily void O\+P\+T3101crosstalk\+Temp\+Coff\+::store\+To\+File (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+saves crosstalk temp coff values to file This methods saves the crosstalk temp coff values to a non-\/volatile memory. Storage/\+Restoration to/from non-\/volatile memory is important for factory calibration 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em file\+Name;} & Path and name of the file to store \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing; 
+\end{DoxyReturn}
+{\bfseries Algorithm of the method is as follows}
+\begin{DoxyItemize}
+\item User needs to implement file storage based on host. 
+\end{DoxyItemize}
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_o_p_t3101crosstalk_temp_coff_ac111d5555887277804f4b0ee8f555349}\label{class_o_p_t3101crosstalk_temp_coff_ac111d5555887277804f4b0ee8f555349}} 
+\index{O\+P\+T3101crosstalk\+Temp\+Coff@{O\+P\+T3101crosstalk\+Temp\+Coff}!coffI@{coffI}}
+\index{coffI@{coffI}!O\+P\+T3101crosstalk\+Temp\+Coff@{O\+P\+T3101crosstalk\+Temp\+Coff}}
+\subsubsection{\texorpdfstring{coffI}{coffI}}
+{\footnotesize\ttfamily double O\+P\+T3101crosstalk\+Temp\+Coff\+::coffI}
+
+
+
+Coeffecient for I Component with floating point precision.\+Units for this measurement is crosstalk \mbox{\hyperlink{class_o_p_t3101_crosstalk_a382c8271e35b33821b22d612466c96c7}{O\+P\+T3101\+Crosstalk\+::I}} (24 bit level) codes change per unit of temperature sensor codes (\mbox{\hyperlink{class_o_p_t3101_1_1registers_a3dfd8d81d4cb04d274007deb7c6122fc}{O\+P\+T3101\+::registers\+::tmain}}) per \mbox{\hyperlink{class_o_p_t3101_crosstalk_acb6217116c652bc7c0c84e7b86504f18}{O\+P\+T3101\+Crosstalk\+::magnitude()}} of crosstalk. 
+
+\mbox{\Hypertarget{class_o_p_t3101crosstalk_temp_coff_a5dd870ca86bfb7314dfaa636654d797e}\label{class_o_p_t3101crosstalk_temp_coff_a5dd870ca86bfb7314dfaa636654d797e}} 
+\index{O\+P\+T3101crosstalk\+Temp\+Coff@{O\+P\+T3101crosstalk\+Temp\+Coff}!coff\+I\+Reg@{coff\+I\+Reg}}
+\index{coff\+I\+Reg@{coff\+I\+Reg}!O\+P\+T3101crosstalk\+Temp\+Coff@{O\+P\+T3101crosstalk\+Temp\+Coff}}
+\subsubsection{\texorpdfstring{coff\+I\+Reg}{coffIReg}}
+{\footnotesize\ttfamily uint8\+\_\+t O\+P\+T3101crosstalk\+Temp\+Coff\+::coff\+I\+Reg}
+
+
+
+Value of \mbox{\hyperlink{class_o_p_t3101crosstalk_temp_coff_ac111d5555887277804f4b0ee8f555349}{O\+P\+T3101crosstalk\+Temp\+Coff\+::coffI}} represented as a 8 bit number to be written to illum crosstalk temp compensation registers. 
+
+\mbox{\Hypertarget{class_o_p_t3101crosstalk_temp_coff_a6d2ce80b4e1936571777185f302305b5}\label{class_o_p_t3101crosstalk_temp_coff_a6d2ce80b4e1936571777185f302305b5}} 
+\index{O\+P\+T3101crosstalk\+Temp\+Coff@{O\+P\+T3101crosstalk\+Temp\+Coff}!coffQ@{coffQ}}
+\index{coffQ@{coffQ}!O\+P\+T3101crosstalk\+Temp\+Coff@{O\+P\+T3101crosstalk\+Temp\+Coff}}
+\subsubsection{\texorpdfstring{coffQ}{coffQ}}
+{\footnotesize\ttfamily double O\+P\+T3101crosstalk\+Temp\+Coff\+::coffQ}
+
+
+
+Coeffecient for Q Component with floating point precision.\+Units for this measurement is crosstalk \mbox{\hyperlink{class_o_p_t3101_crosstalk_a0454e10774015dd2e941f9284ea516da}{O\+P\+T3101\+Crosstalk\+::Q}} (24 bit level) codes change per unit of temperature sensor codes (\mbox{\hyperlink{class_o_p_t3101_1_1registers_a3dfd8d81d4cb04d274007deb7c6122fc}{O\+P\+T3101\+::registers\+::tmain}}) per \mbox{\hyperlink{class_o_p_t3101_crosstalk_acb6217116c652bc7c0c84e7b86504f18}{O\+P\+T3101\+Crosstalk\+::magnitude()}} of crosstalk. 
+
+\mbox{\Hypertarget{class_o_p_t3101crosstalk_temp_coff_abe7525dd02d13dbbb4ea329b5dfa9250}\label{class_o_p_t3101crosstalk_temp_coff_abe7525dd02d13dbbb4ea329b5dfa9250}} 
+\index{O\+P\+T3101crosstalk\+Temp\+Coff@{O\+P\+T3101crosstalk\+Temp\+Coff}!coff\+Q\+Reg@{coff\+Q\+Reg}}
+\index{coff\+Q\+Reg@{coff\+Q\+Reg}!O\+P\+T3101crosstalk\+Temp\+Coff@{O\+P\+T3101crosstalk\+Temp\+Coff}}
+\subsubsection{\texorpdfstring{coff\+Q\+Reg}{coffQReg}}
+{\footnotesize\ttfamily uint8\+\_\+t O\+P\+T3101crosstalk\+Temp\+Coff\+::coff\+Q\+Reg}
+
+
+
+Value of \mbox{\hyperlink{class_o_p_t3101crosstalk_temp_coff_a6d2ce80b4e1936571777185f302305b5}{O\+P\+T3101crosstalk\+Temp\+Coff\+::coffQ}} represented as a 8 bit number to be written to illum crosstalk temp compensation registers. 
+
+\mbox{\Hypertarget{class_o_p_t3101crosstalk_temp_coff_a23ec6b8c3190fefad73d747864a0b10f}\label{class_o_p_t3101crosstalk_temp_coff_a23ec6b8c3190fefad73d747864a0b10f}} 
+\index{O\+P\+T3101crosstalk\+Temp\+Coff@{O\+P\+T3101crosstalk\+Temp\+Coff}!common\+Scale@{common\+Scale}}
+\index{common\+Scale@{common\+Scale}!O\+P\+T3101crosstalk\+Temp\+Coff@{O\+P\+T3101crosstalk\+Temp\+Coff}}
+\subsubsection{\texorpdfstring{common\+Scale}{commonScale}}
+{\footnotesize\ttfamily uint8\+\_\+t O\+P\+T3101crosstalk\+Temp\+Coff\+::common\+Scale}
+
+
+
+Value of common scale for register coeffecients achieved using different instances of \mbox{\hyperlink{class_o_p_t3101crosstalk_temp_coff}{O\+P\+T3101crosstalk\+Temp\+Coff}}. Calculated by \mbox{\hyperlink{class_o_p_t3101_calibration_ab4a9d45a3175bec9d2d5c2967cc0348f}{O\+P\+T3101\+Calibration\+::find\+Crosstalk\+Temp\+Register\+Values}} during production calibration. Used while loading a set of TX and current configurations to the \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} device during production calibration. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/folders/d/scripts/cpp/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\mbox{\hyperlink{_o_p_t3101_design_coefficients_8h}{O\+P\+T3101\+Design\+Coefficients.\+h}}\item 
+C\+:/folders/d/scripts/cpp/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\mbox{\hyperlink{_o_p_t3101_design_coefficients_8cpp}{O\+P\+T3101\+Design\+Coefficients.\+cpp}}\end{DoxyCompactItemize}

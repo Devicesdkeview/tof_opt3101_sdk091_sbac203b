@@ -1,0 +1,364 @@
+\hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl}{}\section{serial\+:\+:serial\+:\+:Serial\+:\+:Serial\+Impl Class Reference}
+\label{classserial_1_1serial_1_1_serial_1_1_serial_impl}\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+
+
+{\ttfamily \#include $<$unix.\+h$>$}
+
+
+
+Collaboration diagram for serial\+:\+:serial\+:\+:Serial\+:\+:Serial\+Impl\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classserial_1_1serial_1_1_serial_1_1_serial_impl__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_a80885778652ea3c7f7db39ec3f20310c}{Serial\+Impl}} (const string \&port, unsigned long baudrate, \mbox{\hyperlink{namespaceserial_a00b3281fa11cea770c0b0c8a106080f8}{bytesize\+\_\+t}} bytesize, \mbox{\hyperlink{namespaceserial_a8f45d26bf7c9a06659e75b5004a50481}{parity\+\_\+t}} parity, \mbox{\hyperlink{namespaceserial_af5b116611d6628a3aa8f788fdc09f469}{stopbits\+\_\+t}} stopbits, \mbox{\hyperlink{namespaceserial_a93ef57a314b4e562f9eded6c15d34351}{flowcontrol\+\_\+t}} flowcontrol)
+\item 
+virtual \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_af9f0a13782d7870cf66a49001dcc64e7}{$\sim$\+Serial\+Impl}} ()
+\item 
+void \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_a279801879f609e1845e3e730f5651aa2}{open}} ()
+\item 
+void \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_a2608096ba0d17127b17484fc9481833a}{close}} ()
+\item 
+bool \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_a78f28bc8e63ef24aa805178571f4b384}{is\+Open}} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_aecd5e068c21b076bcf161f7bf7f415f5}{available}} ()
+\item 
+bool \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_a4722f7080b15d12a4e00672858c5f0e8}{wait\+Readable}} (uint32\+\_\+t timeout)
+\item 
+void \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_a039703d806b1c8db071da9a04cf63446}{wait\+Byte\+Times}} (size\+\_\+t count)
+\item 
+size\+\_\+t \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_ada61c83884f0f6350874fc32e640cbac}{read}} (uint8\+\_\+t $\ast$buf, size\+\_\+t size=1)
+\item 
+size\+\_\+t \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_a89b50df2562176fd250413833d636d0a}{write}} (const uint8\+\_\+t $\ast$data, size\+\_\+t length)
+\item 
+void \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_afe873a403bcca3956437d95aa55c4d06}{flush}} ()
+\item 
+void \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_a0b4ef99a4b44c3ef153ec7c4802ff194}{flush\+Input}} ()
+\item 
+void \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_ac61932385ea2ce645192e1539349500b}{flush\+Output}} ()
+\item 
+void \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_a6a1abcf6f4b94c7f3d7753c3f2dab91a}{send\+Break}} (int duration)
+\item 
+void \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_a4e439ed9ab4e38fb64bba2d49b814179}{set\+Break}} (bool level)
+\item 
+void \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_a7faf4ef9a0f1b13c9155a4cae1e0ace9}{set\+R\+TS}} (bool level)
+\item 
+void \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_a94cdd2aad19377a0ec435bb6241b98a8}{set\+D\+TR}} (bool level)
+\item 
+bool \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_a09f1dcb8e32cb64188daaf8ac0d40215}{wait\+For\+Change}} ()
+\item 
+bool \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_afbfd566cd435f7881826fb0a2f74f746}{get\+C\+TS}} ()
+\item 
+bool \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_ae07e012e3630c51baf1b8c7c37dd79a5}{get\+D\+SR}} ()
+\item 
+bool \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_a4b9e1b75dce29e8ed4fa62b389510ae5}{get\+RI}} ()
+\item 
+bool \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_a9d402e28513e22613658b31e13b76802}{get\+CD}} ()
+\item 
+void \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_aa3b4c490f3246a506dd29135553ecd64}{set\+Port}} (const string \&port)
+\item 
+string \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_aae10cc0beaa3fc5b9d88c53c976edf1a}{get\+Port}} () const
+\item 
+void \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_a22cc09f7e828c54631392dc69e3737d3}{set\+Timeout}} (\mbox{\hyperlink{structserial_1_1_timeout}{Timeout}} \&timeout)
+\item 
+\mbox{\hyperlink{structserial_1_1_timeout}{Timeout}} \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_ac83d791d7720e05499c2dbe6cb3f4ae2}{get\+Timeout}} () const
+\item 
+void \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_ad57c0c497d487c2f2115168f60eda146}{set\+Baudrate}} (unsigned long baudrate)
+\item 
+unsigned long \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_a55c2c091aff0bc22c3d770fa528e0f17}{get\+Baudrate}} () const
+\item 
+void \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_aa788845b977360851810f07a07b340a7}{set\+Bytesize}} (\mbox{\hyperlink{namespaceserial_a00b3281fa11cea770c0b0c8a106080f8}{bytesize\+\_\+t}} bytesize)
+\item 
+\mbox{\hyperlink{namespaceserial_a00b3281fa11cea770c0b0c8a106080f8}{bytesize\+\_\+t}} \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_a3091d3840db8f1281bbbce78da13eaf7}{get\+Bytesize}} () const
+\item 
+void \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_a7859629014393110fc76a55f1d956c3f}{set\+Parity}} (\mbox{\hyperlink{namespaceserial_a8f45d26bf7c9a06659e75b5004a50481}{parity\+\_\+t}} parity)
+\item 
+\mbox{\hyperlink{namespaceserial_a8f45d26bf7c9a06659e75b5004a50481}{parity\+\_\+t}} \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_a3dd2675e55de5cfd2be9fd23268bf765}{get\+Parity}} () const
+\item 
+void \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_a23f31163c4c1b4aa488a7c7204ddec17}{set\+Stopbits}} (\mbox{\hyperlink{namespaceserial_af5b116611d6628a3aa8f788fdc09f469}{stopbits\+\_\+t}} stopbits)
+\item 
+\mbox{\hyperlink{namespaceserial_af5b116611d6628a3aa8f788fdc09f469}{stopbits\+\_\+t}} \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_adc56daf989276c47cff8b10564025476}{get\+Stopbits}} () const
+\item 
+void \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_abe20c54b814d70e1e0deaa8d3472babe}{set\+Flowcontrol}} (\mbox{\hyperlink{namespaceserial_a93ef57a314b4e562f9eded6c15d34351}{flowcontrol\+\_\+t}} flowcontrol)
+\item 
+\mbox{\hyperlink{namespaceserial_a93ef57a314b4e562f9eded6c15d34351}{flowcontrol\+\_\+t}} \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_aaa2af4d3b08a0f40da7527af419ec903}{get\+Flowcontrol}} () const
+\item 
+void \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_a284eeedc3dd686ecef0fdcfd83bebc54}{read\+Lock}} ()
+\item 
+void \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_ab6533e884ba609a1dd6a88b7964d8b52}{read\+Unlock}} ()
+\item 
+void \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_a2905e50e9082a757bfafc03356e318ed}{write\+Lock}} ()
+\item 
+void \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_adaec2b322f0b0793929da24f5bf09949}{write\+Unlock}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classserial_1_1serial_1_1_serial_1_1_serial_impl_ad006a2392150daddfa43ae288259c07d}{reconfigure\+Port}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_a80885778652ea3c7f7db39ec3f20310c}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_a80885778652ea3c7f7db39ec3f20310c}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!Serial\+Impl@{Serial\+Impl}}
+\index{Serial\+Impl@{Serial\+Impl}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{Serial\+Impl()}{SerialImpl()}}
+{\footnotesize\ttfamily Serial\+::\+Serial\+Impl\+::\+Serial\+Impl (\begin{DoxyParamCaption}\item[{const string \&}]{port,  }\item[{unsigned long}]{baudrate,  }\item[{\mbox{\hyperlink{namespaceserial_a00b3281fa11cea770c0b0c8a106080f8}{bytesize\+\_\+t}}}]{bytesize,  }\item[{\mbox{\hyperlink{namespaceserial_a8f45d26bf7c9a06659e75b5004a50481}{parity\+\_\+t}}}]{parity,  }\item[{\mbox{\hyperlink{namespaceserial_af5b116611d6628a3aa8f788fdc09f469}{stopbits\+\_\+t}}}]{stopbits,  }\item[{\mbox{\hyperlink{namespaceserial_a93ef57a314b4e562f9eded6c15d34351}{flowcontrol\+\_\+t}}}]{flowcontrol }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_af9f0a13782d7870cf66a49001dcc64e7}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_af9f0a13782d7870cf66a49001dcc64e7}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!````~Serial\+Impl@{$\sim$\+Serial\+Impl}}
+\index{````~Serial\+Impl@{$\sim$\+Serial\+Impl}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{$\sim$\+Serial\+Impl()}{~SerialImpl()}}
+{\footnotesize\ttfamily Serial\+::\+Serial\+Impl\+::$\sim$\+Serial\+Impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_aecd5e068c21b076bcf161f7bf7f415f5}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_aecd5e068c21b076bcf161f7bf7f415f5}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!available@{available}}
+\index{available@{available}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{available()}{available()}}
+{\footnotesize\ttfamily size\+\_\+t Serial\+::\+Serial\+Impl\+::available (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_a2608096ba0d17127b17484fc9481833a}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_a2608096ba0d17127b17484fc9481833a}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!close@{close}}
+\index{close@{close}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void Serial\+::\+Serial\+Impl\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_afe873a403bcca3956437d95aa55c4d06}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_afe873a403bcca3956437d95aa55c4d06}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!flush@{flush}}
+\index{flush@{flush}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily void Serial\+::\+Serial\+Impl\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_a0b4ef99a4b44c3ef153ec7c4802ff194}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_a0b4ef99a4b44c3ef153ec7c4802ff194}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!flush\+Input@{flush\+Input}}
+\index{flush\+Input@{flush\+Input}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{flush\+Input()}{flushInput()}}
+{\footnotesize\ttfamily void Serial\+::\+Serial\+Impl\+::flush\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_ac61932385ea2ce645192e1539349500b}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_ac61932385ea2ce645192e1539349500b}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!flush\+Output@{flush\+Output}}
+\index{flush\+Output@{flush\+Output}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{flush\+Output()}{flushOutput()}}
+{\footnotesize\ttfamily void Serial\+::\+Serial\+Impl\+::flush\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_a55c2c091aff0bc22c3d770fa528e0f17}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_a55c2c091aff0bc22c3d770fa528e0f17}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!get\+Baudrate@{get\+Baudrate}}
+\index{get\+Baudrate@{get\+Baudrate}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{get\+Baudrate()}{getBaudrate()}}
+{\footnotesize\ttfamily unsigned long Serial\+::\+Serial\+Impl\+::get\+Baudrate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_a3091d3840db8f1281bbbce78da13eaf7}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_a3091d3840db8f1281bbbce78da13eaf7}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!get\+Bytesize@{get\+Bytesize}}
+\index{get\+Bytesize@{get\+Bytesize}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{get\+Bytesize()}{getBytesize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceserial_a00b3281fa11cea770c0b0c8a106080f8}{serial\+::bytesize\+\_\+t}} Serial\+::\+Serial\+Impl\+::get\+Bytesize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_a9d402e28513e22613658b31e13b76802}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_a9d402e28513e22613658b31e13b76802}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!get\+CD@{get\+CD}}
+\index{get\+CD@{get\+CD}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{get\+C\+D()}{getCD()}}
+{\footnotesize\ttfamily bool Serial\+::\+Serial\+Impl\+::get\+CD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_afbfd566cd435f7881826fb0a2f74f746}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_afbfd566cd435f7881826fb0a2f74f746}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!get\+C\+TS@{get\+C\+TS}}
+\index{get\+C\+TS@{get\+C\+TS}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{get\+C\+T\+S()}{getCTS()}}
+{\footnotesize\ttfamily bool Serial\+::\+Serial\+Impl\+::get\+C\+TS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_ae07e012e3630c51baf1b8c7c37dd79a5}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_ae07e012e3630c51baf1b8c7c37dd79a5}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!get\+D\+SR@{get\+D\+SR}}
+\index{get\+D\+SR@{get\+D\+SR}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{get\+D\+S\+R()}{getDSR()}}
+{\footnotesize\ttfamily bool Serial\+::\+Serial\+Impl\+::get\+D\+SR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_aaa2af4d3b08a0f40da7527af419ec903}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_aaa2af4d3b08a0f40da7527af419ec903}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!get\+Flowcontrol@{get\+Flowcontrol}}
+\index{get\+Flowcontrol@{get\+Flowcontrol}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{get\+Flowcontrol()}{getFlowcontrol()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceserial_a93ef57a314b4e562f9eded6c15d34351}{serial\+::flowcontrol\+\_\+t}} Serial\+::\+Serial\+Impl\+::get\+Flowcontrol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_a3dd2675e55de5cfd2be9fd23268bf765}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_a3dd2675e55de5cfd2be9fd23268bf765}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!get\+Parity@{get\+Parity}}
+\index{get\+Parity@{get\+Parity}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{get\+Parity()}{getParity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceserial_a8f45d26bf7c9a06659e75b5004a50481}{serial\+::parity\+\_\+t}} Serial\+::\+Serial\+Impl\+::get\+Parity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_aae10cc0beaa3fc5b9d88c53c976edf1a}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_aae10cc0beaa3fc5b9d88c53c976edf1a}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!get\+Port@{get\+Port}}
+\index{get\+Port@{get\+Port}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{get\+Port()}{getPort()}}
+{\footnotesize\ttfamily string Serial\+::\+Serial\+Impl\+::get\+Port (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_a4b9e1b75dce29e8ed4fa62b389510ae5}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_a4b9e1b75dce29e8ed4fa62b389510ae5}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!get\+RI@{get\+RI}}
+\index{get\+RI@{get\+RI}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{get\+R\+I()}{getRI()}}
+{\footnotesize\ttfamily bool Serial\+::\+Serial\+Impl\+::get\+RI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_adc56daf989276c47cff8b10564025476}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_adc56daf989276c47cff8b10564025476}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!get\+Stopbits@{get\+Stopbits}}
+\index{get\+Stopbits@{get\+Stopbits}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{get\+Stopbits()}{getStopbits()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceserial_af5b116611d6628a3aa8f788fdc09f469}{serial\+::stopbits\+\_\+t}} Serial\+::\+Serial\+Impl\+::get\+Stopbits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_ac83d791d7720e05499c2dbe6cb3f4ae2}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_ac83d791d7720e05499c2dbe6cb3f4ae2}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!get\+Timeout@{get\+Timeout}}
+\index{get\+Timeout@{get\+Timeout}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{get\+Timeout()}{getTimeout()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structserial_1_1_timeout}{serial\+::\+Timeout}} Serial\+::\+Serial\+Impl\+::get\+Timeout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_a78f28bc8e63ef24aa805178571f4b384}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_a78f28bc8e63ef24aa805178571f4b384}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!is\+Open@{is\+Open}}
+\index{is\+Open@{is\+Open}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{is\+Open()}{isOpen()}}
+{\footnotesize\ttfamily bool Serial\+::\+Serial\+Impl\+::is\+Open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_a279801879f609e1845e3e730f5651aa2}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_a279801879f609e1845e3e730f5651aa2}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!open@{open}}
+\index{open@{open}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily void Serial\+::\+Serial\+Impl\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_ada61c83884f0f6350874fc32e640cbac}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_ada61c83884f0f6350874fc32e640cbac}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!read@{read}}
+\index{read@{read}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily size\+\_\+t Serial\+::\+Serial\+Impl\+::read (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{buf,  }\item[{size\+\_\+t}]{size = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_a284eeedc3dd686ecef0fdcfd83bebc54}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_a284eeedc3dd686ecef0fdcfd83bebc54}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!read\+Lock@{read\+Lock}}
+\index{read\+Lock@{read\+Lock}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{read\+Lock()}{readLock()}}
+{\footnotesize\ttfamily void Serial\+::\+Serial\+Impl\+::read\+Lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_ab6533e884ba609a1dd6a88b7964d8b52}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_ab6533e884ba609a1dd6a88b7964d8b52}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!read\+Unlock@{read\+Unlock}}
+\index{read\+Unlock@{read\+Unlock}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{read\+Unlock()}{readUnlock()}}
+{\footnotesize\ttfamily void Serial\+::\+Serial\+Impl\+::read\+Unlock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_ad006a2392150daddfa43ae288259c07d}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_ad006a2392150daddfa43ae288259c07d}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!reconfigure\+Port@{reconfigure\+Port}}
+\index{reconfigure\+Port@{reconfigure\+Port}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{reconfigure\+Port()}{reconfigurePort()}}
+{\footnotesize\ttfamily void Serial\+::\+Serial\+Impl\+::reconfigure\+Port (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_a6a1abcf6f4b94c7f3d7753c3f2dab91a}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_a6a1abcf6f4b94c7f3d7753c3f2dab91a}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!send\+Break@{send\+Break}}
+\index{send\+Break@{send\+Break}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{send\+Break()}{sendBreak()}}
+{\footnotesize\ttfamily void Serial\+::\+Serial\+Impl\+::send\+Break (\begin{DoxyParamCaption}\item[{int}]{duration }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_ad57c0c497d487c2f2115168f60eda146}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_ad57c0c497d487c2f2115168f60eda146}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!set\+Baudrate@{set\+Baudrate}}
+\index{set\+Baudrate@{set\+Baudrate}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{set\+Baudrate()}{setBaudrate()}}
+{\footnotesize\ttfamily void Serial\+::\+Serial\+Impl\+::set\+Baudrate (\begin{DoxyParamCaption}\item[{unsigned long}]{baudrate }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_a4e439ed9ab4e38fb64bba2d49b814179}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_a4e439ed9ab4e38fb64bba2d49b814179}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!set\+Break@{set\+Break}}
+\index{set\+Break@{set\+Break}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{set\+Break()}{setBreak()}}
+{\footnotesize\ttfamily void Serial\+::\+Serial\+Impl\+::set\+Break (\begin{DoxyParamCaption}\item[{bool}]{level }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_aa788845b977360851810f07a07b340a7}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_aa788845b977360851810f07a07b340a7}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!set\+Bytesize@{set\+Bytesize}}
+\index{set\+Bytesize@{set\+Bytesize}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{set\+Bytesize()}{setBytesize()}}
+{\footnotesize\ttfamily void Serial\+::\+Serial\+Impl\+::set\+Bytesize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceserial_a00b3281fa11cea770c0b0c8a106080f8}{serial\+::bytesize\+\_\+t}}}]{bytesize }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_a94cdd2aad19377a0ec435bb6241b98a8}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_a94cdd2aad19377a0ec435bb6241b98a8}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!set\+D\+TR@{set\+D\+TR}}
+\index{set\+D\+TR@{set\+D\+TR}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{set\+D\+T\+R()}{setDTR()}}
+{\footnotesize\ttfamily void Serial\+::\+Serial\+Impl\+::set\+D\+TR (\begin{DoxyParamCaption}\item[{bool}]{level }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_abe20c54b814d70e1e0deaa8d3472babe}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_abe20c54b814d70e1e0deaa8d3472babe}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!set\+Flowcontrol@{set\+Flowcontrol}}
+\index{set\+Flowcontrol@{set\+Flowcontrol}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{set\+Flowcontrol()}{setFlowcontrol()}}
+{\footnotesize\ttfamily void Serial\+::\+Serial\+Impl\+::set\+Flowcontrol (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceserial_a93ef57a314b4e562f9eded6c15d34351}{serial\+::flowcontrol\+\_\+t}}}]{flowcontrol }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_a7859629014393110fc76a55f1d956c3f}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_a7859629014393110fc76a55f1d956c3f}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!set\+Parity@{set\+Parity}}
+\index{set\+Parity@{set\+Parity}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{set\+Parity()}{setParity()}}
+{\footnotesize\ttfamily void Serial\+::\+Serial\+Impl\+::set\+Parity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceserial_a8f45d26bf7c9a06659e75b5004a50481}{serial\+::parity\+\_\+t}}}]{parity }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_aa3b4c490f3246a506dd29135553ecd64}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_aa3b4c490f3246a506dd29135553ecd64}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!set\+Port@{set\+Port}}
+\index{set\+Port@{set\+Port}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{set\+Port()}{setPort()}}
+{\footnotesize\ttfamily void Serial\+::\+Serial\+Impl\+::set\+Port (\begin{DoxyParamCaption}\item[{const string \&}]{port }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_a7faf4ef9a0f1b13c9155a4cae1e0ace9}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_a7faf4ef9a0f1b13c9155a4cae1e0ace9}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!set\+R\+TS@{set\+R\+TS}}
+\index{set\+R\+TS@{set\+R\+TS}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{set\+R\+T\+S()}{setRTS()}}
+{\footnotesize\ttfamily void Serial\+::\+Serial\+Impl\+::set\+R\+TS (\begin{DoxyParamCaption}\item[{bool}]{level }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_a23f31163c4c1b4aa488a7c7204ddec17}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_a23f31163c4c1b4aa488a7c7204ddec17}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!set\+Stopbits@{set\+Stopbits}}
+\index{set\+Stopbits@{set\+Stopbits}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{set\+Stopbits()}{setStopbits()}}
+{\footnotesize\ttfamily void Serial\+::\+Serial\+Impl\+::set\+Stopbits (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceserial_af5b116611d6628a3aa8f788fdc09f469}{serial\+::stopbits\+\_\+t}}}]{stopbits }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_a22cc09f7e828c54631392dc69e3737d3}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_a22cc09f7e828c54631392dc69e3737d3}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!set\+Timeout@{set\+Timeout}}
+\index{set\+Timeout@{set\+Timeout}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{set\+Timeout()}{setTimeout()}}
+{\footnotesize\ttfamily void Serial\+::\+Serial\+Impl\+::set\+Timeout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structserial_1_1_timeout}{serial\+::\+Timeout}} \&}]{timeout }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_a039703d806b1c8db071da9a04cf63446}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_a039703d806b1c8db071da9a04cf63446}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!wait\+Byte\+Times@{wait\+Byte\+Times}}
+\index{wait\+Byte\+Times@{wait\+Byte\+Times}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{wait\+Byte\+Times()}{waitByteTimes()}}
+{\footnotesize\ttfamily void Serial\+::\+Serial\+Impl\+::wait\+Byte\+Times (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_a09f1dcb8e32cb64188daaf8ac0d40215}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_a09f1dcb8e32cb64188daaf8ac0d40215}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!wait\+For\+Change@{wait\+For\+Change}}
+\index{wait\+For\+Change@{wait\+For\+Change}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{wait\+For\+Change()}{waitForChange()}}
+{\footnotesize\ttfamily bool Serial\+::\+Serial\+Impl\+::wait\+For\+Change (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_a4722f7080b15d12a4e00672858c5f0e8}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_a4722f7080b15d12a4e00672858c5f0e8}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!wait\+Readable@{wait\+Readable}}
+\index{wait\+Readable@{wait\+Readable}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{wait\+Readable()}{waitReadable()}}
+{\footnotesize\ttfamily bool Serial\+::\+Serial\+Impl\+::wait\+Readable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{timeout }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_a89b50df2562176fd250413833d636d0a}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_a89b50df2562176fd250413833d636d0a}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!write@{write}}
+\index{write@{write}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily size\+\_\+t Serial\+::\+Serial\+Impl\+::write (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{data,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+Error ~\newline
+~\newline
+ \mbox{\hyperlink{structserial_1_1_timeout}{Timeout}} ~\newline
+ Port ready to write \mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_a2905e50e9082a757bfafc03356e318ed}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_a2905e50e9082a757bfafc03356e318ed}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!write\+Lock@{write\+Lock}}
+\index{write\+Lock@{write\+Lock}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{write\+Lock()}{writeLock()}}
+{\footnotesize\ttfamily void Serial\+::\+Serial\+Impl\+::write\+Lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classserial_1_1serial_1_1_serial_1_1_serial_impl_adaec2b322f0b0793929da24f5bf09949}\label{classserial_1_1serial_1_1_serial_1_1_serial_impl_adaec2b322f0b0793929da24f5bf09949}} 
+\index{serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}!write\+Unlock@{write\+Unlock}}
+\index{write\+Unlock@{write\+Unlock}!serial\+::serial\+::\+Serial\+::\+Serial\+Impl@{serial\+::serial\+::\+Serial\+::\+Serial\+Impl}}
+\subsubsection{\texorpdfstring{write\+Unlock()}{writeUnlock()}}
+{\footnotesize\ttfamily void Serial\+::\+Serial\+Impl\+::write\+Unlock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/folders/d/scripts/cpp/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/serial\+Lib/\mbox{\hyperlink{unix_8h}{unix.\+h}}\item 
+C\+:/folders/d/scripts/cpp/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/serial\+Lib/\mbox{\hyperlink{unix_8cc}{unix.\+cc}}\end{DoxyCompactItemize}

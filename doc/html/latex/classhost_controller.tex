@@ -1,0 +1,182 @@
+\hypertarget{classhost_controller}{}\section{host\+Controller Class Reference}
+\label{classhost_controller}\index{host\+Controller@{host\+Controller}}
+
+
+Generic implementation for host.  
+
+
+
+
+{\ttfamily \#include $<$host\+Controller.\+h$>$}
+
+
+
+Collaboration diagram for host\+Controller\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classhost_controller__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classhost_controller_a2bee6b3ec45fac241484f7dad943d8ed}{read\+I2C}} (uint8\+\_\+t address)
+\begin{DoxyCompactList}\small\item\em method to read data from I2C port \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classhost_controller_a7c4126810a72333e3ebe749159a0a516}{write\+I2C}} (uint8\+\_\+t address, uint32\+\_\+t data)
+\begin{DoxyCompactList}\small\item\em method to write data from I2C port \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classhost_controller_aa9f25eaf4a9bda5213c70ff91c261649}{reset\+Device}} ()
+\begin{DoxyCompactList}\small\item\em send reset pulse to \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} device Method used to send reset pulse to \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} device \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classhost_controller_a024c031559fade5da0ff7de491212dfe}{sleep}} (uint32\+\_\+t time\+In\+Milli\+Seconds)
+\begin{DoxyCompactList}\small\item\em sleep host Method used to sleep or make host wait for a particular amount of time specified in milli\+Seconds \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classhost_controller_aa678c25de9014a442ed33a4db695aeb3}{sleep\+Data\+Ready\+Counts}} (uint16\+\_\+t data\+Ready\+Counts)
+\begin{DoxyCompactList}\small\item\em sleep host Method used to sleep or make host wait for a particular amount of time specified in number of data ready pulses from \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classhost_controller_aead6dcbe7d02d5b2ae92b5cde1d99f05}{pause}} ()
+\begin{DoxyCompactList}\small\item\em pause host Method used to make host wait for user input or interrupt. Useful for debug \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Generic implementation for host. 
+
+As part of O\+P\+T3101\+S\+DK there are several host specific functions that need to be performed. Examples of such functions are writing or reading from I2C ports, sending reset pulse to \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} device~\newline
+ These implementations are very specific to the host on which the S\+DK is ported and run. ~\newline
+ This abstract class provides a template with self explanatory method names which the users can override and implement their own functions. ~\newline
+ Example code is provided for O\+P\+T3101\+E\+VM with implementations for a windows 10 PC. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classhost_controller_aead6dcbe7d02d5b2ae92b5cde1d99f05}\label{classhost_controller_aead6dcbe7d02d5b2ae92b5cde1d99f05}} 
+\index{host\+Controller@{host\+Controller}!pause@{pause}}
+\index{pause@{pause}!host\+Controller@{host\+Controller}}
+\subsubsection{\texorpdfstring{pause()}{pause()}}
+{\footnotesize\ttfamily void host\+Controller\+::pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+pause host Method used to make host wait for user input or interrupt. Useful for debug 
+
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+{\bfseries Algorithm of the method is as follows} \mbox{\Hypertarget{classhost_controller_a2bee6b3ec45fac241484f7dad943d8ed}\label{classhost_controller_a2bee6b3ec45fac241484f7dad943d8ed}} 
+\index{host\+Controller@{host\+Controller}!read\+I2C@{read\+I2C}}
+\index{read\+I2C@{read\+I2C}!host\+Controller@{host\+Controller}}
+\subsubsection{\texorpdfstring{read\+I2\+C()}{readI2C()}}
+{\footnotesize\ttfamily uint32\+\_\+t host\+Controller\+::read\+I2C (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{address }\end{DoxyParamCaption})}
+
+
+
+method to read data from I2C port 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em address;} & address is the I2C register address \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value; value read from I2C port for the address 
+\end{DoxyReturn}
+{\bfseries Algorithm of the method is as follows}
+
+
+\begin{DoxyItemize}
+\item Creates R\+E\+AD I2C command to send to h/w with address and data specified in arguments
+\item Writes the R\+E\+AD I2C command to h/w
+\item Waits and receives response from h/w
+\item Converters the received string output from h/w to uint32\+\_\+t value
+\item Returns the data in uint32\+\_\+t format 
+\end{DoxyItemize}\mbox{\Hypertarget{classhost_controller_aa9f25eaf4a9bda5213c70ff91c261649}\label{classhost_controller_aa9f25eaf4a9bda5213c70ff91c261649}} 
+\index{host\+Controller@{host\+Controller}!reset\+Device@{reset\+Device}}
+\index{reset\+Device@{reset\+Device}!host\+Controller@{host\+Controller}}
+\subsubsection{\texorpdfstring{reset\+Device()}{resetDevice()}}
+{\footnotesize\ttfamily void host\+Controller\+::reset\+Device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+send reset pulse to \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} device Method used to send reset pulse to \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} device 
+
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+{\bfseries Algorithm of the method is as follows}
+
+
+\begin{DoxyItemize}
+\item Creates a command which specifies host to send R\+E\+S\+ET Pulse to \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} h/w ~\newline
+
+\item Send the R\+E\+S\+ET command to the h/w 
+\end{DoxyItemize}\mbox{\Hypertarget{classhost_controller_a024c031559fade5da0ff7de491212dfe}\label{classhost_controller_a024c031559fade5da0ff7de491212dfe}} 
+\index{host\+Controller@{host\+Controller}!sleep@{sleep}}
+\index{sleep@{sleep}!host\+Controller@{host\+Controller}}
+\subsubsection{\texorpdfstring{sleep()}{sleep()}}
+{\footnotesize\ttfamily void host\+Controller\+::sleep (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{time\+In\+Milli\+Seconds }\end{DoxyParamCaption})}
+
+
+
+sleep host Method used to sleep or make host wait for a particular amount of time specified in milli\+Seconds 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em time\+In\+Milli\+Seconds;} & Time for which the host needs to sleep specified in milli\+Seconds \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+{\bfseries Algorithm of the method is as follows}
+
+
+\begin{DoxyItemize}
+\item Sleeps for the time specified in the argument time\+In\+Milli\+Seconds 
+\end{DoxyItemize}\mbox{\Hypertarget{classhost_controller_aa678c25de9014a442ed33a4db695aeb3}\label{classhost_controller_aa678c25de9014a442ed33a4db695aeb3}} 
+\index{host\+Controller@{host\+Controller}!sleep\+Data\+Ready\+Counts@{sleep\+Data\+Ready\+Counts}}
+\index{sleep\+Data\+Ready\+Counts@{sleep\+Data\+Ready\+Counts}!host\+Controller@{host\+Controller}}
+\subsubsection{\texorpdfstring{sleep\+Data\+Ready\+Counts()}{sleepDataReadyCounts()}}
+{\footnotesize\ttfamily void host\+Controller\+::sleep\+Data\+Ready\+Counts (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{data\+Ready\+Counts }\end{DoxyParamCaption})}
+
+
+
+sleep host Method used to sleep or make host wait for a particular amount of time specified in number of data ready pulses from \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em data\+Ready\+Counts;} & Time for which the host needs to sleep specified data ready pulses from \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+{\bfseries Algorithm of the method is as follows}
+\begin{DoxyItemize}
+\item Currently empty function needs to be implemented by user. Based on interrupts from data ready signal from \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}}, the host needs to count those pulses and wait until data\+Ready\+Counts have reached. 
+\end{DoxyItemize}\mbox{\Hypertarget{classhost_controller_a7c4126810a72333e3ebe749159a0a516}\label{classhost_controller_a7c4126810a72333e3ebe749159a0a516}} 
+\index{host\+Controller@{host\+Controller}!write\+I2C@{write\+I2C}}
+\index{write\+I2C@{write\+I2C}!host\+Controller@{host\+Controller}}
+\subsubsection{\texorpdfstring{write\+I2\+C()}{writeI2C()}}
+{\footnotesize\ttfamily void host\+Controller\+::write\+I2C (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{address,  }\item[{uint32\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+
+
+method to write data from I2C port 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em address;} & address is the I2C register address \\
+\hline
+\mbox{\tt in}  & {\em data;} & data to write to I2C register \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+{\bfseries Algorithm of the method is as follows}
+
+
+\begin{DoxyItemize}
+\item Creates W\+R\+I\+TE I2C command to send to h/w with address and data specified in arguments
+\item Writes the W\+R\+I\+TE I2C command to h/w 
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/folders/d/scripts/cpp/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\mbox{\hyperlink{host_controller_8h}{host\+Controller.\+h}}\item 
+C\+:/folders/d/scripts/cpp/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\mbox{\hyperlink{host_controller_8cpp}{host\+Controller.\+cpp}}\end{DoxyCompactItemize}

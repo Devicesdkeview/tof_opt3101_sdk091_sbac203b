@@ -1,0 +1,154 @@
+\hypertarget{class_o_p_t3101_1_1device_register}{}\section{O\+P\+T3101\+:\+:device\+Register Class Reference}
+\label{class_o_p_t3101_1_1device_register}\index{O\+P\+T3101\+::device\+Register@{O\+P\+T3101\+::device\+Register}}
+
+
+Class that contains positional information for registers in the register map.  
+
+
+
+
+{\ttfamily \#include $<$register.\+h$>$}
+
+
+
+Collaboration diagram for O\+P\+T3101\+:\+:device\+Register\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{class_o_p_t3101_1_1device_register__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_o_p_t3101_1_1device_register_a78bf911477c1d96731b716db7ea83dcb}{O\+P\+T3101\+::device\+Register}} (uint8\+\_\+t \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a058d48b4c23e22739b1c65d85367a0a8}{size}})
+\begin{DoxyCompactList}\small\item\em Constructor for class \mbox{\hyperlink{class_o_p_t3101_1_1device_register}{O\+P\+T3101\+::device\+Register}} Constructor allocated size to each register instance on construction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a0b3153b2ccbe96d37c247c605d6ba995}{operator=}} (int32\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Operator overload for \textquotesingle{}=\textquotesingle{}. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a7092e4906eaff27555bc589eaf737493}{read}} ()
+\begin{DoxyCompactList}\small\item\em Function called to read the value of register. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a40f9e71d804ae858b6baed1f12b3cf83}{msb}} \mbox{[}2\mbox{]}
+\begin{DoxyCompactList}\small\item\em This is the M\+SB position of this register. The register occupies the \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a81d25c717489ac388db0fed33c35bedd}{O\+P\+T3101\+::device\+Register\+::address}} from \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a40f9e71d804ae858b6baed1f12b3cf83}{O\+P\+T3101\+::device\+Register\+::msb}} to \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a404078f369116e10b1cccfbb77c557ca}{O\+P\+T3101\+::device\+Register\+::lsb}}. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a404078f369116e10b1cccfbb77c557ca}{lsb}} \mbox{[}2\mbox{]}
+\begin{DoxyCompactList}\small\item\em This is the L\+SB position of this register. The register occupies the \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a81d25c717489ac388db0fed33c35bedd}{O\+P\+T3101\+::device\+Register\+::address}} from \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a40f9e71d804ae858b6baed1f12b3cf83}{O\+P\+T3101\+::device\+Register\+::msb}} to \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a404078f369116e10b1cccfbb77c557ca}{O\+P\+T3101\+::device\+Register\+::lsb}}. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a81d25c717489ac388db0fed33c35bedd}{address}} \mbox{[}2\mbox{]}
+\begin{DoxyCompactList}\small\item\em This is the A\+D\+D\+R\+E\+SS of this register. The register occupies the \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a81d25c717489ac388db0fed33c35bedd}{O\+P\+T3101\+::device\+Register\+::address}} from \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a40f9e71d804ae858b6baed1f12b3cf83}{O\+P\+T3101\+::device\+Register\+::msb}} to \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a404078f369116e10b1cccfbb77c557ca}{O\+P\+T3101\+::device\+Register\+::lsb}}. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a058d48b4c23e22739b1c65d85367a0a8}{size}}
+\begin{DoxyCompactList}\small\item\em This specifies how many A\+D\+D\+R\+E\+SS does this register span across. For eg\+: There are registers which span multiple address locations in chunks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class that contains positional information for registers in the register map. 
+
+Class that contains positional information for a register in \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} device. \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} has 256 registers each 24 bits wide (\mbox{\hyperlink{class_o_p_t3101_1_1device_register_a40f9e71d804ae858b6baed1f12b3cf83}{O\+P\+T3101\+::device\+Register\+::msb}} of 23 and \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a404078f369116e10b1cccfbb77c557ca}{O\+P\+T3101\+::device\+Register\+::lsb}} of 0 with \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a81d25c717489ac388db0fed33c35bedd}{O\+P\+T3101\+::device\+Register\+::address}} varying from 0 to 255) Bits are groups together and are addressed with a name. Registers have names, placed at different segments of the register map. For eg\+: tmain (temperature of main temp sensor) of \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} occupies location with address 10 from msb of 23 bits to 12 bits in other words \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a81d25c717489ac388db0fed33c35bedd}{O\+P\+T3101\+::device\+Register\+::address}}=10 \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a40f9e71d804ae858b6baed1f12b3cf83}{O\+P\+T3101\+::device\+Register\+::msb}}=23 \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a404078f369116e10b1cccfbb77c557ca}{O\+P\+T3101\+::device\+Register\+::lsb}}=12 This class helps resolve programmers to read and write I2C to \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} device by writing program code with higher level of abstraction with register names rather than dealing with positions of registers \mbox{\hyperlink{class_o_p_t3101_1_1device_register}{O\+P\+T3101\+::device\+Register}} class helps resolve M\+SB, L\+SB and A\+D\+D\+R\+E\+SS fields for a register by its name. ~\newline
+Using this class gives user a functional name for each register making the register read and write more readable and meaningful. In case of \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} device there are some registers which span across 2 address positions, hence the \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a81d25c717489ac388db0fed33c35bedd}{O\+P\+T3101\+::device\+Register\+::address}}, \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a40f9e71d804ae858b6baed1f12b3cf83}{O\+P\+T3101\+::device\+Register\+::msb}} and \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a404078f369116e10b1cccfbb77c557ca}{O\+P\+T3101\+::device\+Register\+::lsb}} have 2 allocations each. In most register cases they may not end up using both the allocations. The actual usage can be found using \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a058d48b4c23e22739b1c65d85367a0a8}{O\+P\+T3101\+::device\+Register\+::size}} member ~\newline
+ Example of register which has more than 1 address is \mbox{\hyperlink{class_o_p_t3101_1_1registers_abdb9db1e1ff8bda71eccaea718b116d0}{O\+P\+T3101\+::registers\+::amplitude\+\_\+min\+\_\+thr}} which spans across register 0x10 from bits 23\+:16 and 0x11 from bites 23\+:16 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_o_p_t3101_1_1device_register_a0b3153b2ccbe96d37c247c605d6ba995}\label{class_o_p_t3101_1_1device_register_a0b3153b2ccbe96d37c247c605d6ba995}} 
+\index{O\+P\+T3101\+::device\+Register@{O\+P\+T3101\+::device\+Register}!operator=@{operator=}}
+\index{operator=@{operator=}!O\+P\+T3101\+::device\+Register@{O\+P\+T3101\+::device\+Register}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily void O\+P\+T3101\+::device\+Register\+::operator= (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Operator overload for \textquotesingle{}=\textquotesingle{}. 
+
+This makes calling this class simpler. dev.\+register=value will resolve the register address and value and invoke \mbox{\hyperlink{classhost_controller_a7c4126810a72333e3ebe749159a0a516}{host\+Controller\+::write\+I2C}} method With proper implementation of the \mbox{\hyperlink{classhost_controller_a7c4126810a72333e3ebe749159a0a516}{host\+Controller\+::write\+I2C}} methods the h/w would receive resolved I2C W\+R\+I\+TE commands The write operations are read modify writes to make the system robust A single call of this method could invoke up to 2 I2C R\+E\+AD and 2 I2C W\+R\+I\+TE transaction depending on the register 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em value;} & value to be set to register \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_o_p_t3101_1_1device_register_a78bf911477c1d96731b716db7ea83dcb}\label{class_o_p_t3101_1_1device_register_a78bf911477c1d96731b716db7ea83dcb}} 
+\index{O\+P\+T3101\+::device\+Register@{O\+P\+T3101\+::device\+Register}!O\+P\+T3101\+::device\+Register@{O\+P\+T3101\+::device\+Register}}
+\index{O\+P\+T3101\+::device\+Register@{O\+P\+T3101\+::device\+Register}!O\+P\+T3101\+::device\+Register@{O\+P\+T3101\+::device\+Register}}
+\subsubsection{\texorpdfstring{O\+P\+T3101\+::device\+Register()}{OPT3101::deviceRegister()}}
+{\footnotesize\ttfamily O\+P\+T3101\+::device\+Register\+::\+O\+P\+T3101\+::device\+Register (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Constructor for class \mbox{\hyperlink{class_o_p_t3101_1_1device_register}{O\+P\+T3101\+::device\+Register}} Constructor allocated size to each register instance on construction. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em size;} & size (typically 1 or 2 bytes) determines the number of segments that the register is divided in to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_o_p_t3101_1_1device_register_a7092e4906eaff27555bc589eaf737493}\label{class_o_p_t3101_1_1device_register_a7092e4906eaff27555bc589eaf737493}} 
+\index{O\+P\+T3101\+::device\+Register@{O\+P\+T3101\+::device\+Register}!read@{read}}
+\index{read@{read}!O\+P\+T3101\+::device\+Register@{O\+P\+T3101\+::device\+Register}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily uint32\+\_\+t O\+P\+T3101\+::device\+Register\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function called to read the value of register. 
+
+This method provides an abstraction for register to be used seamlessly with code for read register operations. \mbox{\hyperlink{classhost_controller_a2bee6b3ec45fac241484f7dad943d8ed}{host\+Controller\+::read\+I2C}} method is invoked with \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a81d25c717489ac388db0fed33c35bedd}{O\+P\+T3101\+::device\+Register\+::address}} fields and the resulting register value is combined as per the register positional information and reported as a uint32\+\_\+t number A single call of this method could invoke up to 2 I2C R\+E\+AD transaction depending on the register \begin{DoxyReturn}{Returns}
+value; value is reading of register from \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} device 
+\end{DoxyReturn}
+{\bfseries Algorithm of the method is as follows}
+
+
+\begin{DoxyItemize}
+\item Loops though the number of \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a81d25c717489ac388db0fed33c35bedd}{O\+P\+T3101\+::device\+Register\+::address}} fields based on \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a058d48b4c23e22739b1c65d85367a0a8}{O\+P\+T3101\+::device\+Register\+::size}}
+\item Invokes \mbox{\hyperlink{classhost_controller_a2bee6b3ec45fac241484f7dad943d8ed}{host\+Controller\+::read\+I2\+C()}} method to get register value from h/w
+\item Masks the bits for the register value to be reported based on register positional information
+\item Assembles the value of the register
+\item Returns the value read from the h/w for the register name specified 
+\end{DoxyItemize}
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_o_p_t3101_1_1device_register_a81d25c717489ac388db0fed33c35bedd}\label{class_o_p_t3101_1_1device_register_a81d25c717489ac388db0fed33c35bedd}} 
+\index{O\+P\+T3101\+::device\+Register@{O\+P\+T3101\+::device\+Register}!address@{address}}
+\index{address@{address}!O\+P\+T3101\+::device\+Register@{O\+P\+T3101\+::device\+Register}}
+\subsubsection{\texorpdfstring{address}{address}}
+{\footnotesize\ttfamily uint8\+\_\+t O\+P\+T3101\+::device\+Register\+::address\mbox{[}2\mbox{]}}
+
+
+
+This is the A\+D\+D\+R\+E\+SS of this register. The register occupies the \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a81d25c717489ac388db0fed33c35bedd}{O\+P\+T3101\+::device\+Register\+::address}} from \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a40f9e71d804ae858b6baed1f12b3cf83}{O\+P\+T3101\+::device\+Register\+::msb}} to \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a404078f369116e10b1cccfbb77c557ca}{O\+P\+T3101\+::device\+Register\+::lsb}}. 
+
+\mbox{\Hypertarget{class_o_p_t3101_1_1device_register_a404078f369116e10b1cccfbb77c557ca}\label{class_o_p_t3101_1_1device_register_a404078f369116e10b1cccfbb77c557ca}} 
+\index{O\+P\+T3101\+::device\+Register@{O\+P\+T3101\+::device\+Register}!lsb@{lsb}}
+\index{lsb@{lsb}!O\+P\+T3101\+::device\+Register@{O\+P\+T3101\+::device\+Register}}
+\subsubsection{\texorpdfstring{lsb}{lsb}}
+{\footnotesize\ttfamily uint8\+\_\+t O\+P\+T3101\+::device\+Register\+::lsb\mbox{[}2\mbox{]}}
+
+
+
+This is the L\+SB position of this register. The register occupies the \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a81d25c717489ac388db0fed33c35bedd}{O\+P\+T3101\+::device\+Register\+::address}} from \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a40f9e71d804ae858b6baed1f12b3cf83}{O\+P\+T3101\+::device\+Register\+::msb}} to \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a404078f369116e10b1cccfbb77c557ca}{O\+P\+T3101\+::device\+Register\+::lsb}}. 
+
+\mbox{\Hypertarget{class_o_p_t3101_1_1device_register_a40f9e71d804ae858b6baed1f12b3cf83}\label{class_o_p_t3101_1_1device_register_a40f9e71d804ae858b6baed1f12b3cf83}} 
+\index{O\+P\+T3101\+::device\+Register@{O\+P\+T3101\+::device\+Register}!msb@{msb}}
+\index{msb@{msb}!O\+P\+T3101\+::device\+Register@{O\+P\+T3101\+::device\+Register}}
+\subsubsection{\texorpdfstring{msb}{msb}}
+{\footnotesize\ttfamily uint8\+\_\+t O\+P\+T3101\+::device\+Register\+::msb\mbox{[}2\mbox{]}}
+
+
+
+This is the M\+SB position of this register. The register occupies the \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a81d25c717489ac388db0fed33c35bedd}{O\+P\+T3101\+::device\+Register\+::address}} from \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a40f9e71d804ae858b6baed1f12b3cf83}{O\+P\+T3101\+::device\+Register\+::msb}} to \mbox{\hyperlink{class_o_p_t3101_1_1device_register_a404078f369116e10b1cccfbb77c557ca}{O\+P\+T3101\+::device\+Register\+::lsb}}. 
+
+\mbox{\Hypertarget{class_o_p_t3101_1_1device_register_a058d48b4c23e22739b1c65d85367a0a8}\label{class_o_p_t3101_1_1device_register_a058d48b4c23e22739b1c65d85367a0a8}} 
+\index{O\+P\+T3101\+::device\+Register@{O\+P\+T3101\+::device\+Register}!size@{size}}
+\index{size@{size}!O\+P\+T3101\+::device\+Register@{O\+P\+T3101\+::device\+Register}}
+\subsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily uint8\+\_\+t O\+P\+T3101\+::device\+Register\+::size}
+
+
+
+This specifies how many A\+D\+D\+R\+E\+SS does this register span across. For eg\+: There are registers which span multiple address locations in chunks. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/folders/d/scripts/cpp/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\mbox{\hyperlink{register_8h}{register.\+h}}\item 
+C\+:/folders/d/scripts/cpp/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\mbox{\hyperlink{register_8cpp}{register.\+cpp}}\end{DoxyCompactItemize}

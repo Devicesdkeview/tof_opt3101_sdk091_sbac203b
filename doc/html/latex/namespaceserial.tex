@@ -1,0 +1,161 @@
+\hypertarget{namespaceserial}{}\section{serial Namespace Reference}
+\label{namespaceserial}\index{serial@{serial}}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceserial_1_1serial}{serial}}
+\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classserial_1_1_i_o_exception}{I\+O\+Exception}}
+\item 
+class \mbox{\hyperlink{classserial_1_1_millisecond_timer}{Millisecond\+Timer}}
+\item 
+struct \mbox{\hyperlink{structserial_1_1_port_info}{Port\+Info}}
+\item 
+class \mbox{\hyperlink{classserial_1_1_port_not_opened_exception}{Port\+Not\+Opened\+Exception}}
+\item 
+class \mbox{\hyperlink{classserial_1_1_serial}{Serial}}
+\item 
+class \mbox{\hyperlink{classserial_1_1_serial_exception}{Serial\+Exception}}
+\item 
+struct \mbox{\hyperlink{structserial_1_1_timeout}{Timeout}}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespaceserial_a00b3281fa11cea770c0b0c8a106080f8}{bytesize\+\_\+t}} \{ \mbox{\hyperlink{namespaceserial_a00b3281fa11cea770c0b0c8a106080f8af09eeaf7333d2feda0bd3d748d5e3123}{fivebits}} = 5, 
+\mbox{\hyperlink{namespaceserial_a00b3281fa11cea770c0b0c8a106080f8a608eb93b80fe8531d626b4e588c5bc8b}{sixbits}} = 6, 
+\mbox{\hyperlink{namespaceserial_a00b3281fa11cea770c0b0c8a106080f8a7cf0a3607e326ff6736941008ea8174d}{sevenbits}} = 7, 
+\mbox{\hyperlink{namespaceserial_a00b3281fa11cea770c0b0c8a106080f8a47f14d952cf9bed6c3f7ae5985161990}{eightbits}} = 8
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceserial_a8f45d26bf7c9a06659e75b5004a50481}{parity\+\_\+t}} \{ \newline
+\mbox{\hyperlink{namespaceserial_a8f45d26bf7c9a06659e75b5004a50481a31cbb2b3cf0870d1a089d66295918416}{parity\+\_\+none}} = 0, 
+\mbox{\hyperlink{namespaceserial_a8f45d26bf7c9a06659e75b5004a50481affd8fd58edf7c25bab458cafaebecb10}{parity\+\_\+odd}} = 1, 
+\mbox{\hyperlink{namespaceserial_a8f45d26bf7c9a06659e75b5004a50481abe15d241d407528bc8a199b02301ed46}{parity\+\_\+even}} = 2, 
+\mbox{\hyperlink{namespaceserial_a8f45d26bf7c9a06659e75b5004a50481a6d7af531414706617a23fe1926ad7ac6}{parity\+\_\+mark}} = 3, 
+\newline
+\mbox{\hyperlink{namespaceserial_a8f45d26bf7c9a06659e75b5004a50481a94681358f3d53873698fdc98d6890cef}{parity\+\_\+space}} = 4
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceserial_af5b116611d6628a3aa8f788fdc09f469}{stopbits\+\_\+t}} \{ \mbox{\hyperlink{namespaceserial_af5b116611d6628a3aa8f788fdc09f469ab70806555a14cb43e5cc43f6f3d01157}{stopbits\+\_\+one}} = 1, 
+\mbox{\hyperlink{namespaceserial_af5b116611d6628a3aa8f788fdc09f469ae0b1b8af1ece65afeacbe9fff198fa47}{stopbits\+\_\+two}} = 2, 
+\mbox{\hyperlink{namespaceserial_af5b116611d6628a3aa8f788fdc09f469abb25fb831662d361d99cf12fb0da45ec}{stopbits\+\_\+one\+\_\+point\+\_\+five}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceserial_a93ef57a314b4e562f9eded6c15d34351}{flowcontrol\+\_\+t}} \{ \mbox{\hyperlink{namespaceserial_a93ef57a314b4e562f9eded6c15d34351a083bc02a6e8e7c6540a28654c0f95bb0}{flowcontrol\+\_\+none}} = 0, 
+\mbox{\hyperlink{namespaceserial_a93ef57a314b4e562f9eded6c15d34351ab3390af5eee11740af5e09d71ad419a6}{flowcontrol\+\_\+software}}, 
+\mbox{\hyperlink{namespaceserial_a93ef57a314b4e562f9eded6c15d34351a84d411ac86fd25d659eef30aade04c43}{flowcontrol\+\_\+hardware}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structserial_1_1_port_info}{Port\+Info}} $>$ \mbox{\hyperlink{namespaceserial_a8fa048a9e4663d6d6b474c1830491a57}{list\+\_\+ports}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespaceserial_a00b3281fa11cea770c0b0c8a106080f8}\label{namespaceserial_a00b3281fa11cea770c0b0c8a106080f8}} 
+\index{serial@{serial}!bytesize\+\_\+t@{bytesize\+\_\+t}}
+\index{bytesize\+\_\+t@{bytesize\+\_\+t}!serial@{serial}}
+\subsubsection{\texorpdfstring{bytesize\+\_\+t}{bytesize\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceserial_a00b3281fa11cea770c0b0c8a106080f8}{serial\+::bytesize\+\_\+t}}}
+
+Enumeration defines the possible bytesizes for the serial port. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{fivebits@{fivebits}!serial@{serial}}\index{serial@{serial}!fivebits@{fivebits}}}\mbox{\Hypertarget{namespaceserial_a00b3281fa11cea770c0b0c8a106080f8af09eeaf7333d2feda0bd3d748d5e3123}\label{namespaceserial_a00b3281fa11cea770c0b0c8a106080f8af09eeaf7333d2feda0bd3d748d5e3123}} 
+fivebits&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sixbits@{sixbits}!serial@{serial}}\index{serial@{serial}!sixbits@{sixbits}}}\mbox{\Hypertarget{namespaceserial_a00b3281fa11cea770c0b0c8a106080f8a608eb93b80fe8531d626b4e588c5bc8b}\label{namespaceserial_a00b3281fa11cea770c0b0c8a106080f8a608eb93b80fe8531d626b4e588c5bc8b}} 
+sixbits&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sevenbits@{sevenbits}!serial@{serial}}\index{serial@{serial}!sevenbits@{sevenbits}}}\mbox{\Hypertarget{namespaceserial_a00b3281fa11cea770c0b0c8a106080f8a7cf0a3607e326ff6736941008ea8174d}\label{namespaceserial_a00b3281fa11cea770c0b0c8a106080f8a7cf0a3607e326ff6736941008ea8174d}} 
+sevenbits&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{eightbits@{eightbits}!serial@{serial}}\index{serial@{serial}!eightbits@{eightbits}}}\mbox{\Hypertarget{namespaceserial_a00b3281fa11cea770c0b0c8a106080f8a47f14d952cf9bed6c3f7ae5985161990}\label{namespaceserial_a00b3281fa11cea770c0b0c8a106080f8a47f14d952cf9bed6c3f7ae5985161990}} 
+eightbits&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespaceserial_a93ef57a314b4e562f9eded6c15d34351}\label{namespaceserial_a93ef57a314b4e562f9eded6c15d34351}} 
+\index{serial@{serial}!flowcontrol\+\_\+t@{flowcontrol\+\_\+t}}
+\index{flowcontrol\+\_\+t@{flowcontrol\+\_\+t}!serial@{serial}}
+\subsubsection{\texorpdfstring{flowcontrol\+\_\+t}{flowcontrol\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceserial_a93ef57a314b4e562f9eded6c15d34351}{serial\+::flowcontrol\+\_\+t}}}
+
+Enumeration defines the possible flowcontrol types for the serial port. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{flowcontrol\+\_\+none@{flowcontrol\+\_\+none}!serial@{serial}}\index{serial@{serial}!flowcontrol\+\_\+none@{flowcontrol\+\_\+none}}}\mbox{\Hypertarget{namespaceserial_a93ef57a314b4e562f9eded6c15d34351a083bc02a6e8e7c6540a28654c0f95bb0}\label{namespaceserial_a93ef57a314b4e562f9eded6c15d34351a083bc02a6e8e7c6540a28654c0f95bb0}} 
+flowcontrol\+\_\+none&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{flowcontrol\+\_\+software@{flowcontrol\+\_\+software}!serial@{serial}}\index{serial@{serial}!flowcontrol\+\_\+software@{flowcontrol\+\_\+software}}}\mbox{\Hypertarget{namespaceserial_a93ef57a314b4e562f9eded6c15d34351ab3390af5eee11740af5e09d71ad419a6}\label{namespaceserial_a93ef57a314b4e562f9eded6c15d34351ab3390af5eee11740af5e09d71ad419a6}} 
+flowcontrol\+\_\+software&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{flowcontrol\+\_\+hardware@{flowcontrol\+\_\+hardware}!serial@{serial}}\index{serial@{serial}!flowcontrol\+\_\+hardware@{flowcontrol\+\_\+hardware}}}\mbox{\Hypertarget{namespaceserial_a93ef57a314b4e562f9eded6c15d34351a84d411ac86fd25d659eef30aade04c43}\label{namespaceserial_a93ef57a314b4e562f9eded6c15d34351a84d411ac86fd25d659eef30aade04c43}} 
+flowcontrol\+\_\+hardware&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespaceserial_a8f45d26bf7c9a06659e75b5004a50481}\label{namespaceserial_a8f45d26bf7c9a06659e75b5004a50481}} 
+\index{serial@{serial}!parity\+\_\+t@{parity\+\_\+t}}
+\index{parity\+\_\+t@{parity\+\_\+t}!serial@{serial}}
+\subsubsection{\texorpdfstring{parity\+\_\+t}{parity\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceserial_a8f45d26bf7c9a06659e75b5004a50481}{serial\+::parity\+\_\+t}}}
+
+Enumeration defines the possible parity types for the serial port. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{parity\+\_\+none@{parity\+\_\+none}!serial@{serial}}\index{serial@{serial}!parity\+\_\+none@{parity\+\_\+none}}}\mbox{\Hypertarget{namespaceserial_a8f45d26bf7c9a06659e75b5004a50481a31cbb2b3cf0870d1a089d66295918416}\label{namespaceserial_a8f45d26bf7c9a06659e75b5004a50481a31cbb2b3cf0870d1a089d66295918416}} 
+parity\+\_\+none&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{parity\+\_\+odd@{parity\+\_\+odd}!serial@{serial}}\index{serial@{serial}!parity\+\_\+odd@{parity\+\_\+odd}}}\mbox{\Hypertarget{namespaceserial_a8f45d26bf7c9a06659e75b5004a50481affd8fd58edf7c25bab458cafaebecb10}\label{namespaceserial_a8f45d26bf7c9a06659e75b5004a50481affd8fd58edf7c25bab458cafaebecb10}} 
+parity\+\_\+odd&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{parity\+\_\+even@{parity\+\_\+even}!serial@{serial}}\index{serial@{serial}!parity\+\_\+even@{parity\+\_\+even}}}\mbox{\Hypertarget{namespaceserial_a8f45d26bf7c9a06659e75b5004a50481abe15d241d407528bc8a199b02301ed46}\label{namespaceserial_a8f45d26bf7c9a06659e75b5004a50481abe15d241d407528bc8a199b02301ed46}} 
+parity\+\_\+even&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{parity\+\_\+mark@{parity\+\_\+mark}!serial@{serial}}\index{serial@{serial}!parity\+\_\+mark@{parity\+\_\+mark}}}\mbox{\Hypertarget{namespaceserial_a8f45d26bf7c9a06659e75b5004a50481a6d7af531414706617a23fe1926ad7ac6}\label{namespaceserial_a8f45d26bf7c9a06659e75b5004a50481a6d7af531414706617a23fe1926ad7ac6}} 
+parity\+\_\+mark&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{parity\+\_\+space@{parity\+\_\+space}!serial@{serial}}\index{serial@{serial}!parity\+\_\+space@{parity\+\_\+space}}}\mbox{\Hypertarget{namespaceserial_a8f45d26bf7c9a06659e75b5004a50481a94681358f3d53873698fdc98d6890cef}\label{namespaceserial_a8f45d26bf7c9a06659e75b5004a50481a94681358f3d53873698fdc98d6890cef}} 
+parity\+\_\+space&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespaceserial_af5b116611d6628a3aa8f788fdc09f469}\label{namespaceserial_af5b116611d6628a3aa8f788fdc09f469}} 
+\index{serial@{serial}!stopbits\+\_\+t@{stopbits\+\_\+t}}
+\index{stopbits\+\_\+t@{stopbits\+\_\+t}!serial@{serial}}
+\subsubsection{\texorpdfstring{stopbits\+\_\+t}{stopbits\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceserial_af5b116611d6628a3aa8f788fdc09f469}{serial\+::stopbits\+\_\+t}}}
+
+Enumeration defines the possible stopbit types for the serial port. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{stopbits\+\_\+one@{stopbits\+\_\+one}!serial@{serial}}\index{serial@{serial}!stopbits\+\_\+one@{stopbits\+\_\+one}}}\mbox{\Hypertarget{namespaceserial_af5b116611d6628a3aa8f788fdc09f469ab70806555a14cb43e5cc43f6f3d01157}\label{namespaceserial_af5b116611d6628a3aa8f788fdc09f469ab70806555a14cb43e5cc43f6f3d01157}} 
+stopbits\+\_\+one&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{stopbits\+\_\+two@{stopbits\+\_\+two}!serial@{serial}}\index{serial@{serial}!stopbits\+\_\+two@{stopbits\+\_\+two}}}\mbox{\Hypertarget{namespaceserial_af5b116611d6628a3aa8f788fdc09f469ae0b1b8af1ece65afeacbe9fff198fa47}\label{namespaceserial_af5b116611d6628a3aa8f788fdc09f469ae0b1b8af1ece65afeacbe9fff198fa47}} 
+stopbits\+\_\+two&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{stopbits\+\_\+one\+\_\+point\+\_\+five@{stopbits\+\_\+one\+\_\+point\+\_\+five}!serial@{serial}}\index{serial@{serial}!stopbits\+\_\+one\+\_\+point\+\_\+five@{stopbits\+\_\+one\+\_\+point\+\_\+five}}}\mbox{\Hypertarget{namespaceserial_af5b116611d6628a3aa8f788fdc09f469abb25fb831662d361d99cf12fb0da45ec}\label{namespaceserial_af5b116611d6628a3aa8f788fdc09f469abb25fb831662d361d99cf12fb0da45ec}} 
+stopbits\+\_\+one\+\_\+point\+\_\+five&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespaceserial_a8fa048a9e4663d6d6b474c1830491a57}\label{namespaceserial_a8fa048a9e4663d6d6b474c1830491a57}} 
+\index{serial@{serial}!list\+\_\+ports@{list\+\_\+ports}}
+\index{list\+\_\+ports@{list\+\_\+ports}!serial@{serial}}
+\subsubsection{\texorpdfstring{list\+\_\+ports()}{list\_ports()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structserial_1_1_port_info}{Port\+Info}}$>$ serial\+::list\+\_\+ports (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+

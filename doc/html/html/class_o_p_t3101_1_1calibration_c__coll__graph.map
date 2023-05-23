@@ -1,0 +1,8 @@
+<map id="OPT3101::calibrationC" name="OPT3101::calibrationC">
+<area shape="rect" id="node2" href="$class_o_p_t3101_1_1crosstalk_temp_coff_c.html" title="Class that holds crosstalk temperature coefficient related registers and values. " alt="" coords="5,431,205,626"/>
+<area shape="rect" id="node3" href="$class_o_p_t3101_1_1phase_ambient_coff_c.html" title="Class that holds ambient phase coefficient related registers and values. " alt="" coords="230,439,429,619"/>
+<area shape="rect" id="node4" href="$class_o_p_t3101_1_1phase_offset_c.html" title="Class that holds phase offset register data. " alt="" coords="453,424,638,633"/>
+<area shape="rect" id="node5" href="$class_o_p_t3101_1_1frame_data.html" title="Class the data output from OPT3101 device. " alt="" coords="470,5,621,303"/>
+<area shape="rect" id="node6" href="$class_o_p_t3101_1_1crosstalk_c.html" title="Class that holds crosstalk related registers and values. " alt="" coords="662,365,839,692"/>
+<area shape="rect" id="node7" href="$class_o_p_t3101_1_1phase_temp_coff_c.html" title="Class that holds phase temperature coefficient related registers and values. " alt="" coords="863,439,1046,619"/>
+</map>

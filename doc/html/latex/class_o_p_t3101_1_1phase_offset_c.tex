@@ -1,0 +1,282 @@
+\hypertarget{class_o_p_t3101_1_1phase_offset_c}{}\section{O\+P\+T3101\+:\+:phase\+OffsetC Class Reference}
+\label{class_o_p_t3101_1_1phase_offset_c}\index{O\+P\+T3101\+::phase\+OffsetC@{O\+P\+T3101\+::phase\+OffsetC}}
+
+
+Class that holds phase offset register data.  
+
+
+
+
+{\ttfamily \#include $<$O\+P\+T3101\+Phase\+Offset.\+h$>$}
+
+
+
+Collaboration diagram for O\+P\+T3101\+:\+:phase\+OffsetC\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{class_o_p_t3101_1_1phase_offset_c__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_o_p_t3101_1_1phase_offset_c_af565b7d9f3261f8e9fc51c08a2f7339a}{phase\+OffsetC}} ()
+\begin{DoxyCompactList}\small\item\em initializes the members to 0 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_p_t3101_1_1phase_offset_c_a6baba22699fdb39d45adfd104a44534c}{report}} ()
+\begin{DoxyCompactList}\small\item\em reports members of the instance Print the members of the class instance on screen \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_p_t3101_1_1phase_offset_c_ae542e328ed54d6e791c1350d878d1dd0}{store\+To\+File}} (char $\ast$file\+Name)
+\begin{DoxyCompactList}\small\item\em store phase offset values to file This methods stores the phase offset values to a non-\/volatile memory. Storage to non-\/volatile memory is important to be able to calculate temperature coefficient \mbox{\hyperlink{class_o_p_t3101_1_1crosstalk_temp_coff_c}{O\+P\+T3101\+::crosstalk\+Temp\+CoffC}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_p_t3101_1_1phase_offset_c_ad6eeb78005b21ce0bd248829ae510045}{load\+From\+File}} (char $\ast$file\+Name)
+\begin{DoxyCompactList}\small\item\em load phase offset values from file This methods loads the phase offset values to a non-\/volatile memory. Storage/\+Restoration to/from non-\/volatile memory is important to be able to calculate temperature coefficient \mbox{\hyperlink{class_o_p_t3101_1_1crosstalk_temp_coff_c}{O\+P\+T3101\+::crosstalk\+Temp\+CoffC}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_o_p_t3101_1_1phase_offset_c_addeef913546f1c431b4fd189478884f9}{phase\+Offset}}
+\begin{DoxyCompactList}\small\item\em This it the 16 bit phase offset register value to be written to the device registers for correcting the delays and offsets. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{class_o_p_t3101_1_1phase_offset_c_ac77c406f9d3672254fa2b91e97a22d0c}{reference\+Distance\+In\+Codes}}
+\begin{DoxyCompactList}\small\item\em Captures a snapshot of the distances measured in \mbox{\hyperlink{class_o_p_t3101_1_1frame_data_af8661d11405953dc378ad4d7cb0f2db6}{O\+P\+T3101\+::frame\+Data\+::phase}} codes used during calibration. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_o_p_t3101_1_1phase_offset_c_a687116f5b495ca2314afd1b4cbc9bf34}{illum\+Scale}}
+\begin{DoxyCompactList}\small\item\em Captures the illumination scale used during phase offset measurement. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_o_p_t3101_1_1phase_offset_c_a606c3c6697150e9f2672c7f7ad3d08ea}{illum\+Dac}}
+\begin{DoxyCompactList}\small\item\em Captures the illumination current setting used during phase offset measurement. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_o_p_t3101_1_1phase_offset_c_a99bd3c6d218a562c98d2a842db48aaab}{illum\+D\+Cdac}}
+\begin{DoxyCompactList}\small\item\em Captures the illumination DC current setting used during phase offset measurement. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{class_o_p_t3101_1_1phase_offset_c_ab95e4dde3ea8b0ad825d315160fe33ca}{freq\+Count}}
+\begin{DoxyCompactList}\small\item\em Captures the frequency Count register \mbox{\hyperlink{class_o_p_t3101_1_1registers_a0d343738560c0bc418f34b458735a811}{O\+P\+T3101\+::registers\+::freq\+\_\+count\+\_\+read\+\_\+reg}} during phase offset measurement. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_o_p_t3101_1_1phase_offset_c_a1977598d500c18fdd2ba58cbfd8789b9}{shift\+Illum\+Phase}}
+\begin{DoxyCompactList}\small\item\em Captures the register \mbox{\hyperlink{class_o_p_t3101_1_1registers_a18539cc6fd63ce4f504fcf16b1e48f31}{O\+P\+T3101\+::registers\+::shift\+\_\+illum\+\_\+phase}} during phase offset measurement. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_o_p_t3101_1_1frame_data}{frame\+Data}} \mbox{\hyperlink{class_o_p_t3101_1_1phase_offset_c_a2db3531b8b3c643bae7af9db0e1fd040}{data}}
+\begin{DoxyCompactList}\small\item\em Captures the \mbox{\hyperlink{class_o_p_t3101_1_1frame_data}{O\+P\+T3101\+::frame\+Data}} used to calculate the \mbox{\hyperlink{class_o_p_t3101_1_1phase_offset_c_addeef913546f1c431b4fd189478884f9}{O\+P\+T3101\+::phase\+Offset\+C\+::phase\+Offset}} register. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_o_p_t3101_1_1phase_offset_c_a14c7935315901f4bd7c15982b88da40a}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_o_p_t3101_1_1phase_offset_c}{phase\+OffsetC}} $\ast$\mbox{\hyperlink{class_o_p_t3101_1_1phase_offset_c_a2db3531b8b3c643bae7af9db0e1fd040}{data}})
+\begin{DoxyCompactList}\small\item\em Operator overload to store class contents to a file Casts all the class members for file storage. \end{DoxyCompactList}\item 
+std\+::istream \& \mbox{\hyperlink{class_o_p_t3101_1_1phase_offset_c_afa58bc00875bb33c432f672980242427}{operator$>$$>$}} (std\+::istream \&is, \mbox{\hyperlink{class_o_p_t3101_1_1phase_offset_c}{phase\+OffsetC}} $\ast$\mbox{\hyperlink{class_o_p_t3101_1_1phase_offset_c_a2db3531b8b3c643bae7af9db0e1fd040}{data}})
+\begin{DoxyCompactList}\small\item\em Operator overload to load class contents to from a file Retreives all the class members from a stored file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class that holds phase offset register data. 
+
+The class contains the phase offset calibration registers and related snapshot from the device settings. Phase offset calibration is an important factory calibration that needs to be performed on every unit. The calibration is important to remove all the offsets and delays and read accurate distance or phase. The calibration involves having a target at a known distance and setting up offset register so that the device reads distance as expected. This class besides capturing the register settings also holds critical snapshot from device for analysis and debug. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_o_p_t3101_1_1phase_offset_c_af565b7d9f3261f8e9fc51c08a2f7339a}\label{class_o_p_t3101_1_1phase_offset_c_af565b7d9f3261f8e9fc51c08a2f7339a}} 
+\index{O\+P\+T3101\+::phase\+OffsetC@{O\+P\+T3101\+::phase\+OffsetC}!phase\+OffsetC@{phase\+OffsetC}}
+\index{phase\+OffsetC@{phase\+OffsetC}!O\+P\+T3101\+::phase\+OffsetC@{O\+P\+T3101\+::phase\+OffsetC}}
+\subsubsection{\texorpdfstring{phase\+Offset\+C()}{phaseOffsetC()}}
+{\footnotesize\ttfamily O\+P\+T3101\+::phase\+Offset\+C\+::phase\+OffsetC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+initializes the members to 0 
+
+\begin{DoxyReturn}{Returns}
+Nothing; 
+\end{DoxyReturn}
+{\bfseries Algorithm of the method is as follows}
+
+
+\begin{DoxyItemize}
+\item Initializes all members to 0 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_o_p_t3101_1_1phase_offset_c_ad6eeb78005b21ce0bd248829ae510045}\label{class_o_p_t3101_1_1phase_offset_c_ad6eeb78005b21ce0bd248829ae510045}} 
+\index{O\+P\+T3101\+::phase\+OffsetC@{O\+P\+T3101\+::phase\+OffsetC}!load\+From\+File@{load\+From\+File}}
+\index{load\+From\+File@{load\+From\+File}!O\+P\+T3101\+::phase\+OffsetC@{O\+P\+T3101\+::phase\+OffsetC}}
+\subsubsection{\texorpdfstring{load\+From\+File()}{loadFromFile()}}
+{\footnotesize\ttfamily void O\+P\+T3101\+::phase\+Offset\+C\+::load\+From\+File (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+load phase offset values from file This methods loads the phase offset values to a non-\/volatile memory. Storage/\+Restoration to/from non-\/volatile memory is important to be able to calculate temperature coefficient \mbox{\hyperlink{class_o_p_t3101_1_1crosstalk_temp_coff_c}{O\+P\+T3101\+::crosstalk\+Temp\+CoffC}} 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em file\+Name;} & Path and name of the file from where the crosstalk values are loaded \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing; 
+\end{DoxyReturn}
+{\bfseries Algorithm of the method is as follows}
+
+
+\begin{DoxyItemize}
+\item User needs to implement file load/restore based on host. 
+\end{DoxyItemize}\mbox{\Hypertarget{class_o_p_t3101_1_1phase_offset_c_a6baba22699fdb39d45adfd104a44534c}\label{class_o_p_t3101_1_1phase_offset_c_a6baba22699fdb39d45adfd104a44534c}} 
+\index{O\+P\+T3101\+::phase\+OffsetC@{O\+P\+T3101\+::phase\+OffsetC}!report@{report}}
+\index{report@{report}!O\+P\+T3101\+::phase\+OffsetC@{O\+P\+T3101\+::phase\+OffsetC}}
+\subsubsection{\texorpdfstring{report()}{report()}}
+{\footnotesize\ttfamily void O\+P\+T3101\+::phase\+Offset\+C\+::report (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+reports members of the instance Print the members of the class instance on screen 
+
+\begin{DoxyReturn}{Returns}
+Nothing; 
+\end{DoxyReturn}
+
+\begin{DoxyItemize}
+\item Prints all the members and values of members on screen. ~\newline
+
+\item Prints all the members and values of members on screen. 
+\end{DoxyItemize}\mbox{\Hypertarget{class_o_p_t3101_1_1phase_offset_c_ae542e328ed54d6e791c1350d878d1dd0}\label{class_o_p_t3101_1_1phase_offset_c_ae542e328ed54d6e791c1350d878d1dd0}} 
+\index{O\+P\+T3101\+::phase\+OffsetC@{O\+P\+T3101\+::phase\+OffsetC}!store\+To\+File@{store\+To\+File}}
+\index{store\+To\+File@{store\+To\+File}!O\+P\+T3101\+::phase\+OffsetC@{O\+P\+T3101\+::phase\+OffsetC}}
+\subsubsection{\texorpdfstring{store\+To\+File()}{storeToFile()}}
+{\footnotesize\ttfamily void O\+P\+T3101\+::phase\+Offset\+C\+::store\+To\+File (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+store phase offset values to file This methods stores the phase offset values to a non-\/volatile memory. Storage to non-\/volatile memory is important to be able to calculate temperature coefficient \mbox{\hyperlink{class_o_p_t3101_1_1crosstalk_temp_coff_c}{O\+P\+T3101\+::crosstalk\+Temp\+CoffC}} 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em file\+Name;} & Path and name of the file to capture the crosstalk values to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing; 
+\end{DoxyReturn}
+{\bfseries Algorithm of the method is as follows}
+
+
+\begin{DoxyItemize}
+\item User needs to implement file storage based on host. 
+\end{DoxyItemize}
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_o_p_t3101_1_1phase_offset_c_a14c7935315901f4bd7c15982b88da40a}\label{class_o_p_t3101_1_1phase_offset_c_a14c7935315901f4bd7c15982b88da40a}} 
+\index{O\+P\+T3101\+::phase\+OffsetC@{O\+P\+T3101\+::phase\+OffsetC}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!O\+P\+T3101\+::phase\+OffsetC@{O\+P\+T3101\+::phase\+OffsetC}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_o_p_t3101_1_1phase_offset_c}{phase\+OffsetC}} $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Operator overload to store class contents to a file Casts all the class members for file storage. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em os;} & os is data stream to serialize data \\
+\hline
+\mbox{\tt in}  & {\em data;} & data is pointer to the class to be serialized and stored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::ostream; Serialized std\+::ostream to be written to a file 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_o_p_t3101_1_1phase_offset_c_afa58bc00875bb33c432f672980242427}\label{class_o_p_t3101_1_1phase_offset_c_afa58bc00875bb33c432f672980242427}} 
+\index{O\+P\+T3101\+::phase\+OffsetC@{O\+P\+T3101\+::phase\+OffsetC}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!O\+P\+T3101\+::phase\+OffsetC@{O\+P\+T3101\+::phase\+OffsetC}}
+\subsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{\mbox{\hyperlink{class_o_p_t3101_1_1phase_offset_c}{phase\+OffsetC}} $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Operator overload to load class contents to from a file Retreives all the class members from a stored file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em is;} & is input stream from where the data is loaded \\
+\hline
+\mbox{\tt out}  & {\em data;} & data is pointer to the class to be restored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::istream; Serialized Input stream loaded from file 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_o_p_t3101_1_1phase_offset_c_a2db3531b8b3c643bae7af9db0e1fd040}\label{class_o_p_t3101_1_1phase_offset_c_a2db3531b8b3c643bae7af9db0e1fd040}} 
+\index{O\+P\+T3101\+::phase\+OffsetC@{O\+P\+T3101\+::phase\+OffsetC}!data@{data}}
+\index{data@{data}!O\+P\+T3101\+::phase\+OffsetC@{O\+P\+T3101\+::phase\+OffsetC}}
+\subsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_p_t3101_1_1frame_data}{frame\+Data}} O\+P\+T3101\+::phase\+Offset\+C\+::data}
+
+
+
+Captures the \mbox{\hyperlink{class_o_p_t3101_1_1frame_data}{O\+P\+T3101\+::frame\+Data}} used to calculate the \mbox{\hyperlink{class_o_p_t3101_1_1phase_offset_c_addeef913546f1c431b4fd189478884f9}{O\+P\+T3101\+::phase\+Offset\+C\+::phase\+Offset}} register. 
+
+\mbox{\Hypertarget{class_o_p_t3101_1_1phase_offset_c_ab95e4dde3ea8b0ad825d315160fe33ca}\label{class_o_p_t3101_1_1phase_offset_c_ab95e4dde3ea8b0ad825d315160fe33ca}} 
+\index{O\+P\+T3101\+::phase\+OffsetC@{O\+P\+T3101\+::phase\+OffsetC}!freq\+Count@{freq\+Count}}
+\index{freq\+Count@{freq\+Count}!O\+P\+T3101\+::phase\+OffsetC@{O\+P\+T3101\+::phase\+OffsetC}}
+\subsubsection{\texorpdfstring{freq\+Count}{freqCount}}
+{\footnotesize\ttfamily uint16\+\_\+t O\+P\+T3101\+::phase\+Offset\+C\+::freq\+Count}
+
+
+
+Captures the frequency Count register \mbox{\hyperlink{class_o_p_t3101_1_1registers_a0d343738560c0bc418f34b458735a811}{O\+P\+T3101\+::registers\+::freq\+\_\+count\+\_\+read\+\_\+reg}} during phase offset measurement. 
+
+\mbox{\Hypertarget{class_o_p_t3101_1_1phase_offset_c_a606c3c6697150e9f2672c7f7ad3d08ea}\label{class_o_p_t3101_1_1phase_offset_c_a606c3c6697150e9f2672c7f7ad3d08ea}} 
+\index{O\+P\+T3101\+::phase\+OffsetC@{O\+P\+T3101\+::phase\+OffsetC}!illum\+Dac@{illum\+Dac}}
+\index{illum\+Dac@{illum\+Dac}!O\+P\+T3101\+::phase\+OffsetC@{O\+P\+T3101\+::phase\+OffsetC}}
+\subsubsection{\texorpdfstring{illum\+Dac}{illumDac}}
+{\footnotesize\ttfamily uint8\+\_\+t O\+P\+T3101\+::phase\+Offset\+C\+::illum\+Dac}
+
+
+
+Captures the illumination current setting used during phase offset measurement. 
+
+\mbox{\Hypertarget{class_o_p_t3101_1_1phase_offset_c_a99bd3c6d218a562c98d2a842db48aaab}\label{class_o_p_t3101_1_1phase_offset_c_a99bd3c6d218a562c98d2a842db48aaab}} 
+\index{O\+P\+T3101\+::phase\+OffsetC@{O\+P\+T3101\+::phase\+OffsetC}!illum\+D\+Cdac@{illum\+D\+Cdac}}
+\index{illum\+D\+Cdac@{illum\+D\+Cdac}!O\+P\+T3101\+::phase\+OffsetC@{O\+P\+T3101\+::phase\+OffsetC}}
+\subsubsection{\texorpdfstring{illum\+D\+Cdac}{illumDCdac}}
+{\footnotesize\ttfamily uint8\+\_\+t O\+P\+T3101\+::phase\+Offset\+C\+::illum\+D\+Cdac}
+
+
+
+Captures the illumination DC current setting used during phase offset measurement. 
+
+\mbox{\Hypertarget{class_o_p_t3101_1_1phase_offset_c_a687116f5b495ca2314afd1b4cbc9bf34}\label{class_o_p_t3101_1_1phase_offset_c_a687116f5b495ca2314afd1b4cbc9bf34}} 
+\index{O\+P\+T3101\+::phase\+OffsetC@{O\+P\+T3101\+::phase\+OffsetC}!illum\+Scale@{illum\+Scale}}
+\index{illum\+Scale@{illum\+Scale}!O\+P\+T3101\+::phase\+OffsetC@{O\+P\+T3101\+::phase\+OffsetC}}
+\subsubsection{\texorpdfstring{illum\+Scale}{illumScale}}
+{\footnotesize\ttfamily uint8\+\_\+t O\+P\+T3101\+::phase\+Offset\+C\+::illum\+Scale}
+
+
+
+Captures the illumination scale used during phase offset measurement. 
+
+\mbox{\Hypertarget{class_o_p_t3101_1_1phase_offset_c_addeef913546f1c431b4fd189478884f9}\label{class_o_p_t3101_1_1phase_offset_c_addeef913546f1c431b4fd189478884f9}} 
+\index{O\+P\+T3101\+::phase\+OffsetC@{O\+P\+T3101\+::phase\+OffsetC}!phase\+Offset@{phase\+Offset}}
+\index{phase\+Offset@{phase\+Offset}!O\+P\+T3101\+::phase\+OffsetC@{O\+P\+T3101\+::phase\+OffsetC}}
+\subsubsection{\texorpdfstring{phase\+Offset}{phaseOffset}}
+{\footnotesize\ttfamily uint16\+\_\+t O\+P\+T3101\+::phase\+Offset\+C\+::phase\+Offset}
+
+
+
+This it the 16 bit phase offset register value to be written to the device registers for correcting the delays and offsets. 
+
+\mbox{\Hypertarget{class_o_p_t3101_1_1phase_offset_c_ac77c406f9d3672254fa2b91e97a22d0c}\label{class_o_p_t3101_1_1phase_offset_c_ac77c406f9d3672254fa2b91e97a22d0c}} 
+\index{O\+P\+T3101\+::phase\+OffsetC@{O\+P\+T3101\+::phase\+OffsetC}!reference\+Distance\+In\+Codes@{reference\+Distance\+In\+Codes}}
+\index{reference\+Distance\+In\+Codes@{reference\+Distance\+In\+Codes}!O\+P\+T3101\+::phase\+OffsetC@{O\+P\+T3101\+::phase\+OffsetC}}
+\subsubsection{\texorpdfstring{reference\+Distance\+In\+Codes}{referenceDistanceInCodes}}
+{\footnotesize\ttfamily uint16\+\_\+t O\+P\+T3101\+::phase\+Offset\+C\+::reference\+Distance\+In\+Codes}
+
+
+
+Captures a snapshot of the distances measured in \mbox{\hyperlink{class_o_p_t3101_1_1frame_data_af8661d11405953dc378ad4d7cb0f2db6}{O\+P\+T3101\+::frame\+Data\+::phase}} codes used during calibration. 
+
+\mbox{\Hypertarget{class_o_p_t3101_1_1phase_offset_c_a1977598d500c18fdd2ba58cbfd8789b9}\label{class_o_p_t3101_1_1phase_offset_c_a1977598d500c18fdd2ba58cbfd8789b9}} 
+\index{O\+P\+T3101\+::phase\+OffsetC@{O\+P\+T3101\+::phase\+OffsetC}!shift\+Illum\+Phase@{shift\+Illum\+Phase}}
+\index{shift\+Illum\+Phase@{shift\+Illum\+Phase}!O\+P\+T3101\+::phase\+OffsetC@{O\+P\+T3101\+::phase\+OffsetC}}
+\subsubsection{\texorpdfstring{shift\+Illum\+Phase}{shiftIllumPhase}}
+{\footnotesize\ttfamily uint8\+\_\+t O\+P\+T3101\+::phase\+Offset\+C\+::shift\+Illum\+Phase}
+
+
+
+Captures the register \mbox{\hyperlink{class_o_p_t3101_1_1registers_a18539cc6fd63ce4f504fcf16b1e48f31}{O\+P\+T3101\+::registers\+::shift\+\_\+illum\+\_\+phase}} during phase offset measurement. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/folders/d/scripts/cpp/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\mbox{\hyperlink{_o_p_t3101_phase_offset_8h}{O\+P\+T3101\+Phase\+Offset.\+h}}\item 
+C\+:/folders/d/scripts/cpp/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\mbox{\hyperlink{_o_p_t3101_phase_offset_8cpp}{O\+P\+T3101\+Phase\+Offset.\+cpp}}\end{DoxyCompactItemize}

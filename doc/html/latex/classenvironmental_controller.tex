@@ -1,0 +1,150 @@
+\hypertarget{classenvironmental_controller}{}\section{environmental\+Controller Class Reference}
+\label{classenvironmental_controller}\index{environmental\+Controller@{environmental\+Controller}}
+
+
+Generic implementation for environment controller.  
+
+
+
+
+{\ttfamily \#include $<$environment\+Control.\+h$>$}
+
+
+
+Collaboration diagram for environmental\+Controller\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classenvironmental_controller__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classenvironmental_controller_a2dbb21c983ff11a07ef763fba57b2e76}{environmental\+Controller}} ()
+\begin{DoxyCompactList}\small\item\em Constructor to initialize variables to 0. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classenvironmental_controller_a8251b7f25c6a6c5583c718bac664d05b}{set\+Target\+Distance}} (uint16\+\_\+t target\+Distance\+In\+MM)
+\begin{DoxyCompactList}\small\item\em Sets target distance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classenvironmental_controller_a3c23e944f34f2d7c0fa0b279d5fc8a3f}{set\+Chamber\+Temperature}} (int8\+\_\+t chamber\+Temperature\+InC)
+\begin{DoxyCompactList}\small\item\em Sets chamber temperature. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classenvironmental_controller_adc63a8d9dbdbcef5768cf34692c6465c}{set\+Ambient\+Light}} (uint32\+\_\+t ambient\+Light\+In\+Lux)
+\begin{DoxyCompactList}\small\item\em Sets ambient light condition. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classenvironmental_controller_a8a1fb44efff232844f00de18e174d4ce}{set\+Target\+To\+Infinity\+\_\+\+O\+R\+\_\+cover\+Photodiode}} ()
+\begin{DoxyCompactList}\small\item\em Sets target such that the amplitude of system is very low This is a crucial step to determine \mbox{\hyperlink{class_o_p_t3101_1_1crosstalk_c}{O\+P\+T3101\+::crosstalkC}} values for the \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} system. The environment\+Controller is expected to target in such a way that the amplitude of the system reads a low enough value that this can be ignored as crosstalk value. Either setting target to far enough position (or low enough reflectivity) or covering the photo diode would help achieve this. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Generic implementation for environment controller. 
+
+As part of O\+P\+T3101\+S\+DK there are several environment specific functions that need to be performed. Examples of such functions are setting up targets at particular distance, setting up chamber temperature. These are essential functions to perform the calibration of \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} based system. The setting up of these environment conditions have to be done at specific steps during calibration. The template class \mbox{\hyperlink{classenvironmental_controller}{environmental\+Controller}} makes this process simple and scalable. Appropriate methods of this class are called at relevant steps in calibration. Users using this S\+DK are expected to implement these functions based on the environment setup. ~\newline
+~\newline
+ The names of the methods reflect the conditions for the environment. For eg\+: \mbox{\hyperlink{classenvironmental_controller_a8a1fb44efff232844f00de18e174d4ce}{environmental\+Controller\+::set\+Target\+To\+Infinity\+\_\+\+O\+R\+\_\+cover\+Photodiode}} method as the name suggest is a condition where the \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} system needs to be pointed to infinity (far away from detectable range of system) or the photo diode needs to be covered so no light leaks directly between the transmitter(s) and photo diode. ~\newline
+These implementations are very specific to the host on which the S\+DK is ported and run. ~\newline
+ This abstract class provides a template with self explanatory method names which the users can override and implement their own functions. ~\newline
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classenvironmental_controller_a2dbb21c983ff11a07ef763fba57b2e76}\label{classenvironmental_controller_a2dbb21c983ff11a07ef763fba57b2e76}} 
+\index{environmental\+Controller@{environmental\+Controller}!environmental\+Controller@{environmental\+Controller}}
+\index{environmental\+Controller@{environmental\+Controller}!environmental\+Controller@{environmental\+Controller}}
+\subsubsection{\texorpdfstring{environmental\+Controller()}{environmentalController()}}
+{\footnotesize\ttfamily environmental\+Controller\+::environmental\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor to initialize variables to 0. 
+
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+{\bfseries Algorithm of the method is as follows}
+
+
+\begin{DoxyItemize}
+\item Nulls all the class members 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classenvironmental_controller_adc63a8d9dbdbcef5768cf34692c6465c}\label{classenvironmental_controller_adc63a8d9dbdbcef5768cf34692c6465c}} 
+\index{environmental\+Controller@{environmental\+Controller}!set\+Ambient\+Light@{set\+Ambient\+Light}}
+\index{set\+Ambient\+Light@{set\+Ambient\+Light}!environmental\+Controller@{environmental\+Controller}}
+\subsubsection{\texorpdfstring{set\+Ambient\+Light()}{setAmbientLight()}}
+{\footnotesize\ttfamily void environmental\+Controller\+::set\+Ambient\+Light (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ambient\+Light\+In\+Lux }\end{DoxyParamCaption})}
+
+
+
+Sets ambient light condition. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ambient\+Light\+In\+Lux;} & ambient\+Light\+In\+Lux is the intensity (in lux) of ambient light to be applied to the system to perform \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c}{O\+P\+T3101\+::phase\+Ambient\+CoffC}} measurements \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+{\bfseries Algorithm of the method is as follows} \mbox{\Hypertarget{classenvironmental_controller_a3c23e944f34f2d7c0fa0b279d5fc8a3f}\label{classenvironmental_controller_a3c23e944f34f2d7c0fa0b279d5fc8a3f}} 
+\index{environmental\+Controller@{environmental\+Controller}!set\+Chamber\+Temperature@{set\+Chamber\+Temperature}}
+\index{set\+Chamber\+Temperature@{set\+Chamber\+Temperature}!environmental\+Controller@{environmental\+Controller}}
+\subsubsection{\texorpdfstring{set\+Chamber\+Temperature()}{setChamberTemperature()}}
+{\footnotesize\ttfamily void environmental\+Controller\+::set\+Chamber\+Temperature (\begin{DoxyParamCaption}\item[{int8\+\_\+t}]{chamber\+Temperature\+InC }\end{DoxyParamCaption})}
+
+
+
+Sets chamber temperature. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em chamber\+Temperature\+In\+C;} & chamber\+Temperature\+InC is the known temperature the chamber needs to be set to and settled. This is critical for temperature related calibration steps \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+{\bfseries Algorithm of the method is as follows} \mbox{\Hypertarget{classenvironmental_controller_a8251b7f25c6a6c5583c718bac664d05b}\label{classenvironmental_controller_a8251b7f25c6a6c5583c718bac664d05b}} 
+\index{environmental\+Controller@{environmental\+Controller}!set\+Target\+Distance@{set\+Target\+Distance}}
+\index{set\+Target\+Distance@{set\+Target\+Distance}!environmental\+Controller@{environmental\+Controller}}
+\subsubsection{\texorpdfstring{set\+Target\+Distance()}{setTargetDistance()}}
+{\footnotesize\ttfamily void environmental\+Controller\+::set\+Target\+Distance (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{target\+Distance\+In\+MM }\end{DoxyParamCaption})}
+
+
+
+Sets target distance. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em target\+Distance\+In\+M\+M;} & target\+Distance\+In\+MM is the known distance where the target needs to be placed. This is expressed in mm \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+{\bfseries Algorithm of the method is as follows}
+
+
+\begin{DoxyItemize}
+\item User implemented function to set the target distance 
+\end{DoxyItemize}\mbox{\Hypertarget{classenvironmental_controller_a8a1fb44efff232844f00de18e174d4ce}\label{classenvironmental_controller_a8a1fb44efff232844f00de18e174d4ce}} 
+\index{environmental\+Controller@{environmental\+Controller}!set\+Target\+To\+Infinity\+\_\+\+O\+R\+\_\+cover\+Photodiode@{set\+Target\+To\+Infinity\+\_\+\+O\+R\+\_\+cover\+Photodiode}}
+\index{set\+Target\+To\+Infinity\+\_\+\+O\+R\+\_\+cover\+Photodiode@{set\+Target\+To\+Infinity\+\_\+\+O\+R\+\_\+cover\+Photodiode}!environmental\+Controller@{environmental\+Controller}}
+\subsubsection{\texorpdfstring{set\+Target\+To\+Infinity\+\_\+\+O\+R\+\_\+cover\+Photodiode()}{setTargetToInfinity\_OR\_coverPhotodiode()}}
+{\footnotesize\ttfamily void environmental\+Controller\+::set\+Target\+To\+Infinity\+\_\+\+O\+R\+\_\+cover\+Photodiode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets target such that the amplitude of system is very low This is a crucial step to determine \mbox{\hyperlink{class_o_p_t3101_1_1crosstalk_c}{O\+P\+T3101\+::crosstalkC}} values for the \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} system. The environment\+Controller is expected to target in such a way that the amplitude of the system reads a low enough value that this can be ignored as crosstalk value. Either setting target to far enough position (or low enough reflectivity) or covering the photo diode would help achieve this. 
+
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+{\bfseries Algorithm of the method is as follows}
+\begin{DoxyItemize}
+\item This is an empty function to convey the measurement setup required.
+\item With a cover glass in place, the system is expected to be pointed towards a target with very low reflectivity far beyond the range of the system
+\item It is also acceptable to cover the photo diode alone with an optically isolating light blocker. 
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/folders/d/scripts/cpp/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\mbox{\hyperlink{environment_control_8h}{environment\+Control.\+h}}\item 
+C\+:/folders/d/scripts/cpp/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\mbox{\hyperlink{environment_control_8cpp}{environment\+Control.\+cpp}}\end{DoxyCompactItemize}

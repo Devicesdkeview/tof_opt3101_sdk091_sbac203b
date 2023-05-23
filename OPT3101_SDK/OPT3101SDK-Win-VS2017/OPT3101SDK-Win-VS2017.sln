@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OPT3101SDK-Win-VS2017", "OPT3101SDK-Win-VS2017.vcxproj", "{2082FE8D-8160-495E-9878-FE38C23058B2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2082FE8D-8160-495E-9878-FE38C23058B2}.Release|x64.ActiveCfg = Release|x64
+		{2082FE8D-8160-495E-9878-FE38C23058B2}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {86F7CC08-E651-47A6-B00C-A8733C707A17}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,96 @@
+\hypertarget{serial_8h}{}\section{C\+:/folders/d/scripts/cpp/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/serial\+Lib/serial.h File Reference}
+\label{serial_8h}\index{C\+:/folders/d/scripts/cpp/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/serial\+Lib/serial.\+h@{C\+:/folders/d/scripts/cpp/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/serial\+Lib/serial.\+h}}
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$exception$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include \char`\"{}v8stdint.\+h\char`\"{}}\newline
+Include dependency graph for serial.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{serial_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{serial_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structserial_1_1_timeout}{serial\+::\+Timeout}}
+\item 
+class \mbox{\hyperlink{classserial_1_1_serial}{serial\+::\+Serial}}
+\item 
+class \mbox{\hyperlink{classserial_1_1_serial_exception}{serial\+::\+Serial\+Exception}}
+\item 
+class \mbox{\hyperlink{classserial_1_1_i_o_exception}{serial\+::\+I\+O\+Exception}}
+\item 
+class \mbox{\hyperlink{classserial_1_1_port_not_opened_exception}{serial\+::\+Port\+Not\+Opened\+Exception}}
+\item 
+struct \mbox{\hyperlink{structserial_1_1_port_info}{serial\+::\+Port\+Info}}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceserial}{serial}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{serial_8h_a25cffc64bd967636d69d7c3c82af1030}{T\+H\+R\+OW}}(exception\+Class,  message)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespaceserial_a00b3281fa11cea770c0b0c8a106080f8}{serial\+::bytesize\+\_\+t}} \{ \mbox{\hyperlink{namespaceserial_a00b3281fa11cea770c0b0c8a106080f8af09eeaf7333d2feda0bd3d748d5e3123}{serial\+::fivebits}} = 5, 
+\mbox{\hyperlink{namespaceserial_a00b3281fa11cea770c0b0c8a106080f8a608eb93b80fe8531d626b4e588c5bc8b}{serial\+::sixbits}} = 6, 
+\mbox{\hyperlink{namespaceserial_a00b3281fa11cea770c0b0c8a106080f8a7cf0a3607e326ff6736941008ea8174d}{serial\+::sevenbits}} = 7, 
+\mbox{\hyperlink{namespaceserial_a00b3281fa11cea770c0b0c8a106080f8a47f14d952cf9bed6c3f7ae5985161990}{serial\+::eightbits}} = 8
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceserial_a8f45d26bf7c9a06659e75b5004a50481}{serial\+::parity\+\_\+t}} \{ \newline
+\mbox{\hyperlink{namespaceserial_a8f45d26bf7c9a06659e75b5004a50481a31cbb2b3cf0870d1a089d66295918416}{serial\+::parity\+\_\+none}} = 0, 
+\mbox{\hyperlink{namespaceserial_a8f45d26bf7c9a06659e75b5004a50481affd8fd58edf7c25bab458cafaebecb10}{serial\+::parity\+\_\+odd}} = 1, 
+\mbox{\hyperlink{namespaceserial_a8f45d26bf7c9a06659e75b5004a50481abe15d241d407528bc8a199b02301ed46}{serial\+::parity\+\_\+even}} = 2, 
+\mbox{\hyperlink{namespaceserial_a8f45d26bf7c9a06659e75b5004a50481a6d7af531414706617a23fe1926ad7ac6}{serial\+::parity\+\_\+mark}} = 3, 
+\newline
+\mbox{\hyperlink{namespaceserial_a8f45d26bf7c9a06659e75b5004a50481a94681358f3d53873698fdc98d6890cef}{serial\+::parity\+\_\+space}} = 4
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceserial_af5b116611d6628a3aa8f788fdc09f469}{serial\+::stopbits\+\_\+t}} \{ \mbox{\hyperlink{namespaceserial_af5b116611d6628a3aa8f788fdc09f469ab70806555a14cb43e5cc43f6f3d01157}{serial\+::stopbits\+\_\+one}} = 1, 
+\mbox{\hyperlink{namespaceserial_af5b116611d6628a3aa8f788fdc09f469ae0b1b8af1ece65afeacbe9fff198fa47}{serial\+::stopbits\+\_\+two}} = 2, 
+\mbox{\hyperlink{namespaceserial_af5b116611d6628a3aa8f788fdc09f469abb25fb831662d361d99cf12fb0da45ec}{serial\+::stopbits\+\_\+one\+\_\+point\+\_\+five}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceserial_a93ef57a314b4e562f9eded6c15d34351}{serial\+::flowcontrol\+\_\+t}} \{ \mbox{\hyperlink{namespaceserial_a93ef57a314b4e562f9eded6c15d34351a083bc02a6e8e7c6540a28654c0f95bb0}{serial\+::flowcontrol\+\_\+none}} = 0, 
+\mbox{\hyperlink{namespaceserial_a93ef57a314b4e562f9eded6c15d34351ab3390af5eee11740af5e09d71ad419a6}{serial\+::flowcontrol\+\_\+software}}, 
+\mbox{\hyperlink{namespaceserial_a93ef57a314b4e562f9eded6c15d34351a84d411ac86fd25d659eef30aade04c43}{serial\+::flowcontrol\+\_\+hardware}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ Port\+Info $>$ \mbox{\hyperlink{namespaceserial_a8fa048a9e4663d6d6b474c1830491a57}{serial\+::list\+\_\+ports}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{serial_8h_a25cffc64bd967636d69d7c3c82af1030}\label{serial_8h_a25cffc64bd967636d69d7c3c82af1030}} 
+\index{serial.\+h@{serial.\+h}!T\+H\+R\+OW@{T\+H\+R\+OW}}
+\index{T\+H\+R\+OW@{T\+H\+R\+OW}!serial.\+h@{serial.\+h}}
+\subsubsection{\texorpdfstring{T\+H\+R\+OW}{THROW}}
+{\footnotesize\ttfamily \#define T\+H\+R\+OW(\begin{DoxyParamCaption}\item[{}]{exception\+Class,  }\item[{}]{message }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{throw} exceptionClass(\_\_FILE\_\_, \(\backslash\)
+\_\_LINE\_\_, (message) )
+\end{DoxyCode}

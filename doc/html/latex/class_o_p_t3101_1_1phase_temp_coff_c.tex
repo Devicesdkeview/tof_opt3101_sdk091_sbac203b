@@ -1,0 +1,269 @@
+\hypertarget{class_o_p_t3101_1_1phase_temp_coff_c}{}\section{O\+P\+T3101\+:\+:phase\+Temp\+CoffC Class Reference}
+\label{class_o_p_t3101_1_1phase_temp_coff_c}\index{O\+P\+T3101\+::phase\+Temp\+CoffC@{O\+P\+T3101\+::phase\+Temp\+CoffC}}
+
+
+Class that holds phase temperature coefficient related registers and values.  
+
+
+
+
+{\ttfamily \#include $<$O\+P\+T3101\+Design\+Coefficients.\+h$>$}
+
+
+
+Collaboration diagram for O\+P\+T3101\+:\+:phase\+Temp\+CoffC\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{class_o_p_t3101_1_1phase_temp_coff_c__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_o_p_t3101_1_1phase_temp_coff_c_a537d187395d87831e0004e333b1e0e94}{phase\+Temp\+CoffC}} ()
+\begin{DoxyCompactList}\small\item\em initializes the members to 0 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_p_t3101_1_1phase_temp_coff_c_a6a9ce25c87c81782b999e28c0a63a6af}{calculate\+Coff}} (\mbox{\hyperlink{class_o_p_t3101_1_1frame_data}{frame\+Data}} $\ast$frame\+Data0, \mbox{\hyperlink{class_o_p_t3101_1_1frame_data}{frame\+Data}} $\ast$frame\+Data1, bool \mbox{\hyperlink{class_o_p_t3101_1_1phase_temp_coff_c_abcd691cfc4678e3588bc1b38600632e7}{ist\+Main\+Coff}}=true)
+\begin{DoxyCompactList}\small\item\em calculates the phase temp coff \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_p_t3101_1_1phase_temp_coff_c_af41bc218f81c9bfe8ae00e0bc6a64f4f}{report}} ()
+\begin{DoxyCompactList}\small\item\em reports members of the instance Print the members of the class instance on screen \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_p_t3101_1_1phase_temp_coff_c_a05f0376e59830c4c81b37dc2042237e6}{store\+To\+File}} (char $\ast$file\+Name)
+\begin{DoxyCompactList}\small\item\em saves phase temp coff values to file This methods saves the phase temp coff values to a non-\/volatile memory. Storage/\+Restoration to/from non-\/volatile memory is important for factory calibration \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_p_t3101_1_1phase_temp_coff_c_a26e1e98384b8d69f1f8bb8f3cd88071f}{load\+From\+File}} (char $\ast$file\+Name)
+\begin{DoxyCompactList}\small\item\em load phase temp coff values from file This methods loads the phase temp coff values to a non-\/volatile memory. Storage/\+Restoration to/from non-\/volatile memory is important for factory calibration \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_o_p_t3101_1_1phase_temp_coff_c_ade7d29c7cac1e63af7910eec0ec38043}{coff}}
+\begin{DoxyCompactList}\small\item\em Coefficient stores in floating point precision.\+Units for this measurement is \mbox{\hyperlink{class_o_p_t3101_1_1frame_data_af8661d11405953dc378ad4d7cb0f2db6}{O\+P\+T3101\+::frame\+Data\+::phase}} codes (16 bit level) codes change per unit of temperature sensor codes (\mbox{\hyperlink{class_o_p_t3101_1_1registers_a3dfd8d81d4cb04d274007deb7c6122fc}{O\+P\+T3101\+::registers\+::tmain}} or \mbox{\hyperlink{class_o_p_t3101_1_1registers_a8a097a41ecdf2b98226c4a3a92121c12}{O\+P\+T3101\+::registers\+::tillum}} based on \mbox{\hyperlink{class_o_p_t3101_1_1phase_temp_coff_c_abcd691cfc4678e3588bc1b38600632e7}{O\+P\+T3101\+::phase\+Temp\+Coff\+C\+::ist\+Main\+Coff}}. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{class_o_p_t3101_1_1phase_temp_coff_c_a69e1782e097ce7ab761e4e55b5206f2e}{coff\+Reg}}
+\begin{DoxyCompactList}\small\item\em Coefficient value of \mbox{\hyperlink{class_o_p_t3101_1_1phase_temp_coff_c_ade7d29c7cac1e63af7910eec0ec38043}{O\+P\+T3101\+::phase\+Temp\+Coff\+C\+::coff}} represented as 16bit register setting. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_o_p_t3101_1_1phase_temp_coff_c_a0f7646d71d058bc5354ac8f14270fcf3}{common\+Scale}}
+\begin{DoxyCompactList}\small\item\em Common scale of \mbox{\hyperlink{class_o_p_t3101_1_1phase_temp_coff_c_a69e1782e097ce7ab761e4e55b5206f2e}{O\+P\+T3101\+::phase\+Temp\+Coff\+C\+::coff\+Reg}} calculated based on various \mbox{\hyperlink{class_o_p_t3101_1_1phase_temp_coff_c}{O\+P\+T3101\+::phase\+Temp\+CoffC}} class instances. This is calculated by \mbox{\hyperlink{class_o_p_t3101_1_1calibration_c_a5ca75c8e4d7818a90cacc0471522b365}{O\+P\+T3101\+::calibration\+C\+::find\+Phase\+Temp\+Register\+Values}} during production calibration. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_o_p_t3101_1_1phase_temp_coff_c_abcd691cfc4678e3588bc1b38600632e7}{ist\+Main\+Coff}}
+\begin{DoxyCompactList}\small\item\em Flag which determines if the coefficient was obtained using \mbox{\hyperlink{class_o_p_t3101_1_1registers_a3dfd8d81d4cb04d274007deb7c6122fc}{O\+P\+T3101\+::registers\+::tmain}} difference or \mbox{\hyperlink{class_o_p_t3101_1_1registers_a8a097a41ecdf2b98226c4a3a92121c12}{O\+P\+T3101\+::registers\+::tillum}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_o_p_t3101_1_1phase_temp_coff_c_a2d7a662f1af9735bc8cae566975afbec}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_o_p_t3101_1_1phase_temp_coff_c}{phase\+Temp\+CoffC}} $\ast$data)
+\begin{DoxyCompactList}\small\item\em Operator overload to store class contents to a file Casts all the class members for file storage. \end{DoxyCompactList}\item 
+std\+::istream \& \mbox{\hyperlink{class_o_p_t3101_1_1phase_temp_coff_c_aaf30671f3ce159d515fd178309007701}{operator$>$$>$}} (std\+::istream \&is, \mbox{\hyperlink{class_o_p_t3101_1_1phase_temp_coff_c}{phase\+Temp\+CoffC}} $\ast$data)
+\begin{DoxyCompactList}\small\item\em Operator overload to load class contents to from a file Retrieves all the class members from a stored file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class that holds phase temperature coefficient related registers and values. 
+
+This is a class container that can hold phase/phase offset temperature coefficients and related register values. \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} A\+FE phase measurement drifts over temperature. This drift is primarily due to change in delay in the path of the TX channels. The drift will show up in \mbox{\hyperlink{class_o_p_t3101_1_1frame_data_af8661d11405953dc378ad4d7cb0f2db6}{O\+P\+T3101\+::frame\+Data\+::phase}} measurement which will translate to error in measurement.~\newline
+ \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} has mechanism to compensate the output for this drift, for which phase temperature coefficient is required. Either internal temp sensor or external temperature sensor can be used to compensate for this. This class acts as a temporary storage of phase temp coefficients and related registers. Calculations have to be made on the phase offsets and frame data, coefficients to transform them to register settings. Instances of \mbox{\hyperlink{class_o_p_t3101_1_1frame_data}{O\+P\+T3101\+::frame\+Data}} taken at different temperature will be used to calculate these coefficients and registers. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_o_p_t3101_1_1phase_temp_coff_c_a537d187395d87831e0004e333b1e0e94}\label{class_o_p_t3101_1_1phase_temp_coff_c_a537d187395d87831e0004e333b1e0e94}} 
+\index{O\+P\+T3101\+::phase\+Temp\+CoffC@{O\+P\+T3101\+::phase\+Temp\+CoffC}!phase\+Temp\+CoffC@{phase\+Temp\+CoffC}}
+\index{phase\+Temp\+CoffC@{phase\+Temp\+CoffC}!O\+P\+T3101\+::phase\+Temp\+CoffC@{O\+P\+T3101\+::phase\+Temp\+CoffC}}
+\subsubsection{\texorpdfstring{phase\+Temp\+Coff\+C()}{phaseTempCoffC()}}
+{\footnotesize\ttfamily O\+P\+T3101\+::phase\+Temp\+Coff\+C\+::phase\+Temp\+CoffC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+initializes the members to 0 
+
+\begin{DoxyReturn}{Returns}
+Nothing; 
+\end{DoxyReturn}
+{\bfseries Algorithm of the method is as follows}
+
+
+\begin{DoxyItemize}
+\item Initializes all members to 0. Sets \mbox{\hyperlink{class_o_p_t3101_1_1phase_temp_coff_c_abcd691cfc4678e3588bc1b38600632e7}{O\+P\+T3101\+::phase\+Temp\+Coff\+C\+::ist\+Main\+Coff}} to true 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_o_p_t3101_1_1phase_temp_coff_c_a6a9ce25c87c81782b999e28c0a63a6af}\label{class_o_p_t3101_1_1phase_temp_coff_c_a6a9ce25c87c81782b999e28c0a63a6af}} 
+\index{O\+P\+T3101\+::phase\+Temp\+CoffC@{O\+P\+T3101\+::phase\+Temp\+CoffC}!calculate\+Coff@{calculate\+Coff}}
+\index{calculate\+Coff@{calculate\+Coff}!O\+P\+T3101\+::phase\+Temp\+CoffC@{O\+P\+T3101\+::phase\+Temp\+CoffC}}
+\subsubsection{\texorpdfstring{calculate\+Coff()}{calculateCoff()}}
+{\footnotesize\ttfamily void O\+P\+T3101\+::phase\+Temp\+Coff\+C\+::calculate\+Coff (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_p_t3101_1_1frame_data}{O\+P\+T3101\+::frame\+Data}} $\ast$}]{frame\+Data0,  }\item[{\mbox{\hyperlink{class_o_p_t3101_1_1frame_data}{O\+P\+T3101\+::frame\+Data}} $\ast$}]{frame\+Data1,  }\item[{bool}]{ist\+Main\+Coff = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+calculates the phase temp coff 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em frame\+Data0;} & Pointer to frame data \mbox{\hyperlink{class_o_p_t3101_1_1frame_data}{O\+P\+T3101\+::frame\+Data}} instance measured at a lower temperature \\
+\hline
+\mbox{\tt in}  & {\em frame\+Data1;} & Pointer to frame data \mbox{\hyperlink{class_o_p_t3101_1_1frame_data}{O\+P\+T3101\+::frame\+Data}} instance measured at a higher temperature \\
+\hline
+\mbox{\tt in}  & {\em ist\+Main\+Coff;} & ist\+Main\+Coff specifies if the calculation should be done with Tmain Coff \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing; 
+\end{DoxyReturn}
+{\bfseries Algorithm of the method is as follows}
+
+
+\begin{DoxyItemize}
+\item Makes the data base circular to avoid errorneous high slope measurements
+\item Assigns \mbox{\hyperlink{class_o_p_t3101_1_1phase_temp_coff_c_abcd691cfc4678e3588bc1b38600632e7}{O\+P\+T3101\+::phase\+Temp\+Coff\+C\+::ist\+Main\+Coff}} to the value assigned by argument
+\item Calculates the double precision \mbox{\hyperlink{class_o_p_t3101_1_1phase_temp_coff_c_ade7d29c7cac1e63af7910eec0ec38043}{O\+P\+T3101\+::phase\+Temp\+Coff\+C\+::coff}} by finding difference between \mbox{\hyperlink{class_o_p_t3101_1_1frame_data_af8661d11405953dc378ad4d7cb0f2db6}{O\+P\+T3101\+::frame\+Data\+::phase}} divided by delta \mbox{\hyperlink{class_o_p_t3101_1_1frame_data_ae75ca7e9fa494b4d711eb070d5cab45b}{O\+P\+T3101\+::frame\+Data\+::tmain}} or \mbox{\hyperlink{class_o_p_t3101_1_1frame_data_aeb1934ab0ac8d1f846cf166ef26ceb75}{O\+P\+T3101\+::frame\+Data\+::tillum}} based on input flag
+\item {\bfseries Warning\+:} Makes the \mbox{\hyperlink{class_o_p_t3101_1_1phase_temp_coff_c_ade7d29c7cac1e63af7910eec0ec38043}{O\+P\+T3101\+::phase\+Temp\+Coff\+C\+::coff}} 0 if the \mbox{\hyperlink{class_o_p_t3101_1_1frame_data_ae75ca7e9fa494b4d711eb070d5cab45b}{O\+P\+T3101\+::frame\+Data\+::tmain}} or \mbox{\hyperlink{class_o_p_t3101_1_1frame_data_aeb1934ab0ac8d1f846cf166ef26ceb75}{O\+P\+T3101\+::frame\+Data\+::tillum}} are same for both the input arguments 
+\end{DoxyItemize}\mbox{\Hypertarget{class_o_p_t3101_1_1phase_temp_coff_c_a26e1e98384b8d69f1f8bb8f3cd88071f}\label{class_o_p_t3101_1_1phase_temp_coff_c_a26e1e98384b8d69f1f8bb8f3cd88071f}} 
+\index{O\+P\+T3101\+::phase\+Temp\+CoffC@{O\+P\+T3101\+::phase\+Temp\+CoffC}!load\+From\+File@{load\+From\+File}}
+\index{load\+From\+File@{load\+From\+File}!O\+P\+T3101\+::phase\+Temp\+CoffC@{O\+P\+T3101\+::phase\+Temp\+CoffC}}
+\subsubsection{\texorpdfstring{load\+From\+File()}{loadFromFile()}}
+{\footnotesize\ttfamily void O\+P\+T3101\+::phase\+Temp\+Coff\+C\+::load\+From\+File (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+load phase temp coff values from file This methods loads the phase temp coff values to a non-\/volatile memory. Storage/\+Restoration to/from non-\/volatile memory is important for factory calibration 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em file\+Name;} & Path and name of the file from where to load \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing; 
+\end{DoxyReturn}
+{\bfseries Algorithm of the method is as follows}
+
+
+\begin{DoxyItemize}
+\item User needs to implement file load/restore based on host. 
+\end{DoxyItemize}\mbox{\Hypertarget{class_o_p_t3101_1_1phase_temp_coff_c_af41bc218f81c9bfe8ae00e0bc6a64f4f}\label{class_o_p_t3101_1_1phase_temp_coff_c_af41bc218f81c9bfe8ae00e0bc6a64f4f}} 
+\index{O\+P\+T3101\+::phase\+Temp\+CoffC@{O\+P\+T3101\+::phase\+Temp\+CoffC}!report@{report}}
+\index{report@{report}!O\+P\+T3101\+::phase\+Temp\+CoffC@{O\+P\+T3101\+::phase\+Temp\+CoffC}}
+\subsubsection{\texorpdfstring{report()}{report()}}
+{\footnotesize\ttfamily void O\+P\+T3101\+::phase\+Temp\+Coff\+C\+::report (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+reports members of the instance Print the members of the class instance on screen 
+
+\begin{DoxyReturn}{Returns}
+Nothing; 
+\end{DoxyReturn}
+{\bfseries Algorithm of the method is as follows}
+
+
+\begin{DoxyItemize}
+\item Prints all the members and values of members on screen. ~\newline
+
+\item Prints all the members and values of members on screen. 
+\end{DoxyItemize}\mbox{\Hypertarget{class_o_p_t3101_1_1phase_temp_coff_c_a05f0376e59830c4c81b37dc2042237e6}\label{class_o_p_t3101_1_1phase_temp_coff_c_a05f0376e59830c4c81b37dc2042237e6}} 
+\index{O\+P\+T3101\+::phase\+Temp\+CoffC@{O\+P\+T3101\+::phase\+Temp\+CoffC}!store\+To\+File@{store\+To\+File}}
+\index{store\+To\+File@{store\+To\+File}!O\+P\+T3101\+::phase\+Temp\+CoffC@{O\+P\+T3101\+::phase\+Temp\+CoffC}}
+\subsubsection{\texorpdfstring{store\+To\+File()}{storeToFile()}}
+{\footnotesize\ttfamily void O\+P\+T3101\+::phase\+Temp\+Coff\+C\+::store\+To\+File (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+saves phase temp coff values to file This methods saves the phase temp coff values to a non-\/volatile memory. Storage/\+Restoration to/from non-\/volatile memory is important for factory calibration 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em file\+Name;} & Path and name of the file to store \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing; 
+\end{DoxyReturn}
+{\bfseries Algorithm of the method is as follows}
+
+
+\begin{DoxyItemize}
+\item User needs to implement file storage based on host. 
+\end{DoxyItemize}
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_o_p_t3101_1_1phase_temp_coff_c_a2d7a662f1af9735bc8cae566975afbec}\label{class_o_p_t3101_1_1phase_temp_coff_c_a2d7a662f1af9735bc8cae566975afbec}} 
+\index{O\+P\+T3101\+::phase\+Temp\+CoffC@{O\+P\+T3101\+::phase\+Temp\+CoffC}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!O\+P\+T3101\+::phase\+Temp\+CoffC@{O\+P\+T3101\+::phase\+Temp\+CoffC}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_o_p_t3101_1_1phase_temp_coff_c}{phase\+Temp\+CoffC}} $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Operator overload to store class contents to a file Casts all the class members for file storage. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em os;} & os is data stream to serialize data \\
+\hline
+\mbox{\tt in}  & {\em data;} & data is pointer to the class to be serialized and stored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::ostream; Serialized std\+::ostream to be written to a file 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_o_p_t3101_1_1phase_temp_coff_c_aaf30671f3ce159d515fd178309007701}\label{class_o_p_t3101_1_1phase_temp_coff_c_aaf30671f3ce159d515fd178309007701}} 
+\index{O\+P\+T3101\+::phase\+Temp\+CoffC@{O\+P\+T3101\+::phase\+Temp\+CoffC}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!O\+P\+T3101\+::phase\+Temp\+CoffC@{O\+P\+T3101\+::phase\+Temp\+CoffC}}
+\subsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{\mbox{\hyperlink{class_o_p_t3101_1_1phase_temp_coff_c}{phase\+Temp\+CoffC}} $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Operator overload to load class contents to from a file Retrieves all the class members from a stored file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em is;} & is input stream from where the data is loaded \\
+\hline
+\mbox{\tt out}  & {\em data;} & data is pointer to the class to be restored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::istream; Serialized Input stream loaded from file 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_o_p_t3101_1_1phase_temp_coff_c_ade7d29c7cac1e63af7910eec0ec38043}\label{class_o_p_t3101_1_1phase_temp_coff_c_ade7d29c7cac1e63af7910eec0ec38043}} 
+\index{O\+P\+T3101\+::phase\+Temp\+CoffC@{O\+P\+T3101\+::phase\+Temp\+CoffC}!coff@{coff}}
+\index{coff@{coff}!O\+P\+T3101\+::phase\+Temp\+CoffC@{O\+P\+T3101\+::phase\+Temp\+CoffC}}
+\subsubsection{\texorpdfstring{coff}{coff}}
+{\footnotesize\ttfamily double O\+P\+T3101\+::phase\+Temp\+Coff\+C\+::coff}
+
+
+
+Coefficient stores in floating point precision.\+Units for this measurement is \mbox{\hyperlink{class_o_p_t3101_1_1frame_data_af8661d11405953dc378ad4d7cb0f2db6}{O\+P\+T3101\+::frame\+Data\+::phase}} codes (16 bit level) codes change per unit of temperature sensor codes (\mbox{\hyperlink{class_o_p_t3101_1_1registers_a3dfd8d81d4cb04d274007deb7c6122fc}{O\+P\+T3101\+::registers\+::tmain}} or \mbox{\hyperlink{class_o_p_t3101_1_1registers_a8a097a41ecdf2b98226c4a3a92121c12}{O\+P\+T3101\+::registers\+::tillum}} based on \mbox{\hyperlink{class_o_p_t3101_1_1phase_temp_coff_c_abcd691cfc4678e3588bc1b38600632e7}{O\+P\+T3101\+::phase\+Temp\+Coff\+C\+::ist\+Main\+Coff}}. 
+
+\mbox{\Hypertarget{class_o_p_t3101_1_1phase_temp_coff_c_a69e1782e097ce7ab761e4e55b5206f2e}\label{class_o_p_t3101_1_1phase_temp_coff_c_a69e1782e097ce7ab761e4e55b5206f2e}} 
+\index{O\+P\+T3101\+::phase\+Temp\+CoffC@{O\+P\+T3101\+::phase\+Temp\+CoffC}!coff\+Reg@{coff\+Reg}}
+\index{coff\+Reg@{coff\+Reg}!O\+P\+T3101\+::phase\+Temp\+CoffC@{O\+P\+T3101\+::phase\+Temp\+CoffC}}
+\subsubsection{\texorpdfstring{coff\+Reg}{coffReg}}
+{\footnotesize\ttfamily uint16\+\_\+t O\+P\+T3101\+::phase\+Temp\+Coff\+C\+::coff\+Reg}
+
+
+
+Coefficient value of \mbox{\hyperlink{class_o_p_t3101_1_1phase_temp_coff_c_ade7d29c7cac1e63af7910eec0ec38043}{O\+P\+T3101\+::phase\+Temp\+Coff\+C\+::coff}} represented as 16bit register setting. 
+
+\mbox{\Hypertarget{class_o_p_t3101_1_1phase_temp_coff_c_a0f7646d71d058bc5354ac8f14270fcf3}\label{class_o_p_t3101_1_1phase_temp_coff_c_a0f7646d71d058bc5354ac8f14270fcf3}} 
+\index{O\+P\+T3101\+::phase\+Temp\+CoffC@{O\+P\+T3101\+::phase\+Temp\+CoffC}!common\+Scale@{common\+Scale}}
+\index{common\+Scale@{common\+Scale}!O\+P\+T3101\+::phase\+Temp\+CoffC@{O\+P\+T3101\+::phase\+Temp\+CoffC}}
+\subsubsection{\texorpdfstring{common\+Scale}{commonScale}}
+{\footnotesize\ttfamily uint8\+\_\+t O\+P\+T3101\+::phase\+Temp\+Coff\+C\+::common\+Scale}
+
+
+
+Common scale of \mbox{\hyperlink{class_o_p_t3101_1_1phase_temp_coff_c_a69e1782e097ce7ab761e4e55b5206f2e}{O\+P\+T3101\+::phase\+Temp\+Coff\+C\+::coff\+Reg}} calculated based on various \mbox{\hyperlink{class_o_p_t3101_1_1phase_temp_coff_c}{O\+P\+T3101\+::phase\+Temp\+CoffC}} class instances. This is calculated by \mbox{\hyperlink{class_o_p_t3101_1_1calibration_c_a5ca75c8e4d7818a90cacc0471522b365}{O\+P\+T3101\+::calibration\+C\+::find\+Phase\+Temp\+Register\+Values}} during production calibration. 
+
+\mbox{\Hypertarget{class_o_p_t3101_1_1phase_temp_coff_c_abcd691cfc4678e3588bc1b38600632e7}\label{class_o_p_t3101_1_1phase_temp_coff_c_abcd691cfc4678e3588bc1b38600632e7}} 
+\index{O\+P\+T3101\+::phase\+Temp\+CoffC@{O\+P\+T3101\+::phase\+Temp\+CoffC}!ist\+Main\+Coff@{ist\+Main\+Coff}}
+\index{ist\+Main\+Coff@{ist\+Main\+Coff}!O\+P\+T3101\+::phase\+Temp\+CoffC@{O\+P\+T3101\+::phase\+Temp\+CoffC}}
+\subsubsection{\texorpdfstring{ist\+Main\+Coff}{istMainCoff}}
+{\footnotesize\ttfamily bool O\+P\+T3101\+::phase\+Temp\+Coff\+C\+::ist\+Main\+Coff}
+
+
+
+Flag which determines if the coefficient was obtained using \mbox{\hyperlink{class_o_p_t3101_1_1registers_a3dfd8d81d4cb04d274007deb7c6122fc}{O\+P\+T3101\+::registers\+::tmain}} difference or \mbox{\hyperlink{class_o_p_t3101_1_1registers_a8a097a41ecdf2b98226c4a3a92121c12}{O\+P\+T3101\+::registers\+::tillum}}. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/folders/d/scripts/cpp/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\mbox{\hyperlink{_o_p_t3101_design_coefficients_8h}{O\+P\+T3101\+Design\+Coefficients.\+h}}\item 
+C\+:/folders/d/scripts/cpp/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\mbox{\hyperlink{_o_p_t3101_design_coefficients_8cpp}{O\+P\+T3101\+Design\+Coefficients.\+cpp}}\end{DoxyCompactItemize}

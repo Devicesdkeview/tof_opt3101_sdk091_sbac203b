@@ -1,0 +1,868 @@
+\hypertarget{class_o_p_t3101device}{}\section{O\+P\+T3101device Class Reference}
+\label{class_o_p_t3101device}\index{O\+P\+T3101device@{O\+P\+T3101device}}
+
+
+{\ttfamily \#include $<$O\+P\+T3101device.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_o_p_t3101device_a3d4ce370caefb0970a83e01e1d5f1f90}{O\+P\+T3101device}} (void)
+\item 
+void \mbox{\hyperlink{class_o_p_t3101device_a2e9a97e6eddcd15a03e68f0f43012d55}{reset}} (void)
+\item 
+void \mbox{\hyperlink{class_o_p_t3101device_a98d04c9a5359b4d62534556e6a3db290}{initialize}} (void)
+\item 
+void \mbox{\hyperlink{class_o_p_t3101device_a041db5eb4a5a900ca5fff0c61ee8f7ab}{measure\+And\+Correct\+Internal\+Crosstalk}} (\mbox{\hyperlink{class_o_p_t3101_1_1crosstalk_c}{O\+P\+T3101\+::crosstalkC}} $\ast$internal\+Xtalk)
+\item 
+void \mbox{\hyperlink{class_o_p_t3101device_af0f08d859f6d8da0d894fa1d4ff5529b}{measure\+Illum\+Crosstalk}} (\mbox{\hyperlink{class_o_p_t3101_1_1crosstalk_c}{O\+P\+T3101\+::crosstalkC}} $\ast$illum\+Xtalk, uint8\+\_\+t tx\+Channel, char register\+Set, uint8\+\_\+t shift\+Illum\+Phase=0)
+\item 
+void \mbox{\hyperlink{class_o_p_t3101device_ace7558bef9a42a7103a60fb91c196e4d}{measure\+Phase\+Offset}} (\mbox{\hyperlink{class_o_p_t3101_1_1phase_offset_c}{O\+P\+T3101\+::phase\+OffsetC}} $\ast$phase\+Offset, uint8\+\_\+t tx\+Channel, char registerset, uint16\+\_\+t ref\+Distance\+In\+Codes, uint8\+\_\+t shift\+Illum\+Phase=0)
+\item 
+void \mbox{\hyperlink{class_o_p_t3101device_aea3e493b07770dcff587bc38c4049611}{load\+Illum\+Crosstalk}} (\mbox{\hyperlink{class_o_p_t3101_1_1crosstalk_c}{O\+P\+T3101\+::crosstalkC}} $\ast$illum\+Xtalk, uint8\+\_\+t tx\+Channel, char register\+Set)
+\item 
+void \mbox{\hyperlink{class_o_p_t3101device_af5b25dc0fd4829e7027e724ee16cc059}{load\+Phase\+Offset}} (\mbox{\hyperlink{class_o_p_t3101_1_1phase_offset_c}{O\+P\+T3101\+::phase\+OffsetC}} $\ast$phase\+Offset, uint8\+\_\+t tx\+Channel, char register\+Set)
+\item 
+void \mbox{\hyperlink{class_o_p_t3101device_ad5782b69e7af9d5cf4db1bd2ba9caf67}{load\+Illum\+Crosstalk\+Temp\+Coff}} (\mbox{\hyperlink{class_o_p_t3101_1_1crosstalk_temp_coff_c}{O\+P\+T3101\+::crosstalk\+Temp\+CoffC}} $\ast$illum\+Xtalk\+Temp\+Coff, uint8\+\_\+t tx\+Channel, char register\+Set)
+\item 
+void \mbox{\hyperlink{class_o_p_t3101device_a72d8a44690cd8d65852522612478b067}{load\+Phase\+Offset\+Temp\+Coff}} (\mbox{\hyperlink{class_o_p_t3101phase_temp_coff}{O\+P\+T3101phase\+Temp\+Coff}} $\ast$phase\+Temp\+Coff, uint8\+\_\+t tx\+Channel, char register\+Set)
+\item 
+void \mbox{\hyperlink{class_o_p_t3101device_a58c9087de66fea64ac3ab69fc6a37288}{load\+Phase\+Ambient\+Coff}} (\mbox{\hyperlink{class_o_p_t3101phase_ambient_coff}{O\+P\+T3101phase\+Ambient\+Coff}} $\ast$phase\+Ambient\+Coff)
+\item 
+void \mbox{\hyperlink{class_o_p_t3101device_af18fa1d1db587c0e220d0bbc955662a9}{load\+Illum\+Crosstalk\+Set}} (void)
+\item 
+void \mbox{\hyperlink{class_o_p_t3101device_a00d7d06d232d29570cbc6f751b991419}{load\+Illum\+Crosstalk\+Temp\+Coff\+Set}} (void)
+\item 
+void \mbox{\hyperlink{class_o_p_t3101device_accaae5aebd551e2198567c1131887700}{load\+Phase\+Offset\+Set}} (void)
+\item 
+void \mbox{\hyperlink{class_o_p_t3101device_a01faedadfb6abb470781ae01fe6b744e}{load\+Phase\+Offset\+Temp\+Coff\+Set}} (void)
+\item 
+void \mbox{\hyperlink{class_o_p_t3101device_aa4cf1fb930424717a4e7fb969b68bde6}{load\+Phase\+Ambient\+Coff\+Set}} (void)
+\item 
+void \mbox{\hyperlink{class_o_p_t3101device_af2dc559857f5d8d209b9f10c3f1cd758}{calibration\+Session\+\_\+first\+Time\+Bring\+Up}} (void)
+\item 
+void \mbox{\hyperlink{class_o_p_t3101device_a545184fdfeca4a576d613ef190131c05}{calibration\+Session\+\_\+per\+Design\+Calibration\+Crosstalk\+Temp}} (void)
+\item 
+void \mbox{\hyperlink{class_o_p_t3101device_a7b7bc05a1555200f13abda6f08218ad7}{calibration\+Session\+\_\+per\+Design\+Calibration\+Phase\+Temp}} (void)
+\item 
+void \mbox{\hyperlink{class_o_p_t3101device_aee76419eb68c21ce03cb92818d485a6a}{calibration\+Session\+\_\+per\+Design\+Calibration\+Phase\+Ambient}} (void)
+\item 
+void \mbox{\hyperlink{class_o_p_t3101device_a873af9bc068728c4ded36435065b448c}{calibration\+Session\+\_\+per\+Unit\+Factory\+Calibration}} (void)
+\item 
+void \mbox{\hyperlink{class_o_p_t3101device_a6d9e6e45e260f4af1a874b5075105792}{calibration\+Session\+\_\+per\+Unit\+Factory\+Calibration\+Write\+Register\+Data\+To\+E\+E\+P\+R\+OM}} (void)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_o_p_t3101_1_1registers}{O\+P\+T3101\+::registers}} \mbox{\hyperlink{class_o_p_t3101device_a702787c83b68e71d5db5ec8cdac57ba0}{reg}}
+\item 
+\mbox{\hyperlink{class_o_p_t3101_calibration}{O\+P\+T3101\+Calibration}} \mbox{\hyperlink{class_o_p_t3101device_a8f1283a73fbfac90ccc2a8f5ab6ae382}{calibration}}
+\item 
+bool \mbox{\hyperlink{class_o_p_t3101device_aef9e49f763e74af7ec44f8adfe58879e}{configuration\+Flags\+\_\+monoshot\+Mode}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_o_p_t3101device_a77ca0f4554ea37a86be99b88818365ac}{configuration\+Flags\+\_\+xtalk\+Filter\+Tau}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_o_p_t3101device_a6518ba457e85d945792dbd80114e40d8}{configuration\+Flags\+\_\+xtalk\+Settling\+One\+Tau\+In\+Milli\+Seconds}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_o_p_t3101device_a3f84d9487e61d5141a89d01058d799a9}{configuration\+Flags\+\_\+xtalk\+Settling\+One\+Tau\+In\+Data\+Ready\+Counts}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_o_p_t3101device_a09ebfac6870717c9ae9152c42db29362}{configuration\+Flags\+\_\+avg\+Frame\+Count\+Exponent\+Of\+Two}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_o_p_t3101device_ae38d48a69ae6c79669cde8a8746ef6f0}{configuration\+Flags\+\_\+frame\+Time\+In\+Milli\+Seconds}}
+\item 
+bool \mbox{\hyperlink{class_o_p_t3101device_afbfcfa5559df6b5fab71be3f465545da}{configuration\+Flags\+\_\+is\+T\+X\+Channel\+Active}} \mbox{[}3\mbox{]}
+\item 
+bool \mbox{\hyperlink{class_o_p_t3101device_a6e157c52c4ae15e416686b2a6abe5299}{configuration\+Flags\+\_\+is\+Register\+Set\+Active}} \mbox{[}2\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_o_p_t3101device_a3d4ce370caefb0970a83e01e1d5f1f90}\label{class_o_p_t3101device_a3d4ce370caefb0970a83e01e1d5f1f90}} 
+\index{O\+P\+T3101device@{O\+P\+T3101device}!O\+P\+T3101device@{O\+P\+T3101device}}
+\index{O\+P\+T3101device@{O\+P\+T3101device}!O\+P\+T3101device@{O\+P\+T3101device}}
+\subsubsection{\texorpdfstring{O\+P\+T3101device()}{OPT3101device()}}
+{\footnotesize\ttfamily O\+P\+T3101device\+::\+O\+P\+T3101device (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_o_p_t3101device_af2dc559857f5d8d209b9f10c3f1cd758}\label{class_o_p_t3101device_af2dc559857f5d8d209b9f10c3f1cd758}} 
+\index{O\+P\+T3101device@{O\+P\+T3101device}!calibration\+Session\+\_\+first\+Time\+Bring\+Up@{calibration\+Session\+\_\+first\+Time\+Bring\+Up}}
+\index{calibration\+Session\+\_\+first\+Time\+Bring\+Up@{calibration\+Session\+\_\+first\+Time\+Bring\+Up}!O\+P\+T3101device@{O\+P\+T3101device}}
+\subsubsection{\texorpdfstring{calibration\+Session\+\_\+first\+Time\+Bring\+Up()}{calibrationSession\_firstTimeBringUp()}}
+{\footnotesize\ttfamily void O\+P\+T3101device\+::calibration\+Session\+\_\+first\+Time\+Bring\+Up (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+$<$ This resets the device
+
+$<$ This initializes the device based on the configurator tool input
+
+$<$ This step calibrates and corrects for internal crosstalk
+
+$<$ This step is to measure illum xtalk for different TX and current settings
+
+$<$ Loop to iterate over all TX channels
+
+$<$ Checking is TX channel is active for this profile ~\newline
+~\newline
+~\newline
+~\newline
+ $<$ Loop to iterate over the H/L registers ~\newline
+~\newline
+~\newline
+ $<$ Checking if registers are active for this profile
+
+$<$ Step to measure illum Crosstalk
+
+$<$ Provide file name if save to File is implemented eg\+: illum\+Crosstalk\+TX\{tx\+Channel\}Reg\{reg\+Set\}\+\_\+room\+Temp \mbox{\Hypertarget{class_o_p_t3101device_a545184fdfeca4a576d613ef190131c05}\label{class_o_p_t3101device_a545184fdfeca4a576d613ef190131c05}} 
+\index{O\+P\+T3101device@{O\+P\+T3101device}!calibration\+Session\+\_\+per\+Design\+Calibration\+Crosstalk\+Temp@{calibration\+Session\+\_\+per\+Design\+Calibration\+Crosstalk\+Temp}}
+\index{calibration\+Session\+\_\+per\+Design\+Calibration\+Crosstalk\+Temp@{calibration\+Session\+\_\+per\+Design\+Calibration\+Crosstalk\+Temp}!O\+P\+T3101device@{O\+P\+T3101device}}
+\subsubsection{\texorpdfstring{calibration\+Session\+\_\+per\+Design\+Calibration\+Crosstalk\+Temp()}{calibrationSession\_perDesignCalibrationCrosstalkTemp()}}
+{\footnotesize\ttfamily void O\+P\+T3101device\+::calibration\+Session\+\_\+per\+Design\+Calibration\+Crosstalk\+Temp (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+$<$ This resets the device
+
+$<$ This initializes the device based on the configurator tool input
+
+$<$ This step calibrates and corrects for internal crosstalk
+
+$<$ This step is to measure illum xtalk for different TX and current settings
+
+$<$ Temperature needs to be set to different than original
+
+$<$ Loop to iterate over all TX channels
+
+$<$ Checking is TX channel is active for this profile ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ $<$ Loop to iterate over the H/L registers ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ $<$ Checking if registers are active for this profile
+
+$<$ Step to measure illum Crosstalk
+
+$<$ Provide file name if save to File is implemented eg\+: illum\+Crosstalk\+TX\{tx\+Channel\}Reg\{reg\+Set\}\+\_\+low/high\+Temp
+
+$<$ report crosstalk value is for user readability of crosstalk and verification
+
+$<$ Set temperature back to room temperature
+
+$<$ Loop to iterate over all TX channels
+
+$<$ Checking is TX channel is active for this profile ~\newline
+~\newline
+ $<$ Loop to iterate over the H/L registers ~\newline
+ $<$ Checking if registers are active for this profile \mbox{\Hypertarget{class_o_p_t3101device_aee76419eb68c21ce03cb92818d485a6a}\label{class_o_p_t3101device_aee76419eb68c21ce03cb92818d485a6a}} 
+\index{O\+P\+T3101device@{O\+P\+T3101device}!calibration\+Session\+\_\+per\+Design\+Calibration\+Phase\+Ambient@{calibration\+Session\+\_\+per\+Design\+Calibration\+Phase\+Ambient}}
+\index{calibration\+Session\+\_\+per\+Design\+Calibration\+Phase\+Ambient@{calibration\+Session\+\_\+per\+Design\+Calibration\+Phase\+Ambient}!O\+P\+T3101device@{O\+P\+T3101device}}
+\subsubsection{\texorpdfstring{calibration\+Session\+\_\+per\+Design\+Calibration\+Phase\+Ambient()}{calibrationSession\_perDesignCalibrationPhaseAmbient()}}
+{\footnotesize\ttfamily void O\+P\+T3101device\+::calibration\+Session\+\_\+per\+Design\+Calibration\+Phase\+Ambient (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+$<$ This resets the device
+
+$<$ This initializes the device based on the configurator tool input
+
+$<$ This step calibrates and corrects for internal crosstalk
+
+$<$ Loop to iterate over all TX channels
+
+$<$ Checking is TX channel is active for this profile ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ $<$ Loop to iterate over the H/L registers ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ $<$ Checking if registers are active for this profile
+
+$<$ Set referance distance so that amplitude of the system measures between 16K and 24K ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ $<$ Method to set the target distance as desired
+
+$<$ Converting from mm to distance in \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} A\+FE Phase codes
+
+$<$ Loop to measure for 2 temperatures
+
+$<$ Set ambient light condition on target ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ $<$ Specify distance in codes
+
+$<$ Save this to a file for analyis to curve fit P\+WL ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ $<$ Measure and populate Ambient Coeffecients ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ $<$ After analysis from PC load the following with values from the analysis; ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ $<$ Set this based on P\+WL curve\+Fit data
+
+$<$ Set this based on P\+WL curve\+Fit data
+
+$<$ Set this based on P\+WL curve\+Fit data
+
+$<$ Set this based on P\+WL curve\+Fit data
+
+$<$ Set this based on P\+WL curve\+Fit data
+
+$<$ Set this based on P\+WL curve\+Fit data
+
+$<$ Set this based on P\+WL curve\+Fit data
+
+$<$ Store this to file for reference \mbox{\Hypertarget{class_o_p_t3101device_a7b7bc05a1555200f13abda6f08218ad7}\label{class_o_p_t3101device_a7b7bc05a1555200f13abda6f08218ad7}} 
+\index{O\+P\+T3101device@{O\+P\+T3101device}!calibration\+Session\+\_\+per\+Design\+Calibration\+Phase\+Temp@{calibration\+Session\+\_\+per\+Design\+Calibration\+Phase\+Temp}}
+\index{calibration\+Session\+\_\+per\+Design\+Calibration\+Phase\+Temp@{calibration\+Session\+\_\+per\+Design\+Calibration\+Phase\+Temp}!O\+P\+T3101device@{O\+P\+T3101device}}
+\subsubsection{\texorpdfstring{calibration\+Session\+\_\+per\+Design\+Calibration\+Phase\+Temp()}{calibrationSession\_perDesignCalibrationPhaseTemp()}}
+{\footnotesize\ttfamily void O\+P\+T3101device\+::calibration\+Session\+\_\+per\+Design\+Calibration\+Phase\+Temp (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+$<$ This resets the device
+
+$<$ This initializes the device based on the configurator tool input
+
+$<$ This step calibrates and corrects for internal crosstalk
+
+$<$ Loop to iterate over all TX channels
+
+$<$ Checking is TX channel is active for this profile ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ $<$ Loop to iterate over the H/L registers ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ $<$ Checking if registers are active for this profile
+
+$<$ Set referance distance so that amplitude of the system measures between 16K and 24K ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ $<$ Method to set the target distance as desired
+
+$<$ Converting from mm to distance in \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} A\+FE Phase codes
+
+$<$ Loop to measure for 2 temperatures
+
+$<$ Set chamber temperature
+
+$<$ Specify distance in codes ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ $<$ Set true of flase based on if external temp sensor is used or not ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ $<$ Loop to iterate over all TX channels
+
+$<$ Checking is TX channel is active for this profile ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ $<$ Loop to iterate over the H/L registers ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ $<$ Checking if registers are active for this profile
+
+$<$ Set temperature back to room temperature
+
+$<$ Loop to iterate over all TX channels
+
+$<$ Checking is TX channel is active for this profile ~\newline
+~\newline
+~\newline
+ $<$ Loop to iterate over the H/L registers ~\newline
+~\newline
+ $<$ Checking if registers are active for this profile
+
+$<$ Choose file name to store the coeffecients if desired \mbox{\Hypertarget{class_o_p_t3101device_a873af9bc068728c4ded36435065b448c}\label{class_o_p_t3101device_a873af9bc068728c4ded36435065b448c}} 
+\index{O\+P\+T3101device@{O\+P\+T3101device}!calibration\+Session\+\_\+per\+Unit\+Factory\+Calibration@{calibration\+Session\+\_\+per\+Unit\+Factory\+Calibration}}
+\index{calibration\+Session\+\_\+per\+Unit\+Factory\+Calibration@{calibration\+Session\+\_\+per\+Unit\+Factory\+Calibration}!O\+P\+T3101device@{O\+P\+T3101device}}
+\subsubsection{\texorpdfstring{calibration\+Session\+\_\+per\+Unit\+Factory\+Calibration()}{calibrationSession\_perUnitFactoryCalibration()}}
+{\footnotesize\ttfamily void O\+P\+T3101device\+::calibration\+Session\+\_\+per\+Unit\+Factory\+Calibration (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+$<$ This resets the device
+
+$<$ This initializes the device based on the configurator tool input
+
+$<$ This step calibrates and corrects for internal crosstalk
+
+$<$ Loop to iterate over all TX channels
+
+$<$ Checking is TX channel is active for this profile ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ $<$ Loop to iterate over the H/L registers ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ $<$ Checking if registers are active for this profile
+
+$<$ Load this from per\+Design measurement ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ $<$ Load this from per\+Design measurement ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ $<$ This step is to measure illum xtalk for different TX and current settings
+
+$<$ Loop to iterate over all TX channels
+
+$<$ Checking is TX channel is active for this profile ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ $<$ Loop to iterate over the H/L registers ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ $<$ Checking if registers are active for this profile
+
+$<$ Step to measure illum Crosstalk
+
+$<$ Loop to iterate over all TX channels
+
+$<$ Checking is TX channel is active for this profile ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ $<$ Loop to iterate over the H/L registers ~\newline
+~\newline
+~\newline
+~\newline
+~\newline
+ $<$ Checking if registers are active for this profile
+
+$<$ Set referance distance so that amplitude of the system measures between 16K and 24K ~\newline
+~\newline
+~\newline
+ $<$ Method to set the target distance as desired
+
+$<$ Converting from mm to distance in \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} A\+FE Phase codes
+
+$<$ Specify distance in codes \mbox{\Hypertarget{class_o_p_t3101device_a6d9e6e45e260f4af1a874b5075105792}\label{class_o_p_t3101device_a6d9e6e45e260f4af1a874b5075105792}} 
+\index{O\+P\+T3101device@{O\+P\+T3101device}!calibration\+Session\+\_\+per\+Unit\+Factory\+Calibration\+Write\+Register\+Data\+To\+E\+E\+P\+R\+OM@{calibration\+Session\+\_\+per\+Unit\+Factory\+Calibration\+Write\+Register\+Data\+To\+E\+E\+P\+R\+OM}}
+\index{calibration\+Session\+\_\+per\+Unit\+Factory\+Calibration\+Write\+Register\+Data\+To\+E\+E\+P\+R\+OM@{calibration\+Session\+\_\+per\+Unit\+Factory\+Calibration\+Write\+Register\+Data\+To\+E\+E\+P\+R\+OM}!O\+P\+T3101device@{O\+P\+T3101device}}
+\subsubsection{\texorpdfstring{calibration\+Session\+\_\+per\+Unit\+Factory\+Calibration\+Write\+Register\+Data\+To\+E\+E\+P\+R\+O\+M()}{calibrationSession\_perUnitFactoryCalibrationWriteRegisterDataToEEPROM()}}
+{\footnotesize\ttfamily void O\+P\+T3101device\+::calibration\+Session\+\_\+per\+Unit\+Factory\+Calibration\+Write\+Register\+Data\+To\+E\+E\+P\+R\+OM (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_p_t3101device_a98d04c9a5359b4d62534556e6a3db290}\label{class_o_p_t3101device_a98d04c9a5359b4d62534556e6a3db290}} 
+\index{O\+P\+T3101device@{O\+P\+T3101device}!initialize@{initialize}}
+\index{initialize@{initialize}!O\+P\+T3101device@{O\+P\+T3101device}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void O\+P\+T3101device\+::initialize (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+$<$ Overload flab observation window
+
+$<$ Enables the internal
+
+$<$ Mode select between temp sensors
+
+$<$ Chooses between 12bit or 8 bit mode
+
+$<$ Enable Ext temp sensor read
+
+$<$ Sets number of average for ext temp sensor measurement
+
+$<$ Trigger temp sensor measurement every VD
+
+$<$ not required since default is correct
+
+$<$
+
+$<$ I2C Address for External Temp sensor for T\+X0 in super H\+DR Mode
+
+$<$ I2C Address for External Temp sensor for T\+X1 in super H\+DR Mode
+
+$<$ Enables Clip mode for Frequency correction
+
+$<$ Disables Clip mode for Temp coff phase correction
+
+$<$ Disables Clip mode for phase offset correction
+
+$<$ Enables 16 bit frame counter
+
+$<$ Sets maximum ambient support
+
+$<$ Enables Temperature Correction
+
+$<$ Enabled output buffer on G\+P\+I\+O1 pin
+
+$<$ select dig\+\_\+gpo\+\_\+0 on gpio1
+
+$<$ Select Data Ready on dig\+\_\+gpo\+\_\+0
+
+$<$ Enables continuous frequency calibration
+
+$<$ Starts the frequency calibration block
+
+$<$ Enables the frequency correction loop
+
+$<$ Enables automatic frequency count
+
+$<$ Enables digital frequency correction
+
+$<$ Divider for system clock
+
+$<$ Counter limit
+
+$<$ Disables output buffer on G\+P\+I\+O2
+
+$<$ Enables ref clock input of G\+P\+I\+O2
+
+$<$ Sub frames count
+
+$<$ Average frames count
+
+$<$ Crosstalk filter time constant
+
+$<$ Sequence Start
+
+$<$ Sequence End
+
+$<$ Same as Avg\+Frame Count
+
+$<$ Same as Avg\+Frame Count
+
+$<$ Enables processor values
+
+$<$ Enables the Sequencer
+
+$<$ Set Channel 1
+
+$<$ C\+O\+M\+P1.
+
+$<$ Set Channel 0
+
+$<$ C\+O\+M\+P1\+\_\+\+I\+NV
+
+$<$ ThresholdH
+
+$<$ ThresholdH
+
+$<$ Selects Amplitude for Comparison
+
+$<$ Setting T\+X1 register and connect to T\+X0
+
+$<$ High Threshold
+
+$<$ Low Threshold
+
+$<$ Enables adaptive H\+DR feature
+
+$<$ High Current settings \mbox{[}011.\+2mA\+:5.\+6mA X 02\mbox{]}
+
+$<$ Illum scale for H \mbox{[}011.\+2mA\+:5.\+6mA X 02\mbox{]}
+
+$<$ High Current settings \mbox{[}002.\+8mA\+:2.\+8mA X 01\mbox{]}
+
+$<$ Illum scale for H \mbox{[}002.\+8mA\+:2.\+8mA X 01\mbox{]}
+
+$<$ High Current settings \mbox{[}173.\+6mA\+:5.\+6mA X 31\mbox{]}
+
+$<$ Illum scale for H \mbox{[}173.\+6mA\+:5.\+6mA X 31\mbox{]}
+
+$<$ High Current settings \mbox{[}043.\+4mA\+:1.\+4mA X 31\mbox{]}
+
+$<$ Illum scale for H \mbox{[}043.\+4mA\+:1.\+4mA X 31\mbox{]}
+
+$<$ Enables Timing Generator
+
+$<$ This is not a register but a settings flag for the S\+DK
+
+$<$ This is not a register but a settings flag for the S\+DK
+
+$<$ This is not a register but a settings flag for the S\+DK
+
+$<$ This is not a register but a settings flag for the S\+DK
+
+$<$ This is not a register but a settings flag for the S\+DK
+
+$<$ This is not a register but a settings flag for the S\+DK \mbox{\Hypertarget{class_o_p_t3101device_aea3e493b07770dcff587bc38c4049611}\label{class_o_p_t3101device_aea3e493b07770dcff587bc38c4049611}} 
+\index{O\+P\+T3101device@{O\+P\+T3101device}!load\+Illum\+Crosstalk@{load\+Illum\+Crosstalk}}
+\index{load\+Illum\+Crosstalk@{load\+Illum\+Crosstalk}!O\+P\+T3101device@{O\+P\+T3101device}}
+\subsubsection{\texorpdfstring{load\+Illum\+Crosstalk()}{loadIllumCrosstalk()}}
+{\footnotesize\ttfamily void O\+P\+T3101device\+::load\+Illum\+Crosstalk (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_p_t3101_1_1crosstalk_c}{O\+P\+T3101\+::crosstalkC}} $\ast$}]{illum\+Xtalk,  }\item[{uint8\+\_\+t}]{tx\+Channel,  }\item[{char}]{register\+Set }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_p_t3101device_af18fa1d1db587c0e220d0bbc955662a9}\label{class_o_p_t3101device_af18fa1d1db587c0e220d0bbc955662a9}} 
+\index{O\+P\+T3101device@{O\+P\+T3101device}!load\+Illum\+Crosstalk\+Set@{load\+Illum\+Crosstalk\+Set}}
+\index{load\+Illum\+Crosstalk\+Set@{load\+Illum\+Crosstalk\+Set}!O\+P\+T3101device@{O\+P\+T3101device}}
+\subsubsection{\texorpdfstring{load\+Illum\+Crosstalk\+Set()}{loadIllumCrosstalkSet()}}
+{\footnotesize\ttfamily void O\+P\+T3101device\+::load\+Illum\+Crosstalk\+Set (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+$<$ Loop to iterate over all TX channels
+
+$<$ Checking is TX channel is active for this profile ~\newline
+~\newline
+ $<$ Loop to iterate over the H/L registers ~\newline
+ $<$ Checking if registers are active for this profile \mbox{\Hypertarget{class_o_p_t3101device_ad5782b69e7af9d5cf4db1bd2ba9caf67}\label{class_o_p_t3101device_ad5782b69e7af9d5cf4db1bd2ba9caf67}} 
+\index{O\+P\+T3101device@{O\+P\+T3101device}!load\+Illum\+Crosstalk\+Temp\+Coff@{load\+Illum\+Crosstalk\+Temp\+Coff}}
+\index{load\+Illum\+Crosstalk\+Temp\+Coff@{load\+Illum\+Crosstalk\+Temp\+Coff}!O\+P\+T3101device@{O\+P\+T3101device}}
+\subsubsection{\texorpdfstring{load\+Illum\+Crosstalk\+Temp\+Coff()}{loadIllumCrosstalkTempCoff()}}
+{\footnotesize\ttfamily void O\+P\+T3101device\+::load\+Illum\+Crosstalk\+Temp\+Coff (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_p_t3101_1_1crosstalk_temp_coff_c}{O\+P\+T3101\+::crosstalk\+Temp\+CoffC}} $\ast$}]{illum\+Xtalk\+Temp\+Coff,  }\item[{uint8\+\_\+t}]{tx\+Channel,  }\item[{char}]{register\+Set }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_p_t3101device_a00d7d06d232d29570cbc6f751b991419}\label{class_o_p_t3101device_a00d7d06d232d29570cbc6f751b991419}} 
+\index{O\+P\+T3101device@{O\+P\+T3101device}!load\+Illum\+Crosstalk\+Temp\+Coff\+Set@{load\+Illum\+Crosstalk\+Temp\+Coff\+Set}}
+\index{load\+Illum\+Crosstalk\+Temp\+Coff\+Set@{load\+Illum\+Crosstalk\+Temp\+Coff\+Set}!O\+P\+T3101device@{O\+P\+T3101device}}
+\subsubsection{\texorpdfstring{load\+Illum\+Crosstalk\+Temp\+Coff\+Set()}{loadIllumCrosstalkTempCoffSet()}}
+{\footnotesize\ttfamily void O\+P\+T3101device\+::load\+Illum\+Crosstalk\+Temp\+Coff\+Set (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+$<$ Loop to iterate over all TX channels
+
+$<$ Checking is TX channel is active for this profile ~\newline
+~\newline
+ $<$ Loop to iterate over the H/L registers ~\newline
+ $<$ Checking if registers are active for this profile \mbox{\Hypertarget{class_o_p_t3101device_a58c9087de66fea64ac3ab69fc6a37288}\label{class_o_p_t3101device_a58c9087de66fea64ac3ab69fc6a37288}} 
+\index{O\+P\+T3101device@{O\+P\+T3101device}!load\+Phase\+Ambient\+Coff@{load\+Phase\+Ambient\+Coff}}
+\index{load\+Phase\+Ambient\+Coff@{load\+Phase\+Ambient\+Coff}!O\+P\+T3101device@{O\+P\+T3101device}}
+\subsubsection{\texorpdfstring{load\+Phase\+Ambient\+Coff()}{loadPhaseAmbientCoff()}}
+{\footnotesize\ttfamily void O\+P\+T3101device\+::load\+Phase\+Ambient\+Coff (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_p_t3101phase_ambient_coff}{O\+P\+T3101phase\+Ambient\+Coff}} $\ast$}]{phase\+Ambient\+Coff }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_p_t3101device_aa4cf1fb930424717a4e7fb969b68bde6}\label{class_o_p_t3101device_aa4cf1fb930424717a4e7fb969b68bde6}} 
+\index{O\+P\+T3101device@{O\+P\+T3101device}!load\+Phase\+Ambient\+Coff\+Set@{load\+Phase\+Ambient\+Coff\+Set}}
+\index{load\+Phase\+Ambient\+Coff\+Set@{load\+Phase\+Ambient\+Coff\+Set}!O\+P\+T3101device@{O\+P\+T3101device}}
+\subsubsection{\texorpdfstring{load\+Phase\+Ambient\+Coff\+Set()}{loadPhaseAmbientCoffSet()}}
+{\footnotesize\ttfamily void O\+P\+T3101device\+::load\+Phase\+Ambient\+Coff\+Set (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_p_t3101device_af5b25dc0fd4829e7027e724ee16cc059}\label{class_o_p_t3101device_af5b25dc0fd4829e7027e724ee16cc059}} 
+\index{O\+P\+T3101device@{O\+P\+T3101device}!load\+Phase\+Offset@{load\+Phase\+Offset}}
+\index{load\+Phase\+Offset@{load\+Phase\+Offset}!O\+P\+T3101device@{O\+P\+T3101device}}
+\subsubsection{\texorpdfstring{load\+Phase\+Offset()}{loadPhaseOffset()}}
+{\footnotesize\ttfamily void O\+P\+T3101device\+::load\+Phase\+Offset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_p_t3101_1_1phase_offset_c}{O\+P\+T3101\+::phase\+OffsetC}} $\ast$}]{phase\+Offset,  }\item[{uint8\+\_\+t}]{tx\+Channel,  }\item[{char}]{register\+Set }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_p_t3101device_accaae5aebd551e2198567c1131887700}\label{class_o_p_t3101device_accaae5aebd551e2198567c1131887700}} 
+\index{O\+P\+T3101device@{O\+P\+T3101device}!load\+Phase\+Offset\+Set@{load\+Phase\+Offset\+Set}}
+\index{load\+Phase\+Offset\+Set@{load\+Phase\+Offset\+Set}!O\+P\+T3101device@{O\+P\+T3101device}}
+\subsubsection{\texorpdfstring{load\+Phase\+Offset\+Set()}{loadPhaseOffsetSet()}}
+{\footnotesize\ttfamily void O\+P\+T3101device\+::load\+Phase\+Offset\+Set (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+$<$ Loop to iterate over all TX channels
+
+$<$ Checking is TX channel is active for this profile ~\newline
+~\newline
+ $<$ Loop to iterate over the H/L registers ~\newline
+ $<$ Checking if registers are active for this profile \mbox{\Hypertarget{class_o_p_t3101device_a72d8a44690cd8d65852522612478b067}\label{class_o_p_t3101device_a72d8a44690cd8d65852522612478b067}} 
+\index{O\+P\+T3101device@{O\+P\+T3101device}!load\+Phase\+Offset\+Temp\+Coff@{load\+Phase\+Offset\+Temp\+Coff}}
+\index{load\+Phase\+Offset\+Temp\+Coff@{load\+Phase\+Offset\+Temp\+Coff}!O\+P\+T3101device@{O\+P\+T3101device}}
+\subsubsection{\texorpdfstring{load\+Phase\+Offset\+Temp\+Coff()}{loadPhaseOffsetTempCoff()}}
+{\footnotesize\ttfamily void O\+P\+T3101device\+::load\+Phase\+Offset\+Temp\+Coff (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_p_t3101phase_temp_coff}{O\+P\+T3101phase\+Temp\+Coff}} $\ast$}]{phase\+Temp\+Coff,  }\item[{uint8\+\_\+t}]{tx\+Channel,  }\item[{char}]{register\+Set }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_p_t3101device_a01faedadfb6abb470781ae01fe6b744e}\label{class_o_p_t3101device_a01faedadfb6abb470781ae01fe6b744e}} 
+\index{O\+P\+T3101device@{O\+P\+T3101device}!load\+Phase\+Offset\+Temp\+Coff\+Set@{load\+Phase\+Offset\+Temp\+Coff\+Set}}
+\index{load\+Phase\+Offset\+Temp\+Coff\+Set@{load\+Phase\+Offset\+Temp\+Coff\+Set}!O\+P\+T3101device@{O\+P\+T3101device}}
+\subsubsection{\texorpdfstring{load\+Phase\+Offset\+Temp\+Coff\+Set()}{loadPhaseOffsetTempCoffSet()}}
+{\footnotesize\ttfamily void O\+P\+T3101device\+::load\+Phase\+Offset\+Temp\+Coff\+Set (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+$<$ Loop to iterate over all TX channels
+
+$<$ Checking is TX channel is active for this profile ~\newline
+~\newline
+ $<$ Loop to iterate over the H/L registers ~\newline
+ $<$ Checking if registers are active for this profile \mbox{\Hypertarget{class_o_p_t3101device_a041db5eb4a5a900ca5fff0c61ee8f7ab}\label{class_o_p_t3101device_a041db5eb4a5a900ca5fff0c61ee8f7ab}} 
+\index{O\+P\+T3101device@{O\+P\+T3101device}!measure\+And\+Correct\+Internal\+Crosstalk@{measure\+And\+Correct\+Internal\+Crosstalk}}
+\index{measure\+And\+Correct\+Internal\+Crosstalk@{measure\+And\+Correct\+Internal\+Crosstalk}!O\+P\+T3101device@{O\+P\+T3101device}}
+\subsubsection{\texorpdfstring{measure\+And\+Correct\+Internal\+Crosstalk()}{measureAndCorrectInternalCrosstalk()}}
+{\footnotesize\ttfamily void O\+P\+T3101device\+::measure\+And\+Correct\+Internal\+Crosstalk (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_p_t3101_1_1crosstalk_c}{O\+P\+T3101\+::crosstalkC}} $\ast$}]{internal\+Xtalk }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_p_t3101device_af0f08d859f6d8da0d894fa1d4ff5529b}\label{class_o_p_t3101device_af0f08d859f6d8da0d894fa1d4ff5529b}} 
+\index{O\+P\+T3101device@{O\+P\+T3101device}!measure\+Illum\+Crosstalk@{measure\+Illum\+Crosstalk}}
+\index{measure\+Illum\+Crosstalk@{measure\+Illum\+Crosstalk}!O\+P\+T3101device@{O\+P\+T3101device}}
+\subsubsection{\texorpdfstring{measure\+Illum\+Crosstalk()}{measureIllumCrosstalk()}}
+{\footnotesize\ttfamily void O\+P\+T3101device\+::measure\+Illum\+Crosstalk (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_p_t3101_1_1crosstalk_c}{O\+P\+T3101\+::crosstalkC}} $\ast$}]{illum\+Xtalk,  }\item[{uint8\+\_\+t}]{tx\+Channel,  }\item[{char}]{register\+Set,  }\item[{uint8\+\_\+t}]{shift\+Illum\+Phase = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_p_t3101device_ace7558bef9a42a7103a60fb91c196e4d}\label{class_o_p_t3101device_ace7558bef9a42a7103a60fb91c196e4d}} 
+\index{O\+P\+T3101device@{O\+P\+T3101device}!measure\+Phase\+Offset@{measure\+Phase\+Offset}}
+\index{measure\+Phase\+Offset@{measure\+Phase\+Offset}!O\+P\+T3101device@{O\+P\+T3101device}}
+\subsubsection{\texorpdfstring{measure\+Phase\+Offset()}{measurePhaseOffset()}}
+{\footnotesize\ttfamily void O\+P\+T3101device\+::measure\+Phase\+Offset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_p_t3101_1_1phase_offset_c}{O\+P\+T3101\+::phase\+OffsetC}} $\ast$}]{phase\+Offset,  }\item[{uint8\+\_\+t}]{tx\+Channel,  }\item[{char}]{registerset,  }\item[{uint16\+\_\+t}]{ref\+Distance\+In\+Codes,  }\item[{uint8\+\_\+t}]{shift\+Illum\+Phase = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_p_t3101device_a2e9a97e6eddcd15a03e68f0f43012d55}\label{class_o_p_t3101device_a2e9a97e6eddcd15a03e68f0f43012d55}} 
+\index{O\+P\+T3101device@{O\+P\+T3101device}!reset@{reset}}
+\index{reset@{reset}!O\+P\+T3101device@{O\+P\+T3101device}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void O\+P\+T3101device\+::reset (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_o_p_t3101device_a8f1283a73fbfac90ccc2a8f5ab6ae382}\label{class_o_p_t3101device_a8f1283a73fbfac90ccc2a8f5ab6ae382}} 
+\index{O\+P\+T3101device@{O\+P\+T3101device}!calibration@{calibration}}
+\index{calibration@{calibration}!O\+P\+T3101device@{O\+P\+T3101device}}
+\subsubsection{\texorpdfstring{calibration}{calibration}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_p_t3101_calibration}{O\+P\+T3101\+Calibration}} O\+P\+T3101device\+::calibration}
+
+\mbox{\Hypertarget{class_o_p_t3101device_a09ebfac6870717c9ae9152c42db29362}\label{class_o_p_t3101device_a09ebfac6870717c9ae9152c42db29362}} 
+\index{O\+P\+T3101device@{O\+P\+T3101device}!configuration\+Flags\+\_\+avg\+Frame\+Count\+Exponent\+Of\+Two@{configuration\+Flags\+\_\+avg\+Frame\+Count\+Exponent\+Of\+Two}}
+\index{configuration\+Flags\+\_\+avg\+Frame\+Count\+Exponent\+Of\+Two@{configuration\+Flags\+\_\+avg\+Frame\+Count\+Exponent\+Of\+Two}!O\+P\+T3101device@{O\+P\+T3101device}}
+\subsubsection{\texorpdfstring{configuration\+Flags\+\_\+avg\+Frame\+Count\+Exponent\+Of\+Two}{configurationFlags\_avgFrameCountExponentOfTwo}}
+{\footnotesize\ttfamily uint8\+\_\+t O\+P\+T3101device\+::configuration\+Flags\+\_\+avg\+Frame\+Count\+Exponent\+Of\+Two}
+
+\mbox{\Hypertarget{class_o_p_t3101device_ae38d48a69ae6c79669cde8a8746ef6f0}\label{class_o_p_t3101device_ae38d48a69ae6c79669cde8a8746ef6f0}} 
+\index{O\+P\+T3101device@{O\+P\+T3101device}!configuration\+Flags\+\_\+frame\+Time\+In\+Milli\+Seconds@{configuration\+Flags\+\_\+frame\+Time\+In\+Milli\+Seconds}}
+\index{configuration\+Flags\+\_\+frame\+Time\+In\+Milli\+Seconds@{configuration\+Flags\+\_\+frame\+Time\+In\+Milli\+Seconds}!O\+P\+T3101device@{O\+P\+T3101device}}
+\subsubsection{\texorpdfstring{configuration\+Flags\+\_\+frame\+Time\+In\+Milli\+Seconds}{configurationFlags\_frameTimeInMilliSeconds}}
+{\footnotesize\ttfamily uint32\+\_\+t O\+P\+T3101device\+::configuration\+Flags\+\_\+frame\+Time\+In\+Milli\+Seconds}
+
+\mbox{\Hypertarget{class_o_p_t3101device_a6e157c52c4ae15e416686b2a6abe5299}\label{class_o_p_t3101device_a6e157c52c4ae15e416686b2a6abe5299}} 
+\index{O\+P\+T3101device@{O\+P\+T3101device}!configuration\+Flags\+\_\+is\+Register\+Set\+Active@{configuration\+Flags\+\_\+is\+Register\+Set\+Active}}
+\index{configuration\+Flags\+\_\+is\+Register\+Set\+Active@{configuration\+Flags\+\_\+is\+Register\+Set\+Active}!O\+P\+T3101device@{O\+P\+T3101device}}
+\subsubsection{\texorpdfstring{configuration\+Flags\+\_\+is\+Register\+Set\+Active}{configurationFlags\_isRegisterSetActive}}
+{\footnotesize\ttfamily bool O\+P\+T3101device\+::configuration\+Flags\+\_\+is\+Register\+Set\+Active\mbox{[}2\mbox{]}}
+
+\mbox{\Hypertarget{class_o_p_t3101device_afbfcfa5559df6b5fab71be3f465545da}\label{class_o_p_t3101device_afbfcfa5559df6b5fab71be3f465545da}} 
+\index{O\+P\+T3101device@{O\+P\+T3101device}!configuration\+Flags\+\_\+is\+T\+X\+Channel\+Active@{configuration\+Flags\+\_\+is\+T\+X\+Channel\+Active}}
+\index{configuration\+Flags\+\_\+is\+T\+X\+Channel\+Active@{configuration\+Flags\+\_\+is\+T\+X\+Channel\+Active}!O\+P\+T3101device@{O\+P\+T3101device}}
+\subsubsection{\texorpdfstring{configuration\+Flags\+\_\+is\+T\+X\+Channel\+Active}{configurationFlags\_isTXChannelActive}}
+{\footnotesize\ttfamily bool O\+P\+T3101device\+::configuration\+Flags\+\_\+is\+T\+X\+Channel\+Active\mbox{[}3\mbox{]}}
+
+\mbox{\Hypertarget{class_o_p_t3101device_aef9e49f763e74af7ec44f8adfe58879e}\label{class_o_p_t3101device_aef9e49f763e74af7ec44f8adfe58879e}} 
+\index{O\+P\+T3101device@{O\+P\+T3101device}!configuration\+Flags\+\_\+monoshot\+Mode@{configuration\+Flags\+\_\+monoshot\+Mode}}
+\index{configuration\+Flags\+\_\+monoshot\+Mode@{configuration\+Flags\+\_\+monoshot\+Mode}!O\+P\+T3101device@{O\+P\+T3101device}}
+\subsubsection{\texorpdfstring{configuration\+Flags\+\_\+monoshot\+Mode}{configurationFlags\_monoshotMode}}
+{\footnotesize\ttfamily bool O\+P\+T3101device\+::configuration\+Flags\+\_\+monoshot\+Mode}
+
+\mbox{\Hypertarget{class_o_p_t3101device_a77ca0f4554ea37a86be99b88818365ac}\label{class_o_p_t3101device_a77ca0f4554ea37a86be99b88818365ac}} 
+\index{O\+P\+T3101device@{O\+P\+T3101device}!configuration\+Flags\+\_\+xtalk\+Filter\+Tau@{configuration\+Flags\+\_\+xtalk\+Filter\+Tau}}
+\index{configuration\+Flags\+\_\+xtalk\+Filter\+Tau@{configuration\+Flags\+\_\+xtalk\+Filter\+Tau}!O\+P\+T3101device@{O\+P\+T3101device}}
+\subsubsection{\texorpdfstring{configuration\+Flags\+\_\+xtalk\+Filter\+Tau}{configurationFlags\_xtalkFilterTau}}
+{\footnotesize\ttfamily uint8\+\_\+t O\+P\+T3101device\+::configuration\+Flags\+\_\+xtalk\+Filter\+Tau}
+
+\mbox{\Hypertarget{class_o_p_t3101device_a3f84d9487e61d5141a89d01058d799a9}\label{class_o_p_t3101device_a3f84d9487e61d5141a89d01058d799a9}} 
+\index{O\+P\+T3101device@{O\+P\+T3101device}!configuration\+Flags\+\_\+xtalk\+Settling\+One\+Tau\+In\+Data\+Ready\+Counts@{configuration\+Flags\+\_\+xtalk\+Settling\+One\+Tau\+In\+Data\+Ready\+Counts}}
+\index{configuration\+Flags\+\_\+xtalk\+Settling\+One\+Tau\+In\+Data\+Ready\+Counts@{configuration\+Flags\+\_\+xtalk\+Settling\+One\+Tau\+In\+Data\+Ready\+Counts}!O\+P\+T3101device@{O\+P\+T3101device}}
+\subsubsection{\texorpdfstring{configuration\+Flags\+\_\+xtalk\+Settling\+One\+Tau\+In\+Data\+Ready\+Counts}{configurationFlags\_xtalkSettlingOneTauInDataReadyCounts}}
+{\footnotesize\ttfamily uint16\+\_\+t O\+P\+T3101device\+::configuration\+Flags\+\_\+xtalk\+Settling\+One\+Tau\+In\+Data\+Ready\+Counts}
+
+\mbox{\Hypertarget{class_o_p_t3101device_a6518ba457e85d945792dbd80114e40d8}\label{class_o_p_t3101device_a6518ba457e85d945792dbd80114e40d8}} 
+\index{O\+P\+T3101device@{O\+P\+T3101device}!configuration\+Flags\+\_\+xtalk\+Settling\+One\+Tau\+In\+Milli\+Seconds@{configuration\+Flags\+\_\+xtalk\+Settling\+One\+Tau\+In\+Milli\+Seconds}}
+\index{configuration\+Flags\+\_\+xtalk\+Settling\+One\+Tau\+In\+Milli\+Seconds@{configuration\+Flags\+\_\+xtalk\+Settling\+One\+Tau\+In\+Milli\+Seconds}!O\+P\+T3101device@{O\+P\+T3101device}}
+\subsubsection{\texorpdfstring{configuration\+Flags\+\_\+xtalk\+Settling\+One\+Tau\+In\+Milli\+Seconds}{configurationFlags\_xtalkSettlingOneTauInMilliSeconds}}
+{\footnotesize\ttfamily uint16\+\_\+t O\+P\+T3101device\+::configuration\+Flags\+\_\+xtalk\+Settling\+One\+Tau\+In\+Milli\+Seconds}
+
+\mbox{\Hypertarget{class_o_p_t3101device_a702787c83b68e71d5db5ec8cdac57ba0}\label{class_o_p_t3101device_a702787c83b68e71d5db5ec8cdac57ba0}} 
+\index{O\+P\+T3101device@{O\+P\+T3101device}!reg@{reg}}
+\index{reg@{reg}!O\+P\+T3101device@{O\+P\+T3101device}}
+\subsubsection{\texorpdfstring{reg}{reg}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_p_t3101_1_1registers}{O\+P\+T3101\+::registers}} O\+P\+T3101device\+::reg}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/folders/d/scripts/cpp/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\mbox{\hyperlink{_o_p_t3101device_8h}{O\+P\+T3101device.\+h}}\item 
+C\+:/folders/d/scripts/cpp/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\mbox{\hyperlink{_o_p_t3101__configuration_8cpp}{O\+P\+T3101\+\_\+configuration.\+cpp}}\item 
+C\+:/folders/d/scripts/cpp/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\mbox{\hyperlink{_o_p_t3101device___functions_8cpp}{O\+P\+T3101device\+\_\+\+Functions.\+cpp}}\end{DoxyCompactItemize}

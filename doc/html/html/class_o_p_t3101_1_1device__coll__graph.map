@@ -1,0 +1,11 @@
+<map id="OPT3101::device" name="OPT3101::device">
+<area shape="rect" id="node2" href="$class_o_p_t3101_1_1registers.html" title="Class that enumerates all registers in OPT3101. " alt="" coords="244,1019,379,1243"/>
+<area shape="rect" id="node3" href="$class_o_p_t3101_1_1device_register.html" title="Class that contains positional information for registers in the register map. " alt="" coords="5,453,193,604"/>
+<area shape="rect" id="node4" href="$class_o_p_t3101_1_1calibration_c.html" title="Class contains the instances of classes required during OPT3101 calibration. " alt="" coords="523,1004,742,1257"/>
+<area shape="rect" id="node5" href="$class_o_p_t3101_1_1crosstalk_temp_coff_c.html" title="Class that holds crosstalk temperature coefficient related registers and values. " alt="" coords="218,431,418,626"/>
+<area shape="rect" id="node6" href="$class_o_p_t3101_1_1phase_ambient_coff_c.html" title="Class that holds ambient phase coefficient related registers and values. " alt="" coords="443,439,641,619"/>
+<area shape="rect" id="node7" href="$class_o_p_t3101_1_1phase_offset_c.html" title="Class that holds phase offset register data. " alt="" coords="665,424,851,633"/>
+<area shape="rect" id="node8" href="$class_o_p_t3101_1_1frame_data.html" title="Class the data output from OPT3101 device. " alt="" coords="683,5,833,303"/>
+<area shape="rect" id="node9" href="$class_o_p_t3101_1_1crosstalk_c.html" title="Class that holds crosstalk related registers and values. " alt="" coords="875,365,1052,692"/>
+<area shape="rect" id="node10" href="$class_o_p_t3101_1_1phase_temp_coff_c.html" title="Class that holds phase temperature coefficient related registers and values. " alt="" coords="1076,439,1259,619"/>
+</map>

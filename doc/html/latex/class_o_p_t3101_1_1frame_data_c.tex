@@ -1,0 +1,168 @@
+\hypertarget{class_o_p_t3101_1_1frame_data_c}{}\section{O\+P\+T3101\+:\+:frame\+DataC Class Reference}
+\label{class_o_p_t3101_1_1frame_data_c}\index{O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}}
+
+
+{\ttfamily \#include $<$O\+P\+T3101frame\+Data.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_o_p_t3101_1_1frame_data_c_a01b508409579d9d47bd55080a498146d}{capture}} (\mbox{\hyperlink{classhost_controller}{host\+Controller}} $\ast$\mbox{\hyperlink{register_8h_a47f8cbf152e48aa4fdb624be57a9a856}{host}}, \mbox{\hyperlink{class_o_p_t3101_1_1device}{O\+P\+T3101\+::device}} $\ast$\mbox{\hyperlink{main_8cpp_ae89da95486821d0a26b9592cd8891276}{dev}}, bool read\+T\+Illulm=true)
+\item 
+void \mbox{\hyperlink{class_o_p_t3101_1_1frame_data_c_a30c7f8d67291f2fd8a82a79da5d4a8bf}{populate\+With\+Mean}} (\mbox{\hyperlink{class_o_p_t3101_1_1frame_data_c}{frame\+DataC}} $\ast$input\+Data, uint16\+\_\+t n\+Frames)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_o_p_t3101_1_1frame_data_c_acac63e6ee5d619fde4e8d1dfbf75b3f0}{phase}}
+\item 
+bool \mbox{\hyperlink{class_o_p_t3101_1_1frame_data_c_a215ee0c78a8a3ccf401c504190cde782}{phaseovl}}
+\item 
+bool \mbox{\hyperlink{class_o_p_t3101_1_1frame_data_c_a3d351e94751d82291849af774be91b5b}{phaseovlf2}}
+\item 
+bool \mbox{\hyperlink{class_o_p_t3101_1_1frame_data_c_a4dd83c3e12c8e9912edea1e31bab4c36}{ambovl}}
+\item 
+bool \mbox{\hyperlink{class_o_p_t3101_1_1frame_data_c_a211a1d7ec065617890f5c5c627dd6b91}{illum\+Dac}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_o_p_t3101_1_1frame_data_c_a05bb6db589233fa38314befeff48f646}{led\+Channel}}
+\item 
+bool \mbox{\hyperlink{class_o_p_t3101_1_1frame_data_c_a335f6aacd18a4cbb711ca77b73f988c0}{frame\+Status}}
+\item 
+bool \mbox{\hyperlink{class_o_p_t3101_1_1frame_data_c_a9f9849a9afea1e70e72526f216ab327b}{dealias\+Freq}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_o_p_t3101_1_1frame_data_c_a76f63540aaf884343252fe6861065404}{frame\+Counter}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_o_p_t3101_1_1frame_data_c_a37afc0107765d8e4aee6cc53471b14db}{amplitude}}
+\item 
+bool \mbox{\hyperlink{class_o_p_t3101_1_1frame_data_c_af93d6d38c34644bdfa4225a5b4a68b1a}{sigovl}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_o_p_t3101_1_1frame_data_c_a2f212a7fc1f54d3feb829d734dd4fce4}{dealias\+Bin}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_o_p_t3101_1_1frame_data_c_abb33d925d3792c2420b0b8bf055b73c4}{ambient}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_o_p_t3101_1_1frame_data_c_a9edb9b641158fc09caada374ee941d45}{temp}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_o_p_t3101_1_1frame_data_c_a5c1cd938fc62d4672d15842df1f7f539}{tmain}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_o_p_t3101_1_1frame_data_c_ab8de475cc7a584e2c3df93935ffb5601}{tillum}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_o_p_t3101_1_1frame_data_c_a01b508409579d9d47bd55080a498146d}\label{class_o_p_t3101_1_1frame_data_c_a01b508409579d9d47bd55080a498146d}} 
+\index{O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}!capture@{capture}}
+\index{capture@{capture}!O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}}
+\subsubsection{\texorpdfstring{capture()}{capture()}}
+{\footnotesize\ttfamily void O\+P\+T3101\+::frame\+Data\+C\+::capture (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhost_controller}{host\+Controller}} $\ast$}]{host,  }\item[{\mbox{\hyperlink{class_o_p_t3101_1_1device}{O\+P\+T3101\+::device}} $\ast$}]{dev,  }\item[{bool}]{read\+T\+Illulm = {\ttfamily true} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_p_t3101_1_1frame_data_c_a30c7f8d67291f2fd8a82a79da5d4a8bf}\label{class_o_p_t3101_1_1frame_data_c_a30c7f8d67291f2fd8a82a79da5d4a8bf}} 
+\index{O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}!populate\+With\+Mean@{populate\+With\+Mean}}
+\index{populate\+With\+Mean@{populate\+With\+Mean}!O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}}
+\subsubsection{\texorpdfstring{populate\+With\+Mean()}{populateWithMean()}}
+{\footnotesize\ttfamily void O\+P\+T3101\+::frame\+Data\+C\+::populate\+With\+Mean (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_p_t3101_1_1frame_data_c}{O\+P\+T3101\+::frame\+DataC}} $\ast$}]{input\+Data,  }\item[{uint16\+\_\+t}]{n\+Frames }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_o_p_t3101_1_1frame_data_c_abb33d925d3792c2420b0b8bf055b73c4}\label{class_o_p_t3101_1_1frame_data_c_abb33d925d3792c2420b0b8bf055b73c4}} 
+\index{O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}!ambient@{ambient}}
+\index{ambient@{ambient}!O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}}
+\subsubsection{\texorpdfstring{ambient}{ambient}}
+{\footnotesize\ttfamily uint16\+\_\+t O\+P\+T3101\+::frame\+Data\+C\+::ambient}
+
+\mbox{\Hypertarget{class_o_p_t3101_1_1frame_data_c_a4dd83c3e12c8e9912edea1e31bab4c36}\label{class_o_p_t3101_1_1frame_data_c_a4dd83c3e12c8e9912edea1e31bab4c36}} 
+\index{O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}!ambovl@{ambovl}}
+\index{ambovl@{ambovl}!O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}}
+\subsubsection{\texorpdfstring{ambovl}{ambovl}}
+{\footnotesize\ttfamily bool O\+P\+T3101\+::frame\+Data\+C\+::ambovl}
+
+\mbox{\Hypertarget{class_o_p_t3101_1_1frame_data_c_a37afc0107765d8e4aee6cc53471b14db}\label{class_o_p_t3101_1_1frame_data_c_a37afc0107765d8e4aee6cc53471b14db}} 
+\index{O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}!amplitude@{amplitude}}
+\index{amplitude@{amplitude}!O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}}
+\subsubsection{\texorpdfstring{amplitude}{amplitude}}
+{\footnotesize\ttfamily uint16\+\_\+t O\+P\+T3101\+::frame\+Data\+C\+::amplitude}
+
+\mbox{\Hypertarget{class_o_p_t3101_1_1frame_data_c_a2f212a7fc1f54d3feb829d734dd4fce4}\label{class_o_p_t3101_1_1frame_data_c_a2f212a7fc1f54d3feb829d734dd4fce4}} 
+\index{O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}!dealias\+Bin@{dealias\+Bin}}
+\index{dealias\+Bin@{dealias\+Bin}!O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}}
+\subsubsection{\texorpdfstring{dealias\+Bin}{dealiasBin}}
+{\footnotesize\ttfamily uint8\+\_\+t O\+P\+T3101\+::frame\+Data\+C\+::dealias\+Bin}
+
+\mbox{\Hypertarget{class_o_p_t3101_1_1frame_data_c_a9f9849a9afea1e70e72526f216ab327b}\label{class_o_p_t3101_1_1frame_data_c_a9f9849a9afea1e70e72526f216ab327b}} 
+\index{O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}!dealias\+Freq@{dealias\+Freq}}
+\index{dealias\+Freq@{dealias\+Freq}!O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}}
+\subsubsection{\texorpdfstring{dealias\+Freq}{dealiasFreq}}
+{\footnotesize\ttfamily bool O\+P\+T3101\+::frame\+Data\+C\+::dealias\+Freq}
+
+\mbox{\Hypertarget{class_o_p_t3101_1_1frame_data_c_a76f63540aaf884343252fe6861065404}\label{class_o_p_t3101_1_1frame_data_c_a76f63540aaf884343252fe6861065404}} 
+\index{O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}!frame\+Counter@{frame\+Counter}}
+\index{frame\+Counter@{frame\+Counter}!O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}}
+\subsubsection{\texorpdfstring{frame\+Counter}{frameCounter}}
+{\footnotesize\ttfamily uint8\+\_\+t O\+P\+T3101\+::frame\+Data\+C\+::frame\+Counter}
+
+\mbox{\Hypertarget{class_o_p_t3101_1_1frame_data_c_a335f6aacd18a4cbb711ca77b73f988c0}\label{class_o_p_t3101_1_1frame_data_c_a335f6aacd18a4cbb711ca77b73f988c0}} 
+\index{O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}!frame\+Status@{frame\+Status}}
+\index{frame\+Status@{frame\+Status}!O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}}
+\subsubsection{\texorpdfstring{frame\+Status}{frameStatus}}
+{\footnotesize\ttfamily bool O\+P\+T3101\+::frame\+Data\+C\+::frame\+Status}
+
+\mbox{\Hypertarget{class_o_p_t3101_1_1frame_data_c_a211a1d7ec065617890f5c5c627dd6b91}\label{class_o_p_t3101_1_1frame_data_c_a211a1d7ec065617890f5c5c627dd6b91}} 
+\index{O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}!illum\+Dac@{illum\+Dac}}
+\index{illum\+Dac@{illum\+Dac}!O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}}
+\subsubsection{\texorpdfstring{illum\+Dac}{illumDac}}
+{\footnotesize\ttfamily bool O\+P\+T3101\+::frame\+Data\+C\+::illum\+Dac}
+
+\mbox{\Hypertarget{class_o_p_t3101_1_1frame_data_c_a05bb6db589233fa38314befeff48f646}\label{class_o_p_t3101_1_1frame_data_c_a05bb6db589233fa38314befeff48f646}} 
+\index{O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}!led\+Channel@{led\+Channel}}
+\index{led\+Channel@{led\+Channel}!O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}}
+\subsubsection{\texorpdfstring{led\+Channel}{ledChannel}}
+{\footnotesize\ttfamily uint8\+\_\+t O\+P\+T3101\+::frame\+Data\+C\+::led\+Channel}
+
+\mbox{\Hypertarget{class_o_p_t3101_1_1frame_data_c_acac63e6ee5d619fde4e8d1dfbf75b3f0}\label{class_o_p_t3101_1_1frame_data_c_acac63e6ee5d619fde4e8d1dfbf75b3f0}} 
+\index{O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}!phase@{phase}}
+\index{phase@{phase}!O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}}
+\subsubsection{\texorpdfstring{phase}{phase}}
+{\footnotesize\ttfamily uint32\+\_\+t O\+P\+T3101\+::frame\+Data\+C\+::phase}
+
+\mbox{\Hypertarget{class_o_p_t3101_1_1frame_data_c_a215ee0c78a8a3ccf401c504190cde782}\label{class_o_p_t3101_1_1frame_data_c_a215ee0c78a8a3ccf401c504190cde782}} 
+\index{O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}!phaseovl@{phaseovl}}
+\index{phaseovl@{phaseovl}!O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}}
+\subsubsection{\texorpdfstring{phaseovl}{phaseovl}}
+{\footnotesize\ttfamily bool O\+P\+T3101\+::frame\+Data\+C\+::phaseovl}
+
+\mbox{\Hypertarget{class_o_p_t3101_1_1frame_data_c_a3d351e94751d82291849af774be91b5b}\label{class_o_p_t3101_1_1frame_data_c_a3d351e94751d82291849af774be91b5b}} 
+\index{O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}!phaseovlf2@{phaseovlf2}}
+\index{phaseovlf2@{phaseovlf2}!O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}}
+\subsubsection{\texorpdfstring{phaseovlf2}{phaseovlf2}}
+{\footnotesize\ttfamily bool O\+P\+T3101\+::frame\+Data\+C\+::phaseovlf2}
+
+\mbox{\Hypertarget{class_o_p_t3101_1_1frame_data_c_af93d6d38c34644bdfa4225a5b4a68b1a}\label{class_o_p_t3101_1_1frame_data_c_af93d6d38c34644bdfa4225a5b4a68b1a}} 
+\index{O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}!sigovl@{sigovl}}
+\index{sigovl@{sigovl}!O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}}
+\subsubsection{\texorpdfstring{sigovl}{sigovl}}
+{\footnotesize\ttfamily bool O\+P\+T3101\+::frame\+Data\+C\+::sigovl}
+
+\mbox{\Hypertarget{class_o_p_t3101_1_1frame_data_c_a9edb9b641158fc09caada374ee941d45}\label{class_o_p_t3101_1_1frame_data_c_a9edb9b641158fc09caada374ee941d45}} 
+\index{O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}!temp@{temp}}
+\index{temp@{temp}!O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}}
+\subsubsection{\texorpdfstring{temp}{temp}}
+{\footnotesize\ttfamily uint16\+\_\+t O\+P\+T3101\+::frame\+Data\+C\+::temp}
+
+\mbox{\Hypertarget{class_o_p_t3101_1_1frame_data_c_ab8de475cc7a584e2c3df93935ffb5601}\label{class_o_p_t3101_1_1frame_data_c_ab8de475cc7a584e2c3df93935ffb5601}} 
+\index{O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}!tillum@{tillum}}
+\index{tillum@{tillum}!O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}}
+\subsubsection{\texorpdfstring{tillum}{tillum}}
+{\footnotesize\ttfamily uint16\+\_\+t O\+P\+T3101\+::frame\+Data\+C\+::tillum}
+
+\mbox{\Hypertarget{class_o_p_t3101_1_1frame_data_c_a5c1cd938fc62d4672d15842df1f7f539}\label{class_o_p_t3101_1_1frame_data_c_a5c1cd938fc62d4672d15842df1f7f539}} 
+\index{O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}!tmain@{tmain}}
+\index{tmain@{tmain}!O\+P\+T3101\+::frame\+DataC@{O\+P\+T3101\+::frame\+DataC}}
+\subsubsection{\texorpdfstring{tmain}{tmain}}
+{\footnotesize\ttfamily uint16\+\_\+t O\+P\+T3101\+::frame\+Data\+C\+::tmain}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/folders/d/scripts/cpp/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\mbox{\hyperlink{_o_p_t3101frame_data_8h}{O\+P\+T3101frame\+Data.\+h}}\item 
+C\+:/folders/d/scripts/cpp/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\mbox{\hyperlink{_o_p_t3101device___functions_8cpp}{O\+P\+T3101device\+\_\+\+Functions.\+cpp}}\end{DoxyCompactItemize}

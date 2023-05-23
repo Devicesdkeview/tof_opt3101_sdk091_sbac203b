@@ -1,0 +1,402 @@
+Version 0.\+8.\+0
+
+\subsection*{Overview}
+
+O\+P\+T3101\+S\+DK is a C++ S\+DK that supports TI \href{http://www.ti.com/product/OPT3101}{\tt O\+P\+T3101} A\+FE.
+
+Link to F\+AQ section \href{#FAQ}{\tt here}
+
+The S\+DK provides C++ library of functions to control and calibrate \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} based systems. \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} Configurator tool is required to generate certain functions since the S\+DK\textquotesingle{}s functions depend on how the \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} system is configured.
+
+Here is an overview on what the S\+DK offers\+:
+
+
+\begin{DoxyItemize}
+\item Register interface where the registers can be accessed by register names instead of physical address
+\begin{DoxyItemize}
+\item Translation to physical address and data read/write fields are translated by the S\+DK
+\item This the the fundamental basis on which the S\+DK is built which makes the calibration routines and methods more meaningful to read and understand
+\item The names of the registers match with the data sheet making seamless reference for documentation.
+\end{DoxyItemize}
+\item Methods to control and access group of registers to achieve specific functionality like the following
+\begin{DoxyItemize}
+\item Initializing the hardware on power-\/up to bring up to the desired state
+\item A Specific calibration for a particular configuration which involves a bunch of register reads writes and extraction of data
+\end{DoxyItemize}
+\item Container data types (classes) to hold, analyze and report calibration data for the systems.
+\begin{DoxyItemize}
+\item During calibration, data needs to be analyzed and stored.\+These classes act as intermediate containers to store and derive register values.
+\end{DoxyItemize}
+\item Template classes for environmental and host controls
+\begin{DoxyItemize}
+\item Calibration routines require specific environmental conditions like chamber temperature, target at specified distance, which is handled by template classes.
+\item Register physical I2C interface is host specific which are also handled by template classes.
+\item User is expected to implement/modify the template classes based on the environmental control hardware and host specifications.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+
+
+
+
+\subsection*{\label{_Prereq}%
+Prerequisites}
+
+
+\begin{DoxyItemize}
+\item C++ (03) compiler
+\item User basic knowledge of C++ to edit source code, compile and get it working based on \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} system, host and environment.
+\item Basic understanding of \href{http://www.ti.com/product/OPT3101}{\tt O\+P\+T3101} A\+FE device and various register configurations
+\item Basic understanding of \href{http://www.ti.com/lit/ug/sbau310/sbau310.pdf}{\tt O\+P\+T3101 Calibration}
+\item \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} Configurator tool configuration and output .cpp file generated from the tool
+\begin{DoxyItemize}
+\item This file has method definition to initialize the hardware and allocate memory to calibration containers based on hardware configuration
+\end{DoxyItemize}
+\item As a reference \href{http://www.ti.com/tool/OPT3101EVM}{\tt O\+P\+T3101\+E\+VM} hardware interface examples are provided. A sample configuration for super-\/\+H\+DR mode is also included
+\begin{DoxyItemize}
+\item If TI E\+VM reference is compiled as such setupapi.\+lib needs to be added to the linker path to get the serial ports working (C\+DC interface)
+\item TI E\+VM drivers are also required.
+\item C\+OM port in the file \href{host_controller_8cpp.html}{\tt host\+Controller.\+cpp} needs to be updated based on the E\+VM enumeration.
+\item Port to be selected is the port number which enumerates with following hardware id \href{https://e2e.ti.com/cfs-file/__key/communityserver-discussions-components-files/989/8461.ControlPort.PNG}{\tt U\+SB V\+I\+D\+\_\+2047\&P\+I\+D\+\_\+0\+A3C\&R\+E\+V\+\_\+0200\&M\+I00}
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+
+
+
+
+\subsection*{\label{_Limitations}%
+Limitations and expectations}
+
+\subsubsection*{S\+DK is a}
+
+
+\begin{DoxyItemize}
+\item Library of functions to help users configure, control and calibrate the \href{http://www.ti.com/product/OPT3101}{\tt O\+P\+T3101} system on their host environment.
+\item Library that needs porting and tweaking to users\textquotesingle{} hardware and environment specifications.
+\begin{DoxyItemize}
+\item I2C Interface\+:
+\begin{DoxyItemize}
+\item For eg\+: Commands to I2C register interface varies depending on hardware and host.
+\item This S\+DK provides translation of register names to physical address and data to be written to h/w, however the actual command to write and read I2C to hardware is host and h/w specific.
+\item The S\+DK provides a template class filled with \href{http://www.ti.com/tool/OPT3101EVM}{\tt O\+P\+T3101\+E\+VM} control example which user needs to modify based on their host and hardware
+\end{DoxyItemize}
+\item Environmental control\+:
+\begin{DoxyItemize}
+\item Some calibration steps require a target to be placed at a distance based on \href{http://www.ti.com/product/OPT3101}{\tt O\+P\+T3101} system configuration. The S\+DK provides a template class which user needs to implement based on host and environment.
+\item Another example is for temperature coefficients chamber temperature needs to be set, for which template classes are provided which needs to be implemented by user.
+\end{DoxyItemize}
+\item Calibration file storage\+:
+\begin{DoxyItemize}
+\item S\+DK uses c++ std\+::fstream to store files in A\+S\+C\+II format which may not by practical in M\+CU like environment, in such cases users need to implement their own method of storage to non-\/volatile memory for some of the calibration steps.
+\end{DoxyItemize}
+\item Report methods
+\begin{DoxyItemize}
+\item Calibration classes have report() method which print readable analysis of the classes using stdio\+::printf statements to stout. This may be impractical in some host environments, in such cases users need to implement their own display methods to view such classes.
+\end{DoxyItemize}
+\end{DoxyItemize}
+\item Library that is powerful enough to build a full fledged design and factory calibration tool for on \href{http://www.ti.com/product/OPT3101}{\tt O\+P\+T3101} system that works of various different hosts and environments.
+\item Coefficients estimation as part of S\+DK are simplified example algorithms based on 2 point linear fitting. A more complicated linear regression fitting may be required to be implemented inside or outside of S\+DK based on accuracy desired by the system.
+\begin{DoxyItemize}
+\item For eg\+: Temperature coefficients are determined by just 2 temperature points, however in reality a multi point line of best fit method may be required.
+\item Users can export the data to file system using methods save\+To\+File and analyze and curve fit data using mathematical tools.
+\item Ones the coefficients are identified, they can be fed back to the class using the library functions and written back to files/load to the h/w using S\+DK methods
+\item Calculating coefficients outside the S\+DK is critical especially for \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c}{O\+P\+T3101\+::phase\+Ambient\+CoffC}} class coefficients since they involve a P\+WL curve fit not implemented in the S\+DK
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\paragraph*{S\+DK is {\bfseries N\+OT}}
+
+
+\begin{DoxyItemize}
+\item Readily available calibration tool to calibrate \href{http://www.ti.com/product/OPT3101}{\tt O\+P\+T3101} system on users\textquotesingle{} host without user efforts to port and compile on host environment
+\end{DoxyItemize}
+
+
+
+
+
+\subsection*{Terminology}
+
+
+\begin{DoxyItemize}
+\item \href{http://www.ti.com/lit/ug/sbau310/sbau310.pdf}{\tt Calibration}\+: This is the process in which coefficients are determined for various phenomenon like temperature, ambient and applied to \href{http://www.ti.com/product/OPT3101}{\tt O\+P\+T3101} system for correction
+\item Calibration session\+: This is a session from power-\/up of h/w ,reset, initialization, setting up environment and measuring the coefficients and storing them to file. (To be shared among different sessions)
+\item Per design Calibration\+: These are coefficients which are needed per system design (or P\+C\+B/optics design). Coefficients determination may need to be done for several units to understand the variation from unit to unit. In almost every case of system only 1 set of coefficients may be determined from all the units under test and used for all the units in factory calibration.
+\item Per unit factory calibration\+: These are coefficients that are required per unit during factory calibration.
+\end{DoxyItemize}
+
+
+
+
+
+\subsection*{Pre-\/processor definitions}
+
+Following pre-\/processor definitions are used in the S\+DK to hide several sections of the S\+DK to compiler. Users can device to define or not define these constructs based on host requirements All the pre-\/processors are defined in the \mbox{\hyperlink{host_controller_8h}{host\+Controller.\+h}} file
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{host_controller_8h_a140baa610a82653550ea9aa0a85feb43}{O\+P\+T3101\+\_\+\+U\+S\+E\+\_\+\+S\+T\+D\+I\+O\+L\+IB}} This pre-\/processor derivative dictates whether to load stdio library which constants stdio\+::printf and stdio\+::sprintf methods
+\begin{DoxyItemize}
+\item This is enabled by default in S\+DK. Not defining this derivate would disable all stdio\+::sprintf and stdio\+::printf methods.
+\item This means that the report() methods which displays user readable class contents on screen for several class will be blank to the compiler.
+\item All file storage and load methods are hidden to compiler since the name for the files cannot be resolved without the stdio\+::sprintf method
+\item User is expected to disable this only on R\+T\+OS or M\+CU like environments when printing on console or file storage/load doesn\textquotesingle{}t make sense on the host
+\item User needs to find a way to transfer the calibration class(es) data from and to the R\+T\+OS host to a PC for debug, analysis and curve fitting of coefficients.
+\end{DoxyItemize}
+\item \mbox{\hyperlink{host_controller_8h_a3ca6673b36debd7f489557558d93fe38}{O\+P\+T3101\+\_\+\+U\+S\+E\+\_\+\+S\+T\+R\+E\+A\+M\+L\+IB}} This pre-\/processor derivative dictates whether to load std\+::iostream and std\+::fstream libraries
+\begin{DoxyItemize}
+\item This is enabled by default in S\+DK. Not defining this derivate would disable all the std\+::iostream and related libraries.
+\item File storage will no longer be possible with the S\+DK since the file storage and load uses these libraries
+\item This means that the report() methods which displays user readable class contents on screen for several class will be blank to the compiler.
+\item All stream operator overload methods for classes are hidden to the compiler.
+\item All methods related to load\+From\+File and save\+To\+File are blank methods to the compiler.
+\item User is expected to disable this only on R\+T\+OS or M\+CU like environments file storage/load doesn\textquotesingle{}t make sense on the host
+\item User needs to find a way to transfer the calibration class(es) data from and to the R\+T\+OS host to a PC for debug, analysis and curve fitting of coefficients.
+\end{DoxyItemize}
+\item \mbox{\hyperlink{host_controller_8h_af9ad545b8deb1b3c44ff9168213be470}{O\+P\+T3101\+\_\+\+U\+S\+E\+\_\+\+S\+E\+R\+I\+A\+L\+L\+IB}} This pre-\/processor derivative dictates whether to use included \mbox{\hyperlink{serial_8h}{serial.\+h}} library
+\begin{DoxyItemize}
+\item This is enabled by default in S\+DK. Not defining this derivate would disable the serial communication capability from the host
+\item The included \href{https://github.com/wjwwood/serial}{\tt serial.\+h} library is from M\+IT under M\+IT license will be hidden to compiler on disabling this derivative
+\item In case of usage of S\+DK with \href{http://www.ti.com/tool/OPT3101EVM}{\tt O\+P\+T3101\+E\+VM} , this derivate is required.
+\item User can disable this derivative and use their own library based on the h/w.
+\item In that case the I2C read and writes operations need to be handled by user in the \mbox{\hyperlink{host_controller_8cpp}{host\+Controller.\+cpp}}
+\end{DoxyItemize}
+\item \mbox{\hyperlink{host_controller_8h_a913d77ed1a69aa41135440e6d7e8ec6c}{H\+O\+S\+T\+\_\+\+PC}} This pre-\/processor derivative dictates whether the host is PC
+\begin{DoxyItemize}
+\item This derivatives when set enables all the 3 \mbox{\hyperlink{host_controller_8h_a140baa610a82653550ea9aa0a85feb43}{O\+P\+T3101\+\_\+\+U\+S\+E\+\_\+\+S\+T\+D\+I\+O\+L\+IB}} , \mbox{\hyperlink{host_controller_8h_a3ca6673b36debd7f489557558d93fe38}{O\+P\+T3101\+\_\+\+U\+S\+E\+\_\+\+S\+T\+R\+E\+A\+M\+L\+IB}} and \mbox{\hyperlink{host_controller_8h_af9ad545b8deb1b3c44ff9168213be470}{O\+P\+T3101\+\_\+\+U\+S\+E\+\_\+\+S\+E\+R\+I\+A\+L\+L\+IB}}
+\item User can disable this derivative in R\+T\+OS or M\+CU environment, however need to take care of handling calibration data as specified in above sections
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+
+
+
+
+\subsection*{\label{_Levels}%
+Methods abstraction levels}
+
+The master class \mbox{\hyperlink{class_o_p_t3101_1_1device}{O\+P\+T3101\+::device}} has several methods for various different tasks and coefficient determination. They are classified to different levels based on simplicity. \subsubsection*{Level 3 methods (Simplest abstraction)}
+
+
+\begin{DoxyItemize}
+\item These are methods that provide the simplest level of abstraction to the user.
+\item All the methods don\textquotesingle{}t require any arguments to be passed.
+\item These methods internally call lower level methods methods to achieve the targeted functionality
+\item All steps are listed in the documentation for each method.
+\item {\bfseries It is highly recommended to understand the steps before using these methods}
+\item {\bfseries Some methods will require user to edit and set up some parameters}. This is true for phase offset related methods where reference distances will have to be setup.
+\item The list below is the recommended order in which these sessions are meant to be run
+\end{DoxyItemize}
+
+Here is the list of Level 3 methods
+\begin{DoxyEnumerate}
+\item \mbox{\hyperlink{class_o_p_t3101_1_1device_a0dd8c59bc93c392f8d3f430697457415}{O\+P\+T3101\+::device\+::calibration\+Session\+\_\+first\+Time\+Bring\+Up}} --$>$ As name suggest this method is used to bring up the board and do basic measurements
+\item \mbox{\hyperlink{class_o_p_t3101_1_1device_a6b44ee9769ae8a2debff7b475bccdfe4}{O\+P\+T3101\+::device\+::calibration\+Session\+\_\+per\+Design\+Calibration\+Crosstalk\+Temp}} --$>$ This measures the crosstalk temperature coefficients for the system
+\item \mbox{\hyperlink{class_o_p_t3101_1_1device_aec05fdf2f9780dea74305720ccb1cf32}{O\+P\+T3101\+::device\+::calibration\+Session\+\_\+per\+Design\+Calibration\+Phase\+Temp}} --$>$ This measures the phase temp coefficients for the system
+\item \mbox{\hyperlink{class_o_p_t3101_1_1device_a94c4e35aa43bc53eb8fe0d4c364aea25}{O\+P\+T3101\+::device\+::calibration\+Session\+\_\+per\+Design\+Calibration\+Phase\+Ambient}} --$>$ This measures the phase ambient coefficients for the system
+\item \mbox{\hyperlink{class_o_p_t3101_1_1device_a3b278687f5414b66c614d83dcf229f80}{O\+P\+T3101\+::device\+::calibration\+\_\+per\+Design\+Calibration\+Phase\+Ambient\+Set\+Coff\+After\+Curve\+Fit}} --$>$ Curve fit data needs to be entered back to the S\+DK after calculations on PC
+\item \mbox{\hyperlink{class_o_p_t3101_1_1device_abad5b2d7405e735fa80041dbbf47502c}{O\+P\+T3101\+::device\+::calibration\+Session\+\_\+per\+Unit\+Factory\+Calibration}} --$>$ Recommended list of functions to be run during production calibration in factory
+\item \mbox{\hyperlink{class_o_p_t3101_1_1device_aa0a1b1f37d9aea753d7910de3e8c2799}{O\+P\+T3101\+::device\+::calibration\+Session\+\_\+per\+Unit\+Factory\+Calibration\+Write\+Register\+Data\+To\+Non\+Volatile\+Memory}} --$>$ Steps to store factory calibration data to non-\/volatile memory
+\end{DoxyEnumerate}
+
+\subsubsection*{Level 2 methods}
+
+
+\begin{DoxyItemize}
+\item These are methods are called by Level 3 methods.
+\item These methods can be directly called by user at top level as well.
+\item These methods require arguments to be passed.
+\item These methods internally call ever lower level methods methods to achieve the targeted functionality
+\item All steps are listed in the documentation for each method.
+\item {\bfseries It is highly recommended to understand the steps before using these methods}
+\end{DoxyItemize}
+
+Here is the list of Level 2 methods
+\begin{DoxyEnumerate}
+\item \mbox{\hyperlink{class_o_p_t3101_1_1device_a48b320dfe4376bf62043d10ba937e8cd}{O\+P\+T3101\+::device\+::load\+Illum\+Crosstalk\+Set}} --$>$ Loads the set of illum crosstalk registers
+\item \mbox{\hyperlink{class_o_p_t3101_1_1device_ab384cacd80cd32643b7029fe59428e92}{O\+P\+T3101\+::device\+::load\+Illum\+Crosstalk\+Temp\+Coff\+Set}} --$>$ Loads the set of illum crosstalk temp coefficient registers
+\item \mbox{\hyperlink{class_o_p_t3101_1_1device_a69d7fbb471d186845242774d7f2c86a8}{O\+P\+T3101\+::device\+::load\+Phase\+Offset\+Temp\+Coff\+Set}} --$>$ Loads the set of phase temperature coefficient registers
+\item \mbox{\hyperlink{class_o_p_t3101_1_1device_ac70129fa0dacd700b19349087f000f76}{O\+P\+T3101\+::device\+::load\+Phase\+Ambient\+Coff\+Set}} --$>$ Loads the set of phase ambient coefficient registers
+\item \mbox{\hyperlink{class_o_p_t3101_1_1device_a9fed055b5998d93bd37f26388ec8b0a8}{O\+P\+T3101\+::device\+::load\+Phase\+Offset\+Set}} --$>$ loads the set of phase offset registers
+\end{DoxyEnumerate}
+
+\subsubsection*{Level 1 methods}
+
+
+\begin{DoxyItemize}
+\item These are methods are called by Level 3 and Level 2 methods.
+\item These methods can be directly called by user at top level as well.
+\item Some of these methods require multiple arguments to be passed.
+\item These methods internally call ever lower level methods methods to achieve the targeted functionality
+\item All steps are listed in the documentation for each method.
+\item {\bfseries It is highly recommended to understand the steps before using these methods}
+\item {\bfseries Some methods will require user to edit and set up some parameters}. This is true for phase offset related methods where reference distances will have to be setup.
+\end{DoxyItemize}
+
+Here is the list of Level 1 methods
+\begin{DoxyEnumerate}
+\item \mbox{\hyperlink{class_o_p_t3101_1_1device_a1d37b22f535d8130c7f24799f7fa3c33}{O\+P\+T3101\+::device\+::reset}} --$>$ Resets the \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} system h/w
+\item \mbox{\hyperlink{class_o_p_t3101_1_1device_ae3b7fb4f9a8f1dee330523e034aa9460}{O\+P\+T3101\+::device\+::initialize}} --$>$ Initializes the \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} system h/w
+\item \mbox{\hyperlink{class_o_p_t3101_1_1device_a44f832d6edbfb26db079ddba4debfdba}{O\+P\+T3101\+::device\+::measure\+And\+Correct\+Internal\+Crosstalk}} --$>$ Measures and corrects internal crosstalk
+\item O\+P\+T3101\+::device\+::measure\+Illum\+Crosstalk --$>$ Measures illum crosstalk registers
+\item O\+P\+T3101\+::device\+::measure\+Phase\+Offset --$>$ Measures phase offset registers
+\item \mbox{\hyperlink{class_o_p_t3101_1_1device_acb915ffb10d3c725fe4a58f22d69d27d}{O\+P\+T3101\+::device\+::load\+Illum\+Crosstalk}} --$>$ Loads illum crosstalk registers
+\item \mbox{\hyperlink{class_o_p_t3101_1_1device_a941591aefa8b4c9b7436ac8f216938ed}{O\+P\+T3101\+::device\+::load\+Phase\+Offset}} --$>$ Loads phase offset registers
+\item \mbox{\hyperlink{class_o_p_t3101_1_1device_a450bc6b5bcd3e6b232d4352229a2829c}{O\+P\+T3101\+::device\+::load\+Illum\+Crosstalk\+Temp\+Coff}} --$>$ Loads the illum crosstalk temperature coefficient registers
+\item \mbox{\hyperlink{class_o_p_t3101_1_1device_a71e7ec6f26d54ea7cba11bf1c4132489}{O\+P\+T3101\+::device\+::load\+Phase\+Offset\+Temp\+Coff}} --$>$ Loads the phase temperature coefficient registers
+\item \mbox{\hyperlink{class_o_p_t3101_1_1device_aa34206319a66be86de29789a1c24e3f7}{O\+P\+T3101\+::device\+::load\+Phase\+Ambient\+Coff}} --$>$ Loads the phase ambient coefficient registers
+\end{DoxyEnumerate}
+
+\subsubsection*{Level 0 methods}
+
+These are private members of the class hidden to the users internally used by Level 1 methods 
+
+
+
+\subsection*{Critical files in S\+DK and their purpose}
+
+\subsubsection*{\mbox{\hyperlink{_o_p_t3101device_8h}{O\+P\+T3101device.\+h}}}
+
+
+\begin{DoxyItemize}
+\item Master class instance of which {\bfseries needs to be declared by user in the program}
+\item Has methods for device reset, initialization, calibration routines etc as listed in the S\+DK documentation.
+\item All calibration routines, register interfaces are availalbe as methods and variables inside this master class instance.
+\item For eg\+: \mbox{\hyperlink{class_o_p_t3101_1_1device}{O\+P\+T3101\+::device}} dev; is declared in the program, \href{class_o_p_t3101_1_1device.html#a0dd8c59bc93c392f8d3f430697457415}{\tt dev.\+calibration\+Session\+\_\+first\+Time\+Bring\+Up()} would perform the steps to power-\/up, reset and initialize the device and perform initial calibration steps.
+\end{DoxyItemize}
+
+\subsubsection*{\mbox{\hyperlink{_o_p_t3101__configuration_8cpp}{O\+P\+T3101\+\_\+configuration.\+cpp}}}
+
+
+\begin{DoxyItemize}
+\item This is the file created by the O\+P\+T3101-\/\+Configurator tool based on user inputs
+\item This is a critical file that sets up and allocates memory for various different classes with in the \mbox{\hyperlink{class_o_p_t3101_1_1device}{O\+P\+T3101\+::device}} class
+\end{DoxyItemize}
+
+\subsubsection*{\mbox{\hyperlink{environment_control_8h}{environment\+Control.\+h}} \mbox{\hyperlink{environment_control_8cpp}{environment\+Control.\+cpp}}}
+
+
+\begin{DoxyItemize}
+\item Environment control template class which {\bfseries users need to implement/modify}
+\item For eg\+: To set target to infinity or cover photo diode.
+\item If automated environmental control is not available, users could implement methods with host pause or wait statements and realize the desired functionality (as described in the method name and description) manually.
+\item Appropriate methods from this file/class are called by the S\+DK at various stages of calibration
+\end{DoxyItemize}
+
+\subsubsection*{\mbox{\hyperlink{host_controller_8h}{host\+Controller.\+h}} \mbox{\hyperlink{host_controller_8cpp}{host\+Controller.\+cpp}}}
+
+
+\begin{DoxyItemize}
+\item Host control template class which has I2C Read, I2C write, device reset and host sleep commands which {\bfseries users may need to implement/modify}
+\item \href{http://www.ti.com/tool/OPT3101EVM}{\tt O\+P\+T3101\+E\+VM} command controls examples are populated already
+\item Declares global variable \char`\"{}host\char`\"{} which is used by various methods to reset the device and register class to read and write I2C commands to
+\end{DoxyItemize}
+
+\subsubsection*{\mbox{\hyperlink{_o_p_t3101_register_definition_8h}{O\+P\+T3101\+Registerdefinition.\+h}} \mbox{\hyperlink{_o_p_t3101device___register_map_8cpp}{O\+P\+T3101device\+\_\+\+Register\+Map.\+cpp}}}
+
+
+\begin{DoxyItemize}
+\item Declares all the registers of \href{http://www.ti.com/tool/OPT3101EVM}{\tt O\+P\+T3101\+E\+VM} device
+\item {\bfseries users may comment out the registers not by the system to save compiled code memory}
+\end{DoxyItemize}
+
+\subsubsection*{Several Calibration Header and C++ Files}
+
+\mbox{\hyperlink{_o_p_t3101_calibration_8h}{O\+P\+T3101\+Calibration.\+h}} \mbox{\hyperlink{_o_p_t3101___calibration_8cpp}{O\+P\+T3101\+\_\+\+Calibration.\+cpp}} \mbox{\hyperlink{_o_p_t3101_crosstalk_8h}{O\+P\+T3101\+Crosstalk.\+h}} \mbox{\hyperlink{_o_p_t3101_crosstalk_8cpp}{O\+P\+T3101\+Crosstalk.\+cpp}} \mbox{\hyperlink{_o_p_t3101_design_coefficients_8h}{O\+P\+T3101\+Design\+Coefficients.\+h}} \mbox{\hyperlink{_o_p_t3101_design_coefficients_8cpp}{O\+P\+T3101\+Design\+Coefficients.\+cpp}} \mbox{\hyperlink{_o_p_t3101frame_data_8h}{O\+P\+T3101frame\+Data.\+h}} \mbox{\hyperlink{_o_p_t3101_phase_offset_8h}{O\+P\+T3101\+Phase\+Offset.\+h}} \mbox{\hyperlink{_o_p_t3101_phase_offset_8cpp}{O\+P\+T3101\+Phase\+Offset.\+cpp}}
+\begin{DoxyItemize}
+\item Several calibration class declarations have methods to load\+From\+File , save\+To\+File and report the class contents
+\item {\bfseries users may need to modify} the implementations based on host requirements.
+\item S\+DK example implementations use c++ std\+::fstream std\+::iostream and stdio\+::printf methods
+\end{DoxyItemize}
+
+
+
+
+
+\subsection*{\label{_FAQ}%
+F\+AQ (Frequency asked Questions)}
+
+
+\begin{DoxyEnumerate}
+\item Why do I need this S\+DK?
+\begin{DoxyItemize}
+\item Actually you don\textquotesingle{}t need this S\+DK to use \href{http://www.ti.com/tool/OPT3101EVM}{\tt O\+P\+T3101\+E\+VM} or any system build using \href{http://www.ti.com/product/OPT3101}{\tt O\+P\+T3101} A\+FE decide.
+\item However using this S\+DK makes development and debug more efficient and faster.
+\item The application code in the host processor would look like bunch of raw register reads and writes without the S\+DK.
+\item When using this S\+DK the application code is more readable and is at a higher level of abstraction.
+\end{DoxyItemize}
+\item Okay I see... but still Why?
+\begin{DoxyItemize}
+\item \href{http://www.ti.com/lit/ug/sbau310/sbau310.pdf}{\tt Calibration} of \href{http://www.ti.com/product/OPT3101}{\tt O\+P\+T3101} typically involve the following...
+\begin{DoxyItemize}
+\item Setting up environmental conditions like temperature, covering photo diode or setting up target
+\item Configuring the \href{http://www.ti.com/product/OPT3101}{\tt O\+P\+T3101} device to a particular mode of operation with a bunch of register settings
+\item Waiting for the \href{http://www.ti.com/product/OPT3101}{\tt O\+P\+T3101} device to acquired data
+\item Reading back acquired data from the \href{http://www.ti.com/product/OPT3101}{\tt O\+P\+T3101} device to the host.
+\item Finding out floating point precision coefficients from the acquired data, for some coefficients using curve fitting or regression.
+\item Finding out register scales to translate the floating point precision coefficients to register values and their corresponding scaling values
+\item Writing these coefficients back to the device in production calibration environment
+\item Writing all calibration related registers to a non-\/volatile memory
+\end{DoxyItemize}
+\item Now imagine doing all the above steps using just raw hex reads and writes. Some of the registers are split and they span across multiple addresses.
+\item The application code for this would look cumbersome and non readable making the development and debug inefficient.
+\item Especially true during early stages of development where registers may need to be tweaked to achieve best performance from the system.
+\item S\+DK provides a simpler abstraction to the register interface and also provides all the calibration functions as methods.
+\item Methods involve setting up the environment, setting up \href{http://www.ti.com/product/OPT3101}{\tt O\+P\+T3101} device , taking measurements, finding scaling coefficients and register values.
+\item Methods are extended to very high level abstractions like listed in the \href{#Levels}{\tt levels} section giving users a simpler approach to the listed complex list of steps
+\end{DoxyItemize}
+\item This S\+DK is in C++, can i get one in C?
+\begin{DoxyItemize}
+\item No. The S\+DK is designed in C++ and will continue to be supported in C++.
+\end{DoxyItemize}
+\item Why is this C++ and not C?
+\begin{DoxyItemize}
+\item There are several structured data types for different calibrations which needs to interact between one another. Also the register interface needs a cleaner operated overloaded structured entity to make the register reads and writes more meaningful and readable. C++ given a simpler level of abstraction for implementation of these features which C lacks.
+\end{DoxyItemize}
+\item I would really like to get C library since I am more familiar with C.
+\begin{DoxyItemize}
+\item The library uses very simple C++ constructs, hence using this library doesn\textquotesingle{}t require advanced C++ knowledge. The classes in this library are used as glorified struc entities with self contained methods or functions.
+\end{DoxyItemize}
+\item I would really like to get C library since my host processor may not support C++.
+\begin{DoxyItemize}
+\item Most application processors developments kits support C and C++ including TI\textquotesingle{}s embedded processors. Even TI\textquotesingle{}s M\+S\+P430 series support C++. ~\newline
+7. I would really like to get C library since my existing application code is in C.
+\item C code is fully backward compatible in C++ compiler environment. There are some minor changes to be done to the code to notify the linker that the library included are C based and not C++ based.
+\item Typical syntax for that involves enumerating the includes and the syntax with in extern \char`\"{}\+C\char`\"{} \{ \} entities.
+\item Users could switch to C++ compiler on the host with minor changes to their existing code, in which case this S\+DK becomes compatible in their environment.
+\end{DoxyItemize}
+\item I like the register access with names, can i get only that portion ?
+\begin{DoxyItemize}
+\item Only the files \href{class_o_p_t3101_1_1registers.html}{\tt register.\+h/register.cpp} \href{class_o_p_t3101_1_1registers.html}{\tt O\+P\+T3101\+Registerdefinition.\+h/\+O\+P\+T3101device\+\_\+\+Register\+Map.cpp} are good enough to translate the register names to physical address, data. Users can them implement own I2C read write functions based on resolved physical quantities.
+\end{DoxyItemize}
+\item Does this come with G\+UI interface?
+\begin{DoxyItemize}
+\item No. This is not a ready to use tool, this is a development kit. Please read \href{#Limitations}{\tt this} section
+\end{DoxyItemize}
+\item Why are there so many files and classes?
+\begin{DoxyItemize}
+\item There are several functions the S\+DK fulfills mainly the calibration aspects. Each calibration is unique data type with its own set of registers and coefficients. Having a single class for all the calibration types is not possible hence several classes have been declared specifically for each type of calibration containers. These have been split to different files for easy management and readability
+\end{DoxyItemize}
+\item What do i need to know before I start using this?
+\begin{DoxyItemize}
+\item Please refer to \href{#Prereq}{\tt this} section
+\end{DoxyItemize}
+\item What are these host\+Controler and environment\+Controller classes? Why do i need them?
+\begin{DoxyItemize}
+\item This is an S\+DK expected to be used on various different h/w and host configurations.
+\item Given that for eg\+: the I2C read or write command is very different for each host or h/w.
+\item Similarly to get ambient coefficient, the S\+DK has to convey to the user the ambient level needs to be set to a particular value.
+\item Conventionally these are provided with pseudo code in the source files which the user needs to implement.
+\item In case of this S\+DK, instead of pseudo code a template classes have been created with methods which are expected to do these specific tasks.
+\item These methods (whose name and documentation covers the purpose of this method) are called by the S\+DK at appropriate times.
+\item If users implement the action for these methods according to their host or environmental conditions then the S\+DK would work seamlessly in their system
+\item For eg\+: The S\+DK Calls the method environment\+Controller\+::set\+Chamber\+Temperature method when it requires to change the temperature of the environment.
+\end{DoxyItemize}
+\item Where do i see detailed documentation for each class or method?
+\begin{DoxyItemize}
+\item In the top menu go to Classes--$>$Class Hierarchy which is a good starting point. Every file is documented and almost every step in each method/function is documented.
+\end{DoxyItemize}
+\item I have more questions and clarifications. How do i each out?
+\begin{DoxyItemize}
+\item Please submit a \href{http://e2e.ti.com}{\tt E2E} question regarding the same. 
+\end{DoxyItemize}
+\end{DoxyEnumerate}

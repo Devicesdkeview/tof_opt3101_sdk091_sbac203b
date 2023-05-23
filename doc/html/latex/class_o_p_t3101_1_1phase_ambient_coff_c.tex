@@ -1,0 +1,271 @@
+\hypertarget{class_o_p_t3101_1_1phase_ambient_coff_c}{}\section{O\+P\+T3101\+:\+:phase\+Ambient\+CoffC Class Reference}
+\label{class_o_p_t3101_1_1phase_ambient_coff_c}\index{O\+P\+T3101\+::phase\+Ambient\+CoffC@{O\+P\+T3101\+::phase\+Ambient\+CoffC}}
+
+
+Class that holds ambient phase coefficient related registers and values.  
+
+
+
+
+{\ttfamily \#include $<$O\+P\+T3101\+Design\+Coefficients.\+h$>$}
+
+
+
+Collaboration diagram for O\+P\+T3101\+:\+:phase\+Ambient\+CoffC\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{class_o_p_t3101_1_1phase_ambient_coff_c__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c_aa32106a402df3ed93a73203634017953}{phase\+Ambient\+CoffC}} ()
+\begin{DoxyCompactList}\small\item\em initializes the members to 0 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c_ac8f4dfff191b0adc7be044f39500e242}{calculate\+Coff}} (uint16\+\_\+t freq\+Counter)
+\begin{DoxyCompactList}\small\item\em Calculates the register settings for the phase ambient coefficient Calculates \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c_a267c8f925dedeb8af97aba7ffae95da4}{O\+P\+T3101\+::phase\+Ambient\+Coff\+C\+::coff\+Reg}} and \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c_abed8ff9971976201638badbda9fd4543}{O\+P\+T3101\+::phase\+Ambient\+Coff\+C\+::common\+Scale}} based on \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c_af655f6704c4b3901b82a913f8a047258}{O\+P\+T3101\+::phase\+Ambient\+Coff\+C\+::coff}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c_afba22e085a341c2d9b1add1532ea06a1}{report}} ()
+\begin{DoxyCompactList}\small\item\em reports members of the instance Print the members of the class instance on screen \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c_ad5b439c7ab384c03fa540d2bc06c3352}{store\+To\+File}} (char $\ast$file\+Name)
+\begin{DoxyCompactList}\small\item\em saves phase ambient coff values to file This methods saves the phase ambient coff values to a non-\/volatile memory. Storage/\+Restoration to/from non-\/volatile memory is important for factory calibration \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c_a41db9882facdbf3b437dcb54958b5763}{load\+From\+File}} (char $\ast$file\+Name)
+\begin{DoxyCompactList}\small\item\em load phase ambient coff values from file This methods loads the phase ambient coff values to a non-\/volatile memory. Storage/\+Restoration to/from non-\/volatile memory is important for factory calibration \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c_af655f6704c4b3901b82a913f8a047258}{coff}} \mbox{[}4\mbox{]}
+\begin{DoxyCompactList}\small\item\em Coefficients stored in floating point precision. Since there are 4 sections the \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c_af655f6704c4b3901b82a913f8a047258}{O\+P\+T3101\+::phase\+Ambient\+Coff\+C\+::coff}} is array of 4 elements. Units for this is \mbox{\hyperlink{class_o_p_t3101_1_1frame_data_af8661d11405953dc378ad4d7cb0f2db6}{O\+P\+T3101\+::frame\+Data\+::phase}} codes per unit \mbox{\hyperlink{class_o_p_t3101_1_1frame_data_a39ebf8bd06141bef6986e49013d03c35}{O\+P\+T3101\+::frame\+Data\+::ambient}} codes. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c_a267c8f925dedeb8af97aba7ffae95da4}{coff\+Reg}} \mbox{[}4\mbox{]}
+\begin{DoxyCompactList}\small\item\em Coefficients value of \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c_af655f6704c4b3901b82a913f8a047258}{O\+P\+T3101\+::phase\+Ambient\+Coff\+C\+::coff}} represented as 8 bit register values calculated by \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c_ac8f4dfff191b0adc7be044f39500e242}{O\+P\+T3101\+::phase\+Ambient\+Coff\+C\+::calculate\+Coff}}. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c_a5a2e9d6a0622f02024eaa8a1d2ec0011}{splits\+Reg}} \mbox{[}3\mbox{]}
+\begin{DoxyCompactList}\small\item\em Register entries for the split point for the P\+WL. Since there are 4 sections where are 3 split points to be set. Units for this is \mbox{\hyperlink{class_o_p_t3101_1_1frame_data_a39ebf8bd06141bef6986e49013d03c35}{O\+P\+T3101\+::frame\+Data\+::ambient}} codes. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c_abed8ff9971976201638badbda9fd4543}{common\+Scale}}
+\begin{DoxyCompactList}\small\item\em Since there are 4 \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c_af655f6704c4b3901b82a913f8a047258}{O\+P\+T3101\+::phase\+Ambient\+Coff\+C\+::coff}} to represent them as 8 bit register values a common scaling factor is required. This is calculated by method \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c_ac8f4dfff191b0adc7be044f39500e242}{O\+P\+T3101\+::phase\+Ambient\+Coff\+C\+::calculate\+Coff}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c_a3febbb121799f99cb3f3f6578b43fae9}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c}{phase\+Ambient\+CoffC}} $\ast$data)
+\begin{DoxyCompactList}\small\item\em Operator overload to store class contents to a file Casts all the class members for file storage. \end{DoxyCompactList}\item 
+std\+::istream \& \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c_a1aec354cf48fdc653937a8168af6c78c}{operator$>$$>$}} (std\+::istream \&is, \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c}{phase\+Ambient\+CoffC}} $\ast$data)
+\begin{DoxyCompactList}\small\item\em Operator overload to load class contents to from a file Retrieves all the class members from a stored file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class that holds ambient phase coefficient related registers and values. 
+
+This is a class container that can hold phase offset ambient coefficients and related registers. Photo diodes has a phenomenon where the phase delay of modulated current generated by photo diode is dependent on the amount of ambient light falling on the photo diode. The effect observed on the system is that the phase reported by the system will be dependent on the amount of ambient light of the environment. ~\newline
+ \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} has compensation block for the same, which needs coefficients to be programmed. \mbox{\hyperlink{namespace_o_p_t3101}{O\+P\+T3101}} has a look up table based correction since the phenomenon in non-\/linear. The look-\/up table is a 4 way split P\+WL correction with 4 independent coefficients. The P\+WL correlation is between ambient A\+DC output and phase measured~\newline
+ This class has members to contain the coefficients and the split points. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_o_p_t3101_1_1phase_ambient_coff_c_aa32106a402df3ed93a73203634017953}\label{class_o_p_t3101_1_1phase_ambient_coff_c_aa32106a402df3ed93a73203634017953}} 
+\index{O\+P\+T3101\+::phase\+Ambient\+CoffC@{O\+P\+T3101\+::phase\+Ambient\+CoffC}!phase\+Ambient\+CoffC@{phase\+Ambient\+CoffC}}
+\index{phase\+Ambient\+CoffC@{phase\+Ambient\+CoffC}!O\+P\+T3101\+::phase\+Ambient\+CoffC@{O\+P\+T3101\+::phase\+Ambient\+CoffC}}
+\subsubsection{\texorpdfstring{phase\+Ambient\+Coff\+C()}{phaseAmbientCoffC()}}
+{\footnotesize\ttfamily O\+P\+T3101\+::phase\+Ambient\+Coff\+C\+::phase\+Ambient\+CoffC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+initializes the members to 0 
+
+\begin{DoxyReturn}{Returns}
+Nothing; 
+\end{DoxyReturn}
+{\bfseries Algorithm of the method is as follows}
+
+
+\begin{DoxyItemize}
+\item Serializes all the members and returns to the stream 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_o_p_t3101_1_1phase_ambient_coff_c_ac8f4dfff191b0adc7be044f39500e242}\label{class_o_p_t3101_1_1phase_ambient_coff_c_ac8f4dfff191b0adc7be044f39500e242}} 
+\index{O\+P\+T3101\+::phase\+Ambient\+CoffC@{O\+P\+T3101\+::phase\+Ambient\+CoffC}!calculate\+Coff@{calculate\+Coff}}
+\index{calculate\+Coff@{calculate\+Coff}!O\+P\+T3101\+::phase\+Ambient\+CoffC@{O\+P\+T3101\+::phase\+Ambient\+CoffC}}
+\subsubsection{\texorpdfstring{calculate\+Coff()}{calculateCoff()}}
+{\footnotesize\ttfamily void O\+P\+T3101\+::phase\+Ambient\+Coff\+C\+::calculate\+Coff (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{freq\+Counter }\end{DoxyParamCaption})}
+
+
+
+Calculates the register settings for the phase ambient coefficient Calculates \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c_a267c8f925dedeb8af97aba7ffae95da4}{O\+P\+T3101\+::phase\+Ambient\+Coff\+C\+::coff\+Reg}} and \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c_abed8ff9971976201638badbda9fd4543}{O\+P\+T3101\+::phase\+Ambient\+Coff\+C\+::common\+Scale}} based on \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c_af655f6704c4b3901b82a913f8a047258}{O\+P\+T3101\+::phase\+Ambient\+Coff\+C\+::coff}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em freq\+Counter;} & freq\+Counter is the count which represents the frequency from the Frequency correction block. This is read from register \mbox{\hyperlink{class_o_p_t3101_1_1registers_a0d343738560c0bc418f34b458735a811}{O\+P\+T3101\+::registers\+::freq\+\_\+count\+\_\+read\+\_\+reg}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing; 
+\end{DoxyReturn}
+{\bfseries Algorithm of the method is as follows}
+
+
+\begin{DoxyItemize}
+\item Identifies max of absolute of \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c_af655f6704c4b3901b82a913f8a047258}{O\+P\+T3101\+::phase\+Ambient\+Coff\+C\+::coff}} values ~\newline
+~\newline
+~\newline
+
+\item scales the max coefficient with input frequency\+Count ~\newline
+~\newline
+
+\item Finds a \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c_abed8ff9971976201638badbda9fd4543}{O\+P\+T3101\+::phase\+Ambient\+Coff\+C\+::common\+Scale}} which can fit the \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c_af655f6704c4b3901b82a913f8a047258}{O\+P\+T3101\+::phase\+Ambient\+Coff\+C\+::coff}} to 8 bit registers
+\item Finds \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c_a267c8f925dedeb8af97aba7ffae95da4}{O\+P\+T3101\+::phase\+Ambient\+Coff\+C\+::coff\+Reg}} values (8 bit register values) based on \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c_af655f6704c4b3901b82a913f8a047258}{O\+P\+T3101\+::phase\+Ambient\+Coff\+C\+::coff}} and \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c_abed8ff9971976201638badbda9fd4543}{O\+P\+T3101\+::phase\+Ambient\+Coff\+C\+::common\+Scale}} 
+\end{DoxyItemize}\mbox{\Hypertarget{class_o_p_t3101_1_1phase_ambient_coff_c_a41db9882facdbf3b437dcb54958b5763}\label{class_o_p_t3101_1_1phase_ambient_coff_c_a41db9882facdbf3b437dcb54958b5763}} 
+\index{O\+P\+T3101\+::phase\+Ambient\+CoffC@{O\+P\+T3101\+::phase\+Ambient\+CoffC}!load\+From\+File@{load\+From\+File}}
+\index{load\+From\+File@{load\+From\+File}!O\+P\+T3101\+::phase\+Ambient\+CoffC@{O\+P\+T3101\+::phase\+Ambient\+CoffC}}
+\subsubsection{\texorpdfstring{load\+From\+File()}{loadFromFile()}}
+{\footnotesize\ttfamily void O\+P\+T3101\+::phase\+Ambient\+Coff\+C\+::load\+From\+File (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+load phase ambient coff values from file This methods loads the phase ambient coff values to a non-\/volatile memory. Storage/\+Restoration to/from non-\/volatile memory is important for factory calibration 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em file\+Name;} & Path and name of the file from where to load \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing; 
+\end{DoxyReturn}
+{\bfseries Algorithm of the method is as follows}
+
+
+\begin{DoxyItemize}
+\item User needs to implement file load/restore based on host. 
+\end{DoxyItemize}\mbox{\Hypertarget{class_o_p_t3101_1_1phase_ambient_coff_c_afba22e085a341c2d9b1add1532ea06a1}\label{class_o_p_t3101_1_1phase_ambient_coff_c_afba22e085a341c2d9b1add1532ea06a1}} 
+\index{O\+P\+T3101\+::phase\+Ambient\+CoffC@{O\+P\+T3101\+::phase\+Ambient\+CoffC}!report@{report}}
+\index{report@{report}!O\+P\+T3101\+::phase\+Ambient\+CoffC@{O\+P\+T3101\+::phase\+Ambient\+CoffC}}
+\subsubsection{\texorpdfstring{report()}{report()}}
+{\footnotesize\ttfamily void O\+P\+T3101\+::phase\+Ambient\+Coff\+C\+::report (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+reports members of the instance Print the members of the class instance on screen 
+
+\begin{DoxyReturn}{Returns}
+Nothing; 
+\end{DoxyReturn}
+{\bfseries Algorithm of the method is as follows}
+
+
+\begin{DoxyItemize}
+\item Prints all the members and values of members on screen. ~\newline
+
+\item Prints all the members and values of members on screen. 
+\end{DoxyItemize}\mbox{\Hypertarget{class_o_p_t3101_1_1phase_ambient_coff_c_ad5b439c7ab384c03fa540d2bc06c3352}\label{class_o_p_t3101_1_1phase_ambient_coff_c_ad5b439c7ab384c03fa540d2bc06c3352}} 
+\index{O\+P\+T3101\+::phase\+Ambient\+CoffC@{O\+P\+T3101\+::phase\+Ambient\+CoffC}!store\+To\+File@{store\+To\+File}}
+\index{store\+To\+File@{store\+To\+File}!O\+P\+T3101\+::phase\+Ambient\+CoffC@{O\+P\+T3101\+::phase\+Ambient\+CoffC}}
+\subsubsection{\texorpdfstring{store\+To\+File()}{storeToFile()}}
+{\footnotesize\ttfamily void O\+P\+T3101\+::phase\+Ambient\+Coff\+C\+::store\+To\+File (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+saves phase ambient coff values to file This methods saves the phase ambient coff values to a non-\/volatile memory. Storage/\+Restoration to/from non-\/volatile memory is important for factory calibration 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em file\+Name;} & Path and name of the file to store \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing; 
+\end{DoxyReturn}
+{\bfseries Algorithm of the method is as follows}
+
+
+\begin{DoxyItemize}
+\item User needs to implement file storage based on host. 
+\end{DoxyItemize}
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_o_p_t3101_1_1phase_ambient_coff_c_a3febbb121799f99cb3f3f6578b43fae9}\label{class_o_p_t3101_1_1phase_ambient_coff_c_a3febbb121799f99cb3f3f6578b43fae9}} 
+\index{O\+P\+T3101\+::phase\+Ambient\+CoffC@{O\+P\+T3101\+::phase\+Ambient\+CoffC}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!O\+P\+T3101\+::phase\+Ambient\+CoffC@{O\+P\+T3101\+::phase\+Ambient\+CoffC}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c}{phase\+Ambient\+CoffC}} $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Operator overload to store class contents to a file Casts all the class members for file storage. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em os;} & os is data stream to serialize data \\
+\hline
+\mbox{\tt in}  & {\em data;} & data is pointer to the class to be serialized and stored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::ostream; Serialized std\+::ostream to be written to a file 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_o_p_t3101_1_1phase_ambient_coff_c_a1aec354cf48fdc653937a8168af6c78c}\label{class_o_p_t3101_1_1phase_ambient_coff_c_a1aec354cf48fdc653937a8168af6c78c}} 
+\index{O\+P\+T3101\+::phase\+Ambient\+CoffC@{O\+P\+T3101\+::phase\+Ambient\+CoffC}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!O\+P\+T3101\+::phase\+Ambient\+CoffC@{O\+P\+T3101\+::phase\+Ambient\+CoffC}}
+\subsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{\mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c}{phase\+Ambient\+CoffC}} $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Operator overload to load class contents to from a file Retrieves all the class members from a stored file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em is;} & is input stream from where the data is loaded \\
+\hline
+\mbox{\tt out}  & {\em data;} & data is pointer to the class to be restored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::istream; Serialized Input stream loaded from file 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_o_p_t3101_1_1phase_ambient_coff_c_af655f6704c4b3901b82a913f8a047258}\label{class_o_p_t3101_1_1phase_ambient_coff_c_af655f6704c4b3901b82a913f8a047258}} 
+\index{O\+P\+T3101\+::phase\+Ambient\+CoffC@{O\+P\+T3101\+::phase\+Ambient\+CoffC}!coff@{coff}}
+\index{coff@{coff}!O\+P\+T3101\+::phase\+Ambient\+CoffC@{O\+P\+T3101\+::phase\+Ambient\+CoffC}}
+\subsubsection{\texorpdfstring{coff}{coff}}
+{\footnotesize\ttfamily double O\+P\+T3101\+::phase\+Ambient\+Coff\+C\+::coff\mbox{[}4\mbox{]}}
+
+
+
+Coefficients stored in floating point precision. Since there are 4 sections the \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c_af655f6704c4b3901b82a913f8a047258}{O\+P\+T3101\+::phase\+Ambient\+Coff\+C\+::coff}} is array of 4 elements. Units for this is \mbox{\hyperlink{class_o_p_t3101_1_1frame_data_af8661d11405953dc378ad4d7cb0f2db6}{O\+P\+T3101\+::frame\+Data\+::phase}} codes per unit \mbox{\hyperlink{class_o_p_t3101_1_1frame_data_a39ebf8bd06141bef6986e49013d03c35}{O\+P\+T3101\+::frame\+Data\+::ambient}} codes. 
+
+\mbox{\Hypertarget{class_o_p_t3101_1_1phase_ambient_coff_c_a267c8f925dedeb8af97aba7ffae95da4}\label{class_o_p_t3101_1_1phase_ambient_coff_c_a267c8f925dedeb8af97aba7ffae95da4}} 
+\index{O\+P\+T3101\+::phase\+Ambient\+CoffC@{O\+P\+T3101\+::phase\+Ambient\+CoffC}!coff\+Reg@{coff\+Reg}}
+\index{coff\+Reg@{coff\+Reg}!O\+P\+T3101\+::phase\+Ambient\+CoffC@{O\+P\+T3101\+::phase\+Ambient\+CoffC}}
+\subsubsection{\texorpdfstring{coff\+Reg}{coffReg}}
+{\footnotesize\ttfamily uint8\+\_\+t O\+P\+T3101\+::phase\+Ambient\+Coff\+C\+::coff\+Reg\mbox{[}4\mbox{]}}
+
+
+
+Coefficients value of \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c_af655f6704c4b3901b82a913f8a047258}{O\+P\+T3101\+::phase\+Ambient\+Coff\+C\+::coff}} represented as 8 bit register values calculated by \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c_ac8f4dfff191b0adc7be044f39500e242}{O\+P\+T3101\+::phase\+Ambient\+Coff\+C\+::calculate\+Coff}}. 
+
+\mbox{\Hypertarget{class_o_p_t3101_1_1phase_ambient_coff_c_abed8ff9971976201638badbda9fd4543}\label{class_o_p_t3101_1_1phase_ambient_coff_c_abed8ff9971976201638badbda9fd4543}} 
+\index{O\+P\+T3101\+::phase\+Ambient\+CoffC@{O\+P\+T3101\+::phase\+Ambient\+CoffC}!common\+Scale@{common\+Scale}}
+\index{common\+Scale@{common\+Scale}!O\+P\+T3101\+::phase\+Ambient\+CoffC@{O\+P\+T3101\+::phase\+Ambient\+CoffC}}
+\subsubsection{\texorpdfstring{common\+Scale}{commonScale}}
+{\footnotesize\ttfamily uint8\+\_\+t O\+P\+T3101\+::phase\+Ambient\+Coff\+C\+::common\+Scale}
+
+
+
+Since there are 4 \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c_af655f6704c4b3901b82a913f8a047258}{O\+P\+T3101\+::phase\+Ambient\+Coff\+C\+::coff}} to represent them as 8 bit register values a common scaling factor is required. This is calculated by method \mbox{\hyperlink{class_o_p_t3101_1_1phase_ambient_coff_c_ac8f4dfff191b0adc7be044f39500e242}{O\+P\+T3101\+::phase\+Ambient\+Coff\+C\+::calculate\+Coff}}. 
+
+\mbox{\Hypertarget{class_o_p_t3101_1_1phase_ambient_coff_c_a5a2e9d6a0622f02024eaa8a1d2ec0011}\label{class_o_p_t3101_1_1phase_ambient_coff_c_a5a2e9d6a0622f02024eaa8a1d2ec0011}} 
+\index{O\+P\+T3101\+::phase\+Ambient\+CoffC@{O\+P\+T3101\+::phase\+Ambient\+CoffC}!splits\+Reg@{splits\+Reg}}
+\index{splits\+Reg@{splits\+Reg}!O\+P\+T3101\+::phase\+Ambient\+CoffC@{O\+P\+T3101\+::phase\+Ambient\+CoffC}}
+\subsubsection{\texorpdfstring{splits\+Reg}{splitsReg}}
+{\footnotesize\ttfamily uint16\+\_\+t O\+P\+T3101\+::phase\+Ambient\+Coff\+C\+::splits\+Reg\mbox{[}3\mbox{]}}
+
+
+
+Register entries for the split point for the P\+WL. Since there are 4 sections where are 3 split points to be set. Units for this is \mbox{\hyperlink{class_o_p_t3101_1_1frame_data_a39ebf8bd06141bef6986e49013d03c35}{O\+P\+T3101\+::frame\+Data\+::ambient}} codes. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/folders/d/scripts/cpp/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\mbox{\hyperlink{_o_p_t3101_design_coefficients_8h}{O\+P\+T3101\+Design\+Coefficients.\+h}}\item 
+C\+:/folders/d/scripts/cpp/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\mbox{\hyperlink{_o_p_t3101_design_coefficients_8cpp}{O\+P\+T3101\+Design\+Coefficients.\+cpp}}\end{DoxyCompactItemize}

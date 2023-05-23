@@ -1,0 +1,231 @@
+\hypertarget{class_o_p_t3101_calibration}{}\section{O\+P\+T3101\+Calibration Class Reference}
+\label{class_o_p_t3101_calibration}\index{O\+P\+T3101\+Calibration@{O\+P\+T3101\+Calibration}}
+
+
+{\ttfamily \#include $<$O\+P\+T3101\+Calibration.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_o_p_t3101_calibration_ab20a3aa586a22bd7ec3f978445ad545b}{O\+P\+T3101\+Calibration}} (void)
+\item 
+void \mbox{\hyperlink{class_o_p_t3101_calibration_a22326c58bcd12e66b54c267b630916c9}{find\+Common\+Crosstalk\+Scale}} (\mbox{\hyperlink{class_o_p_t3101_1_1crosstalk_c}{O\+P\+T3101\+::crosstalkC}} $\ast$illum\+Xtalk, uint8\+\_\+t size)
+\item 
+void \mbox{\hyperlink{class_o_p_t3101_calibration_a3793ff10d62c79f6160070ddabf9601a}{find\+Crosstalk\+Temp\+Register\+Values}} (\mbox{\hyperlink{class_o_p_t3101_1_1crosstalk_temp_coff_c}{O\+P\+T3101\+::crosstalk\+Temp\+CoffC}} $\ast$, uint8\+\_\+t, \mbox{\hyperlink{class_o_p_t3101_1_1crosstalk_c}{O\+P\+T3101\+::crosstalkC}} $\ast$)
+\item 
+void \mbox{\hyperlink{class_o_p_t3101_calibration_aec7a07b81ddeb24225d9d4b15200302c}{find\+Phase\+Temp\+Register\+Values}} (\mbox{\hyperlink{class_o_p_t3101phase_temp_coff}{O\+P\+T3101phase\+Temp\+Coff}} $\ast$, uint8\+\_\+t, uint16\+\_\+t)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_o_p_t3101_1_1crosstalk_c}{O\+P\+T3101\+::crosstalkC}} $\ast$ \mbox{\hyperlink{class_o_p_t3101_calibration_ad437e8a424fe577d83354d12b303a39e}{internal\+Crosstalk}}
+\item 
+\mbox{\hyperlink{class_o_p_t3101_1_1crosstalk_c}{O\+P\+T3101\+::crosstalkC}} $\ast$ \mbox{\hyperlink{class_o_p_t3101_calibration_a325c4a2d0e233044717af30a7fa1bbc3}{illum\+Crosstalk}}
+\item 
+\mbox{\hyperlink{class_o_p_t3101_1_1phase_offset_c}{O\+P\+T3101\+::phase\+OffsetC}} $\ast$ \mbox{\hyperlink{class_o_p_t3101_calibration_a5b412c18abbf34deff2fc6902f6bcb96}{phase\+Offset}}
+\item 
+\mbox{\hyperlink{class_o_p_t3101_1_1crosstalk_temp_coff_c}{O\+P\+T3101\+::crosstalk\+Temp\+CoffC}} $\ast$ \mbox{\hyperlink{class_o_p_t3101_calibration_a4f7cbff7a4cd3401e4d5f4bda8fcddfb}{illum\+Crosstalk\+Temp\+Coff}}
+\item 
+\mbox{\hyperlink{class_o_p_t3101phase_temp_coff}{O\+P\+T3101phase\+Temp\+Coff}} $\ast$ \mbox{\hyperlink{class_o_p_t3101_calibration_a731ed6a15bd11bd5b4aaa5fc5897b50e}{phase\+Temp\+Coff}}
+\item 
+\mbox{\hyperlink{class_o_p_t3101phase_ambient_coff}{O\+P\+T3101phase\+Ambient\+Coff}} $\ast$ \mbox{\hyperlink{class_o_p_t3101_calibration_ae9a486691abb50456b3d177b6694c6c4}{phase\+Ambient\+Coff}}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{class_o_p_t3101_calibration_a111d227d3f19d98a2822d130850f3513}{register\+Address\+List}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_o_p_t3101_calibration_a47b0caca3d9ccfa37b6094a86e1f1235}{register\+Address\+List\+Size}}
+\item 
+bool \mbox{\hyperlink{class_o_p_t3101_calibration_aeba1794114f60f38656292660120588e}{E\+E\+P\+R\+O\+M\+\_\+connected}}
+\item 
+bool \mbox{\hyperlink{class_o_p_t3101_calibration_afbec02cfa51222efaa1905bf4f9d9912}{ext\+Temp\+Sensor\+\_\+connected}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_o_p_t3101_calibration_ab20a3aa586a22bd7ec3f978445ad545b}\label{class_o_p_t3101_calibration_ab20a3aa586a22bd7ec3f978445ad545b}} 
+\index{O\+P\+T3101\+Calibration@{O\+P\+T3101\+Calibration}!O\+P\+T3101\+Calibration@{O\+P\+T3101\+Calibration}}
+\index{O\+P\+T3101\+Calibration@{O\+P\+T3101\+Calibration}!O\+P\+T3101\+Calibration@{O\+P\+T3101\+Calibration}}
+\subsubsection{\texorpdfstring{O\+P\+T3101\+Calibration()}{OPT3101Calibration()}}
+{\footnotesize\ttfamily O\+P\+T3101\+Calibration\+::\+O\+P\+T3101\+Calibration (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+$<$ This configuration requires 1 internal crosstalk record(s)
+
+$<$ This configuration requires 4 internal crosstalk record(s)
+
+$<$ This configuration requires 4 internal crosstalk record(s)
+
+$<$ This configuration requires 4 internal crosstalk record(s)
+
+$<$ This configuration requires 4 internal crosstalk record(s)
+
+$<$ This configuration requires 1 internal crosstalk record(s)
+
+$<$ This configuration requires 36 registers \mbox{[}1152\mbox{]} bits to be stored for calibration
+
+$<$ Allocation of memory to store register addresses
+
+$<$ This configuration helps configure E\+E\+P\+R\+OM
+
+$<$ This configuration helps configure Ext temp sensor
+
+$<$ Address for register(s) iphase\+\_\+xtalk\+\_\+reg\+\_\+hdr0\+\_\+tx0,temp\+\_\+coeff\+\_\+main\+\_\+hdr1\+\_\+tx1
+
+$<$ Address for register(s) qphase\+\_\+xtalk\+\_\+reg\+\_\+hdr0\+\_\+tx0,temp\+\_\+coeff\+\_\+main\+\_\+hdr1\+\_\+tx1
+
+$<$ Address for register(s) temp\+\_\+coeff\+\_\+xtalk\+\_\+iphase\+\_\+hdr0\+\_\+tx0
+
+$<$ Address for register(s) temp\+\_\+coeff\+\_\+xtalk\+\_\+qphase\+\_\+hdr0\+\_\+tx0
+
+$<$ Address for register(s) phase\+\_\+offset\+\_\+hdr0\+\_\+tx0
+
+$<$ Address for register(s) tmain\+\_\+calib\+\_\+hdr0\+\_\+tx0,tillum\+\_\+calib\+\_\+hdr0\+\_\+tx0
+
+$<$ Address for register(s) temp\+\_\+coeff\+\_\+main\+\_\+hdr0\+\_\+tx0
+
+$<$ Address for register(s) temp\+\_\+coeff\+\_\+illum\+\_\+hdr0\+\_\+tx0
+
+$<$ Address for register(s) iphase\+\_\+xtalk\+\_\+reg\+\_\+hdr1\+\_\+tx0
+
+$<$ Address for register(s) qphase\+\_\+xtalk\+\_\+reg\+\_\+hdr1\+\_\+tx0
+
+$<$ Address for register(s) temp\+\_\+coeff\+\_\+xtalk\+\_\+iphase\+\_\+hdr1\+\_\+tx0,temp\+\_\+coeff\+\_\+xtalk\+\_\+iphase\+\_\+hdr0\+\_\+tx1
+
+$<$ Address for register(s) temp\+\_\+coeff\+\_\+xtalk\+\_\+qphase\+\_\+hdr1\+\_\+tx0,temp\+\_\+coeff\+\_\+xtalk\+\_\+qphase\+\_\+hdr0\+\_\+tx1,temp\+\_\+coeff\+\_\+xtalk\+\_\+qphase\+\_\+hdr1\+\_\+tx1
+
+$<$ Address for register(s) phase\+\_\+offset\+\_\+hdr1\+\_\+tx0,temp\+\_\+coeff\+\_\+illum\+\_\+hdr1\+\_\+tx0
+
+$<$ Address for register(s) tmain\+\_\+calib\+\_\+hdr1\+\_\+tx0,tillum\+\_\+calib\+\_\+hdr1\+\_\+tx0
+
+$<$ Address for register(s) temp\+\_\+coeff\+\_\+main\+\_\+hdr1\+\_\+tx0,temp\+\_\+coeff\+\_\+main\+\_\+hdr0\+\_\+tx1
+
+$<$ Address for register(s) temp\+\_\+coeff\+\_\+illum\+\_\+hdr1\+\_\+tx0,phase\+\_\+offset\+\_\+hdr0\+\_\+tx1
+
+$<$ Address for register(s) iphase\+\_\+xtalk\+\_\+reg\+\_\+hdr0\+\_\+tx1
+
+$<$ Address for register(s) qphase\+\_\+xtalk\+\_\+reg\+\_\+hdr0\+\_\+tx1
+
+$<$ Address for register(s) tmain\+\_\+calib\+\_\+hdr0\+\_\+tx1,tillum\+\_\+calib\+\_\+hdr0\+\_\+tx1
+
+$<$ Address for register(s) temp\+\_\+coeff\+\_\+illum\+\_\+hdr0\+\_\+tx1,phase\+\_\+offset\+\_\+hdr1\+\_\+tx1
+
+$<$ Address for register(s) temp\+\_\+coeff\+\_\+illum\+\_\+hdr0\+\_\+tx1
+
+$<$ Address for register(s) iphase\+\_\+xtalk\+\_\+reg\+\_\+hdr1\+\_\+tx1
+
+$<$ Address for register(s) qphase\+\_\+xtalk\+\_\+reg\+\_\+hdr1\+\_\+tx1
+
+$<$ Address for register(s) temp\+\_\+coeff\+\_\+xtalk\+\_\+iphase\+\_\+hdr1\+\_\+tx1
+
+$<$ Address for register(s) tmain\+\_\+calib\+\_\+hdr1\+\_\+tx1
+
+$<$ Address for register(s) tillum\+\_\+calib\+\_\+hdr1\+\_\+tx1,en\+\_\+phase\+\_\+corr,en\+\_\+temp\+\_\+corr,scale\+\_\+phase\+\_\+temp\+\_\+coeff
+
+$<$ Address for register(s) temp\+\_\+coeff\+\_\+illum\+\_\+hdr1\+\_\+tx1
+
+$<$ Address for register(s) temp\+\_\+coeff\+\_\+illum\+\_\+hdr1\+\_\+tx1
+
+$<$ Address for register(s) illum\+\_\+xtalk\+\_\+reg\+\_\+scale
+
+$<$ Address for register(s) scale\+\_\+temp\+\_\+coeff\+\_\+xtalk
+
+$<$ Address for register(s) shift\+\_\+illum\+\_\+phase
+
+$<$ Address for register(s) scale\+\_\+amb\+\_\+phase\+\_\+corr\+\_\+coeff
+
+$<$ Address for register(s) amb\+\_\+phase\+\_\+corr\+\_\+pwl\+\_\+coeff0
+
+$<$ Address for register(s) amb\+\_\+phase\+\_\+corr\+\_\+pwl\+\_\+coeff1,amb\+\_\+phase\+\_\+corr\+\_\+pwl\+\_\+coeff2,amb\+\_\+phase\+\_\+corr\+\_\+pwl\+\_\+coeff3
+
+$<$ Address for register(s) amb\+\_\+phase\+\_\+corr\+\_\+pwl\+\_\+x0,amb\+\_\+phase\+\_\+corr\+\_\+pwl\+\_\+x1
+
+$<$ Address for register(s) amb\+\_\+phase\+\_\+corr\+\_\+pwl\+\_\+x2 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_o_p_t3101_calibration_a22326c58bcd12e66b54c267b630916c9}\label{class_o_p_t3101_calibration_a22326c58bcd12e66b54c267b630916c9}} 
+\index{O\+P\+T3101\+Calibration@{O\+P\+T3101\+Calibration}!find\+Common\+Crosstalk\+Scale@{find\+Common\+Crosstalk\+Scale}}
+\index{find\+Common\+Crosstalk\+Scale@{find\+Common\+Crosstalk\+Scale}!O\+P\+T3101\+Calibration@{O\+P\+T3101\+Calibration}}
+\subsubsection{\texorpdfstring{find\+Common\+Crosstalk\+Scale()}{findCommonCrosstalkScale()}}
+{\footnotesize\ttfamily void O\+P\+T3101\+Calibration\+::find\+Common\+Crosstalk\+Scale (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_p_t3101_1_1crosstalk_c}{O\+P\+T3101\+::crosstalkC}} $\ast$}]{illum\+Xtalk,  }\item[{uint8\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_p_t3101_calibration_a3793ff10d62c79f6160070ddabf9601a}\label{class_o_p_t3101_calibration_a3793ff10d62c79f6160070ddabf9601a}} 
+\index{O\+P\+T3101\+Calibration@{O\+P\+T3101\+Calibration}!find\+Crosstalk\+Temp\+Register\+Values@{find\+Crosstalk\+Temp\+Register\+Values}}
+\index{find\+Crosstalk\+Temp\+Register\+Values@{find\+Crosstalk\+Temp\+Register\+Values}!O\+P\+T3101\+Calibration@{O\+P\+T3101\+Calibration}}
+\subsubsection{\texorpdfstring{find\+Crosstalk\+Temp\+Register\+Values()}{findCrosstalkTempRegisterValues()}}
+{\footnotesize\ttfamily void O\+P\+T3101\+Calibration\+::find\+Crosstalk\+Temp\+Register\+Values (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_p_t3101_1_1crosstalk_temp_coff_c}{O\+P\+T3101\+::crosstalk\+Temp\+CoffC}} $\ast$}]{illum\+Xtalk\+Coff,  }\item[{uint8\+\_\+t}]{size,  }\item[{\mbox{\hyperlink{class_o_p_t3101_1_1crosstalk_c}{O\+P\+T3101\+::crosstalkC}} $\ast$}]{illum\+Xtalk }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_o_p_t3101_calibration_aec7a07b81ddeb24225d9d4b15200302c}\label{class_o_p_t3101_calibration_aec7a07b81ddeb24225d9d4b15200302c}} 
+\index{O\+P\+T3101\+Calibration@{O\+P\+T3101\+Calibration}!find\+Phase\+Temp\+Register\+Values@{find\+Phase\+Temp\+Register\+Values}}
+\index{find\+Phase\+Temp\+Register\+Values@{find\+Phase\+Temp\+Register\+Values}!O\+P\+T3101\+Calibration@{O\+P\+T3101\+Calibration}}
+\subsubsection{\texorpdfstring{find\+Phase\+Temp\+Register\+Values()}{findPhaseTempRegisterValues()}}
+{\footnotesize\ttfamily void O\+P\+T3101\+Calibration\+::find\+Phase\+Temp\+Register\+Values (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_o_p_t3101phase_temp_coff}{O\+P\+T3101phase\+Temp\+Coff}} $\ast$}]{phase\+Temp\+Coff,  }\item[{uint8\+\_\+t}]{size,  }\item[{uint16\+\_\+t}]{freq\+Count }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_o_p_t3101_calibration_aeba1794114f60f38656292660120588e}\label{class_o_p_t3101_calibration_aeba1794114f60f38656292660120588e}} 
+\index{O\+P\+T3101\+Calibration@{O\+P\+T3101\+Calibration}!E\+E\+P\+R\+O\+M\+\_\+connected@{E\+E\+P\+R\+O\+M\+\_\+connected}}
+\index{E\+E\+P\+R\+O\+M\+\_\+connected@{E\+E\+P\+R\+O\+M\+\_\+connected}!O\+P\+T3101\+Calibration@{O\+P\+T3101\+Calibration}}
+\subsubsection{\texorpdfstring{E\+E\+P\+R\+O\+M\+\_\+connected}{EEPROM\_connected}}
+{\footnotesize\ttfamily bool O\+P\+T3101\+Calibration\+::\+E\+E\+P\+R\+O\+M\+\_\+connected}
+
+\mbox{\Hypertarget{class_o_p_t3101_calibration_afbec02cfa51222efaa1905bf4f9d9912}\label{class_o_p_t3101_calibration_afbec02cfa51222efaa1905bf4f9d9912}} 
+\index{O\+P\+T3101\+Calibration@{O\+P\+T3101\+Calibration}!ext\+Temp\+Sensor\+\_\+connected@{ext\+Temp\+Sensor\+\_\+connected}}
+\index{ext\+Temp\+Sensor\+\_\+connected@{ext\+Temp\+Sensor\+\_\+connected}!O\+P\+T3101\+Calibration@{O\+P\+T3101\+Calibration}}
+\subsubsection{\texorpdfstring{ext\+Temp\+Sensor\+\_\+connected}{extTempSensor\_connected}}
+{\footnotesize\ttfamily bool O\+P\+T3101\+Calibration\+::ext\+Temp\+Sensor\+\_\+connected}
+
+\mbox{\Hypertarget{class_o_p_t3101_calibration_a325c4a2d0e233044717af30a7fa1bbc3}\label{class_o_p_t3101_calibration_a325c4a2d0e233044717af30a7fa1bbc3}} 
+\index{O\+P\+T3101\+Calibration@{O\+P\+T3101\+Calibration}!illum\+Crosstalk@{illum\+Crosstalk}}
+\index{illum\+Crosstalk@{illum\+Crosstalk}!O\+P\+T3101\+Calibration@{O\+P\+T3101\+Calibration}}
+\subsubsection{\texorpdfstring{illum\+Crosstalk}{illumCrosstalk}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_p_t3101_1_1crosstalk_c}{O\+P\+T3101\+::crosstalkC}}$\ast$ O\+P\+T3101\+Calibration\+::illum\+Crosstalk}
+
+\mbox{\Hypertarget{class_o_p_t3101_calibration_a4f7cbff7a4cd3401e4d5f4bda8fcddfb}\label{class_o_p_t3101_calibration_a4f7cbff7a4cd3401e4d5f4bda8fcddfb}} 
+\index{O\+P\+T3101\+Calibration@{O\+P\+T3101\+Calibration}!illum\+Crosstalk\+Temp\+Coff@{illum\+Crosstalk\+Temp\+Coff}}
+\index{illum\+Crosstalk\+Temp\+Coff@{illum\+Crosstalk\+Temp\+Coff}!O\+P\+T3101\+Calibration@{O\+P\+T3101\+Calibration}}
+\subsubsection{\texorpdfstring{illum\+Crosstalk\+Temp\+Coff}{illumCrosstalkTempCoff}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_p_t3101_1_1crosstalk_temp_coff_c}{O\+P\+T3101\+::crosstalk\+Temp\+CoffC}}$\ast$ O\+P\+T3101\+Calibration\+::illum\+Crosstalk\+Temp\+Coff}
+
+\mbox{\Hypertarget{class_o_p_t3101_calibration_ad437e8a424fe577d83354d12b303a39e}\label{class_o_p_t3101_calibration_ad437e8a424fe577d83354d12b303a39e}} 
+\index{O\+P\+T3101\+Calibration@{O\+P\+T3101\+Calibration}!internal\+Crosstalk@{internal\+Crosstalk}}
+\index{internal\+Crosstalk@{internal\+Crosstalk}!O\+P\+T3101\+Calibration@{O\+P\+T3101\+Calibration}}
+\subsubsection{\texorpdfstring{internal\+Crosstalk}{internalCrosstalk}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_p_t3101_1_1crosstalk_c}{O\+P\+T3101\+::crosstalkC}}$\ast$ O\+P\+T3101\+Calibration\+::internal\+Crosstalk}
+
+\mbox{\Hypertarget{class_o_p_t3101_calibration_ae9a486691abb50456b3d177b6694c6c4}\label{class_o_p_t3101_calibration_ae9a486691abb50456b3d177b6694c6c4}} 
+\index{O\+P\+T3101\+Calibration@{O\+P\+T3101\+Calibration}!phase\+Ambient\+Coff@{phase\+Ambient\+Coff}}
+\index{phase\+Ambient\+Coff@{phase\+Ambient\+Coff}!O\+P\+T3101\+Calibration@{O\+P\+T3101\+Calibration}}
+\subsubsection{\texorpdfstring{phase\+Ambient\+Coff}{phaseAmbientCoff}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_p_t3101phase_ambient_coff}{O\+P\+T3101phase\+Ambient\+Coff}}$\ast$ O\+P\+T3101\+Calibration\+::phase\+Ambient\+Coff}
+
+\mbox{\Hypertarget{class_o_p_t3101_calibration_a5b412c18abbf34deff2fc6902f6bcb96}\label{class_o_p_t3101_calibration_a5b412c18abbf34deff2fc6902f6bcb96}} 
+\index{O\+P\+T3101\+Calibration@{O\+P\+T3101\+Calibration}!phase\+Offset@{phase\+Offset}}
+\index{phase\+Offset@{phase\+Offset}!O\+P\+T3101\+Calibration@{O\+P\+T3101\+Calibration}}
+\subsubsection{\texorpdfstring{phase\+Offset}{phaseOffset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_p_t3101_1_1phase_offset_c}{O\+P\+T3101\+::phase\+OffsetC}}$\ast$ O\+P\+T3101\+Calibration\+::phase\+Offset}
+
+\mbox{\Hypertarget{class_o_p_t3101_calibration_a731ed6a15bd11bd5b4aaa5fc5897b50e}\label{class_o_p_t3101_calibration_a731ed6a15bd11bd5b4aaa5fc5897b50e}} 
+\index{O\+P\+T3101\+Calibration@{O\+P\+T3101\+Calibration}!phase\+Temp\+Coff@{phase\+Temp\+Coff}}
+\index{phase\+Temp\+Coff@{phase\+Temp\+Coff}!O\+P\+T3101\+Calibration@{O\+P\+T3101\+Calibration}}
+\subsubsection{\texorpdfstring{phase\+Temp\+Coff}{phaseTempCoff}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_o_p_t3101phase_temp_coff}{O\+P\+T3101phase\+Temp\+Coff}}$\ast$ O\+P\+T3101\+Calibration\+::phase\+Temp\+Coff}
+
+\mbox{\Hypertarget{class_o_p_t3101_calibration_a111d227d3f19d98a2822d130850f3513}\label{class_o_p_t3101_calibration_a111d227d3f19d98a2822d130850f3513}} 
+\index{O\+P\+T3101\+Calibration@{O\+P\+T3101\+Calibration}!register\+Address\+List@{register\+Address\+List}}
+\index{register\+Address\+List@{register\+Address\+List}!O\+P\+T3101\+Calibration@{O\+P\+T3101\+Calibration}}
+\subsubsection{\texorpdfstring{register\+Address\+List}{registerAddressList}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ O\+P\+T3101\+Calibration\+::register\+Address\+List}
+
+\mbox{\Hypertarget{class_o_p_t3101_calibration_a47b0caca3d9ccfa37b6094a86e1f1235}\label{class_o_p_t3101_calibration_a47b0caca3d9ccfa37b6094a86e1f1235}} 
+\index{O\+P\+T3101\+Calibration@{O\+P\+T3101\+Calibration}!register\+Address\+List\+Size@{register\+Address\+List\+Size}}
+\index{register\+Address\+List\+Size@{register\+Address\+List\+Size}!O\+P\+T3101\+Calibration@{O\+P\+T3101\+Calibration}}
+\subsubsection{\texorpdfstring{register\+Address\+List\+Size}{registerAddressListSize}}
+{\footnotesize\ttfamily uint8\+\_\+t O\+P\+T3101\+Calibration\+::register\+Address\+List\+Size}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/folders/d/scripts/cpp/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\mbox{\hyperlink{_o_p_t3101_calibration_8h}{O\+P\+T3101\+Calibration.\+h}}\item 
+C\+:/folders/d/scripts/cpp/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\mbox{\hyperlink{_o_p_t3101__configuration_8cpp}{O\+P\+T3101\+\_\+configuration.\+cpp}}\item 
+C\+:/folders/d/scripts/cpp/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\mbox{\hyperlink{_o_p_t3101_design_coefficients_8cpp}{O\+P\+T3101\+Design\+Coefficients.\+cpp}}\item 
+C\+:/folders/d/scripts/cpp/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\+O\+P\+T3101\+S\+D\+K/\mbox{\hyperlink{_o_p_t3101device___functions_8cpp}{O\+P\+T3101device\+\_\+\+Functions.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['scale_5famb_5fcoeff_5fxtalk',['scale_amb_coeff_xtalk',['../class_o_p_t3101_1_1registers.html#ac4a29475ab04f87654c275469b3611c8',1,'OPT3101::registers']]],
+  ['scale_5famb_5fphase_5fcorr_5fcoeff',['scale_amb_phase_corr_coeff',['../class_o_p_t3101_1_1registers.html#aa72ff09dcba134f78340ba3cd9b1fa07',1,'OPT3101::registers']]],
+  ['scale_5fnl_5fcorr_5fcoeff',['scale_nl_corr_coeff',['../class_o_p_t3101_1_1registers.html#a8be7ea17637153d221e4198caea67452',1,'OPT3101::registers']]],
+  ['scale_5fphase_5ftemp_5fcoeff',['scale_phase_temp_coeff',['../class_o_p_t3101_1_1registers.html#a0e1ab2b8fda7b67d1d83606b2a5af70f',1,'OPT3101::registers']]],
+  ['scale_5fphase_5ftemp_5fcorr_5fsquare',['scale_phase_temp_corr_square',['../class_o_p_t3101_1_1registers.html#aa08e058cdd46d26b6321687bcc62aab7',1,'OPT3101::registers']]],
+  ['scale_5ftemp_5fcoeff_5fxtalk',['scale_temp_coeff_xtalk',['../class_o_p_t3101_1_1registers.html#a056d6a7717acab1d8915fc3977c0d130',1,'OPT3101::registers']]],
+  ['sel_5fgp3_5fon_5fsdam',['sel_gp3_on_sdam',['../class_o_p_t3101_1_1registers.html#a2c3f2cecfca84f9cc11dde779753bb17',1,'OPT3101::registers']]],
+  ['sel_5fhdr_5fmode',['sel_hdr_mode',['../class_o_p_t3101_1_1registers.html#a1f8f226c3e13479d0dafeb402d35d519',1,'OPT3101::registers']]],
+  ['sel_5fillum_5ftx0_5fon_5ftx1',['sel_illum_tx0_on_tx1',['../class_o_p_t3101_1_1registers.html#ae39eb9cd24f72ea82c91602018f2cf04',1,'OPT3101::registers']]],
+  ['sel_5ftx_5fch',['sel_tx_ch',['../class_o_p_t3101_1_1registers.html#af79e0b3cfd511e7aa03cf3e55774f0d0',1,'OPT3101::registers']]],
+  ['shift_5fillum_5fphase',['shift_illum_phase',['../class_o_p_t3101_1_1registers.html#a18539cc6fd63ce4f504fcf16b1e48f31',1,'OPT3101::registers']]],
+  ['shiftillumphase',['shiftIllumPhase',['../class_o_p_t3101_1_1crosstalk_c.html#ae60d9239aa603895c534e954ee87c613',1,'OPT3101::crosstalkC::shiftIllumPhase()'],['../class_o_p_t3101_1_1phase_offset_c.html#a1977598d500c18fdd2ba58cbfd8789b9',1,'OPT3101::phaseOffsetC::shiftIllumPhase()']]],
+  ['shut_5fclocks',['shut_clocks',['../class_o_p_t3101_1_1registers.html#ac3c618465f11b7742d57a755528163f6',1,'OPT3101::registers']]],
+  ['sig_5fovl_5fflag',['sig_ovl_flag',['../class_o_p_t3101_1_1registers.html#ad767a496a0cad5741d575a54a095add3',1,'OPT3101::registers']]],
+  ['sigovl',['sigovl',['../class_o_p_t3101_1_1frame_data.html#a5fde4a7c755e99367d2fc79feb51cf1b',1,'OPT3101::frameData']]],
+  ['size',['size',['../class_o_p_t3101_1_1device_register.html#a058d48b4c23e22739b1c65d85367a0a8',1,'OPT3101::deviceRegister']]],
+  ['software_5freset',['software_reset',['../class_o_p_t3101_1_1registers.html#a1223651c77a8bcf33f083b0d668f028d',1,'OPT3101::registers']]],
+  ['splitsreg',['splitsReg',['../class_o_p_t3101_1_1phase_ambient_coff_c.html#a5a2e9d6a0622f02024eaa8a1d2ec0011',1,'OPT3101::phaseAmbientCoffC']]],
+  ['start_5ffreq_5fcalib',['start_freq_calib',['../class_o_p_t3101_1_1registers.html#a50515c2538c13c51a62485ee689c5e1c',1,'OPT3101::registers']]],
+  ['status_5fin_5freg',['status_in_reg',['../class_o_p_t3101_1_1registers.html#a66aabf74083c7c779d82766da1c15fd3',1,'OPT3101::registers']]],
+  ['sub_5fvd_5fclk_5fcnt',['sub_vd_clk_cnt',['../class_o_p_t3101_1_1registers.html#abc883ba2fcc4156c6e28e3b673de0a1a',1,'OPT3101::registers']]],
+  ['swap_5fread_5fdata',['swap_read_data',['../class_o_p_t3101_1_1registers.html#a23607ef6535360d4ff1264f6249b65c0',1,'OPT3101::registers']]],
+  ['sys_5fclk_5fdivider',['sys_clk_divider',['../class_o_p_t3101_1_1registers.html#af4ee9a8bd2c03f0045edee01b1a568ac',1,'OPT3101::registers']]]
+];
